@@ -76,7 +76,7 @@
             color: var(--accent);
         }
 
-        /* --- PHOTO LAYOUT --- */
+        /* --- REVISED PHOTO SIZES --- */
         .bio-flex {
             display: flex;
             gap: 40px;
@@ -85,19 +85,27 @@
         }
 
         .headshot {
-            width: 320px; /* Snug for the 801x1200 portrait */
+            width: 400px; /* Increased size for your portrait photo */
+            height: auto;
             border-radius: 15px;
             border: 1px solid #333;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             flex-shrink: 0;
         }
 
+        .action-shot-container {
+            width: 100%;
+            text-align: center; /* Centers the landscape image if it's smaller than the container */
+            margin: 40px 0;
+        }
+
         .action-shot {
-            width: 100%; /* Spans full width for the 1200x1000 landscape */
-            height: auto;
+            width: 100%;
+            max-width: 800px; /* Limits the width of the landscape image */
+            max-height: 500px; /* Ensures it doesn't take up the whole screen height */
+            object-fit: cover; /* Keeps the aspect ratio clean if it hits the max-height */
             border-radius: 15px;
             border: 1px solid #333;
-            margin: 40px 0;
         }
 
         .bio-text p {
@@ -150,7 +158,6 @@
 
         .footer-container { max-width: 800px; margin: 0 auto; }
         footer h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 4px; font-size: 2rem; margin-bottom: 15px; }
-        .contact-intro { color: #888; font-size: 1.1rem; margin-bottom: 40px; }
         .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .contact-btn {
             color: var(--text);
@@ -169,7 +176,8 @@
 
         @media (max-width: 768px) {
             .bio-flex { flex-direction: column; align-items: center; text-align: center; }
-            .headshot { width: 100%; max-width: 300px; margin-bottom: 20px; }
+            .headshot { width: 100%; max-width: 320px; margin-bottom: 20px; }
+            .action-shot { max-height: none; width: 100%; }
             h1 { font-size: 2.5rem; text-align: center; }
             .highlights-grid { grid-template-columns: 1fr; }
         }
@@ -204,9 +212,11 @@
             
             <p>As Chief Creative Officer at Macaulay Culkin's <strong>BunnyEars.com</strong>, Shawn oversaw satirical content and produced viral projects like Culkin's <strong>"Home Alone" Google commercial</strong>.</p>
 
-            <img src="./action-shot.jpg" alt="Shawn in the studio" class="action-shot">
+            <div class="action-shot-container">
+                <img src="./action-shot.jpg" alt="Shawn in the studio" class="action-shot">
+            </div>
             
-            <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <span class="ska-highlight">ska music</span>.</p>
+            <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <strong>ska music</strong></span>.</p>
         </div>
 
         <div class="highlights-grid">
