@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404: Roll for Initiative | Shawn DePasquale</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --accent: #ff66ff; 
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .error-container {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            margin: 0;
+            color: #1a1a1a;
+            position: relative;
+            line-height: 1;
+        }
+
+        .error-code::after {
+            content: "404";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent);
+            animation: glitch 3s infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 30px var(--accent);
+        }
+
+        @keyframes glitch {
+            0% { transform: translateX(-50%) skew(0deg); }
+            2% { transform: translateX(-52%) skew(10deg); }
+            4% { transform: translateX(-48%) skew(-10deg); }
+            6% { transform: translateX(-50%) skew(0deg); }
+            100% { transform: translateX(-50%) skew(0deg); }
+        }
+
+        .ska-note {
+            position: fixed;
+            bottom: 20px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1>Critical Failure!</h1>
+        <p>
+            You rolled a Nat 1 on your navigation check. This page has been blinked out of existence or moved to a different reality. 
+        </p>
+        <a href="index.html" class="back-btn">Return to Safety</a>
+    </div>
+
+    <div class="ska-note">Pick it up, pick it up, pick it up!</div>
+
+</body>
+</html>

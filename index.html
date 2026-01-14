@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawn DePasquale | Creative Portfolio</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --accent: #ff66ff; 
+            --text: #ffffff;
+            --award: #ffcc00; /* Gold for Stunt List/Awards */
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+            padding-top: 70px; 
+        }
+
+        /* --- STICKY NAVIGATION BAR --- */
+        nav.main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid #222;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-container a {
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-container a:hover {
+            color: var(--accent);
+        }
+
+        /* --- LOGO / BANNER AREA --- */
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .main-logo {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- SHORT BIO SECTION (THE HOOK) --- */
+        .short-bio {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .short-bio p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #bbb;
+        }
+        .short-bio strong {
+            color: var(--accent);
+        }
+        .bio-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+        .bio-link:hover {
+            color: var(--accent);
+        }
+
+        /* --- THE GATEWAY GRID --- */
+        .gateway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gateway-card {
+            position: relative;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 2px solid #222;
+            background-color: #000;
+        }
+
+        .gateway-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px var(--accent);
+            border-color: var(--accent);
+        }
+
+        .lettering-bg, .writing-bg {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s ease, filter 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .lettering-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('lettering-cover.jpg'); 
+        }
+
+        .writing-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('writing-cover.jpg'); 
+        }
+
+        .gateway-card:hover .lettering-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('lettering-cover.jpg');
+            transform: scale(1.05);
+        }
+
+        .gateway-card:hover .writing-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('writing-cover.jpg');
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            pointer-events: none; 
+            z-index: 2;
+        }
+
+        .card-content h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .card-content p {
+            font-size: 1.1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* --- BUTTON FIX & AWARD STYLES --- */
+        .contact-btn, .read-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            padding: 12px 24px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            transition: 0.3s;
+            display: inline-block; /* Default for footer */
+            box-sizing: border-box; 
+        }
+
+        /* Specific fix for cards (used on writing.html) */
+        .card-btn {
+            display: block; 
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .contact-btn:hover, .read-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(255, 102, 255, 0.05);
+        }
+
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--award);
+            margin: 15px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- CONTACT FOOTER STYLES --- */
+        footer {
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: #050505;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h2 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .copyright {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .gateway-grid { grid-template-columns: 1fr; }
+            .gateway-card { height: 350px; }
+            footer h2 { font-size: 1.5rem; }
+            .contact-btn { width: 100%; } /* Mobile friendly footer buttons */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="lettering.html">Lettering</a>
+        </div>
+    </nav>
+
+    <div class="banner-container">
+        <img src="banner.png" alt="Shawn DePasquale - Writer, Producer, Letterer" class="main-logo">
+    </div>
+
+    <div class="short-bio">
+        <p>
+            <strong>Shawn DePasquale</strong> is a Los Angeles-based screenwriter, producer, and comic book creator specializing in high-concept genre storytelling. From <strong>Official Stunt List</strong> selections to professional lettering for <strong>Image</strong> and <strong>IDW</strong>, he builds worlds across every medium.
+        </p>
+        <a href="about.html" class="bio-link">Read Full Bio →</a>
+    </div>
+
+    <div class="gateway-grid">
+        <a href="lettering.html" class="gateway-card">
+            <div class="lettering-bg"></div>
+            <div class="card-content">
+                <h2>Lettering</h2>
+                <p>Comic Book Portfolio</p>
+            </div>
+        </a>
+
+        <a href="writing.html" class="gateway-card">
+            <div class="writing-bg"></div>
+            <div class="card-content">
+                <h2>Writing</h2>
+                <p>Screenplays & Comics</p>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <h2>Let's Collaborate</h2>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
+                shawnwrites@gmail.com
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Shawn DePasquale. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

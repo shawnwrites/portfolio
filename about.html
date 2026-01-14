@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Shawn DePasquale</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --accent: #ff66ff; 
+            --text: #ffffff;
+            --card: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding-top: 100px; 
+            line-height: 1.8;
+        }
+
+        /* --- STICKY NAVIGATION BAR --- */
+        nav.main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid #222;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-container a {
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            opacity: 0.7;
+        }
+
+        .nav-container a:hover {
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        /* --- ABOUT CONTENT --- */
+        .about-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+
+        .bio-text p {
+            font-size: 1.15rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        /* --- REMOVED UNDERLINE FROM BOLD WORDS --- */
+        .bio-text strong {
+            color: #fff;
+        }
+
+        /* --- HIGHLIGHT GRID --- */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .highlight-card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #222;
+        }
+
+        .highlight-card h3 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-top: 0;
+        }
+
+        .highlight-card p {
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* --- CONTACT FOOTER STYLES --- */
+        footer {
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: #050505;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h2 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            padding: 12px 24px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(255, 102, 255, 0.05);
+        }
+
+        .copyright {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .highlights-grid { grid-template-columns: 1fr; }
+            .nav-container { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="about.html" style="color: var(--accent); opacity: 1;">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="lettering.html">Lettering</a>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <h1>About Shawn</h1>
+        
+        <div class="bio-text">
+            <p><strong>Shawn DePasquale</strong> is a screenwriter, comic book writer and letterer, and producer with over <strong>20 years of experience</strong> bringing stories to life across multiple mediums.</p>
+            
+            <p>As a comic book letterer, Shawn has worked with major publishers including <strong>Image Comics, Oni Press, IDW Publishing, Arcana Studios, and Devil's Due Comics</strong>. His lettering work appears in titles alongside some of the industry's top creators, combining technical precision with an instinctive understanding of how words and art tell stories together.</p>
+            
+            <p>In film and television, he's held production roles across <strong>NBC, FX, TNT, and ABC</strong>, learning the ins and outs of visual storytelling from script to screen. He currently works as <strong>story editor</strong> for New York Times best-selling author <strong>Charles Soule</strong>, helping shape narratives that connect with millions of readers.</p>
+            
+            <p>As Chief Creative Officer and Editor-in-Chief at Macaulay Culkin's comedy publication <strong>BunnyEars.com</strong>, Shawn oversaw satirical content that blended sharp wit with pop culture commentary—including writing and producing Culkin's viral <strong>"Home Alone" Google commercial</strong>.</p>
+            
+            <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft, an eye for detail, and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <strong>ska music</strong>.</p>
+        </div>
+
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <h3>Narrative Strategy</h3>
+                <p>Story Editing for NYT Best-Sellers and Script Development for Major Networks.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Technical Mastery</h3>
+                <p>Professional Lettering for the industry's biggest indie publishers and Creative Direction for viral media.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <h2>Let's Collaborate</h2>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
+                shawnwrites@gmail.com
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Shawn DePasquale. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

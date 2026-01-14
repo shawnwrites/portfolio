@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettering Portfolio | Shawn DePasquale</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --accent: #ff66ff;
+            --card: #1a1a1a;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 80px; 
+        }
+
+        /* --- STICKY NAVIGATION BAR --- */
+        nav.main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid #222;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-container a {
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            opacity: 0.7;
+        }
+
+        .nav-container a:hover, .nav-container a.active {
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        /* --- CONTENT STYLES --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px 20px; }
+
+        h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; color: var(--accent); }
+        .intro { color: #888; margin-bottom: 40px; font-size: 1.1rem; text-align: center; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 80px;
+            padding: 20px 0;
+        }
+
+        .gallery a {
+            text-decoration: none;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: zoom-in;
+            border: 1px solid #333;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        border-color 0.3s, 
+                        box-shadow 0.3s;
+            display: block;
+        }
+
+        .gallery a::after {
+            content: "CLICK TO EXPAND";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 102, 255, 0.9);
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: 900;
+            padding: 5px 10px;
+            border-radius: 4px;
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
+            z-index: 11;
+            white-space: nowrap;
+        }
+
+        .gallery a:hover {
+            z-index: 10;
+        }
+
+        .gallery a:hover img {
+            border-color: var(--accent);
+            transform: scale(1.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            object-fit: contain;
+            background-color: #000;
+        }
+
+        .gallery a:hover::after {
+            opacity: 1;
+            bottom: -20px;
+        }
+
+        .credits-section {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+            border: 1px solid #222;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .credits-column h3 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .credits-list { list-style: none; padding: 0; }
+        .credits-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .work-title { font-weight: bold; color: #eee; padding-right: 10px; }
+        .publisher { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; }
+
+        /* --- CONTACT FOOTER STYLES --- */
+        footer {
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: #050505;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h2 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            padding: 12px 24px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(255, 102, 255, 0.05);
+        }
+
+        .copyright {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .credits-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+            .gallery a:hover img { transform: scale(1.1); }
+            .gallery a:hover::after { display: none; }
+            .nav-container { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="lettering.html" class="active">Lettering</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Lettering</h1>
+        <p class="intro">Selection of my professional lettering work for major publishers and independent creators.</p>
+
+        <div class="gallery">
+            <a href="lettering-samples/page1.png" target="_blank"><img src="lettering-samples/page1.png" alt="Club Neph"></a>
+            <a href="lettering-samples/page2.png" target="_blank"><img src="lettering-samples/page2.png" alt="The Disavowed"></a>
+            <a href="lettering-samples/page3.png" target="_blank"><img src="lettering-samples/page3.png" alt="Trailer Park Boys"></a>
+            <a href="lettering-samples/page4.png" target="_blank"><img src="lettering-samples/page4.png" alt="Club Neph"></a>
+            <a href="lettering-samples/page5.jpg" target="_blank"><img src="lettering-samples/page5.jpg" alt="Galaxys For Hire"></a>
+        </div>
+
+        <div class="credits-section">
+            <h2>Lettering Career Highlights</h2>
+            <div class="credits-grid">
+                <div class="credits-column">
+                    <h3>Featured Titles</h3>
+                    <ul class="credits-list">
+                        <li><span class="work-title">Galaxy's For Hire - Issues 1-5</span> <span class="publisher">Devil's Due</span></li>
+                        <li><span class="work-title">Collective Courage Remixed - OGN</span> <span class="publisher">TBD</span></li>
+                        <li><span class="work-title">Mercy Sparx: Daddy Issues - Issues 1-4</span> <span class="publisher">Devil's Due</span></li>
+                    </ul>
+                </div>
+
+                <div class="credits-column">
+                    <h3>Additional Work</h3>
+                    <ul class="credits-list">
+                        <li><span class="work-title">27 - Full series </span> <span class="publisher">Image</span></li>
+                        <li><span class="work-title">Night Moves - Full series</span> <span class="publisher">IDW</span></li>
+                        <li><span class="work-title">Letter 44 - Issues 1-5</span> <span class="publisher">Oni</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <h2>Let's Collaborate</h2>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
+                shawnwrites@gmail.com
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Shawn DePasquale. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

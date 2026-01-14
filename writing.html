@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Portfolio | Shawn DePasquale</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --accent: #ff66ff;
+            --card: #1a1a1a;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            padding-top: 80px; 
+        }
+
+        /* --- STICKY NAVIGATION BAR --- */
+        nav.main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid #222;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-container a {
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            opacity: 0.7;
+        }
+
+        .nav-container a:hover, .nav-container a.active {
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        /* --- CONTENT STYLES --- */
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        h1 { font-size: 3.5rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; color: var(--accent); }
+        .intro { color: #888; margin-bottom: 50px; font-size: 1.2rem; border-left: 3px solid var(--accent); padding-left: 20px; text-align: left; }
+
+        .script-card {
+            background: var(--card);
+            border: 1px solid #222;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .script-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .script-info { max-width: 65%; text-align: left; }
+        
+        .script-type { 
+            color: var(--accent); 
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .script-card h3 { margin: 0 0 15px 0; font-size: 2rem; letter-spacing: -0.5px; }
+        .script-card p { color: #bbb; font-size: 1rem; line-height: 1.6; margin-bottom: 0; }
+
+        .read-btn {
+            padding: 15px 30px;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .read-btn:hover { background: var(--accent); color: #000; }
+
+        /* Style for the "Request" button to look slightly different if desired, or keep same */
+        .request-btn {
+            border-color: #555;
+            color: #888;
+        }
+        .request-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: transparent;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: #050505;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h2 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            padding: 10px 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(255, 102, 255, 0.05);
+        }
+
+        .copyright {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .script-card { flex-direction: column; align-items: flex-start; padding: 30px; }
+            .script-info { max-width: 100%; margin-bottom: 25px; }
+            .read-btn { width: 100%; text-align: center; }
+            h1 { font-size: 2.5rem; }
+            .nav-container { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="writing.html" class="active">Writing</a>
+            <a href="lettering.html">Lettering</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Writing</h1>
+        <p class="intro">Screenplays, Television Pilots, and Comic Book Scripts.</p>
+
+        <div class="script-card">
+            <div class="script-info">
+                <span class="script-type">Feature Film</span>
+                <h3>Grow A Pair</h3>
+                <p>After witnessing a kidnapping, a timid paralegal finally decides to "grow a pair" and pursues the captors across state lines, only to discover that the woman he is trying to rescue might be far more dangerous than the men who took her.</p>
+            </div>
+            <a href="scripts/Grow_A_Pair_04_2025.pdf" class="read-btn" target="_blank">Read Script</a>
+        </div>
+
+        <div class="script-card">
+            <div class="script-info">
+                <span class="script-type">Feature Film</span>
+                <h3>Robocop: Against The Machine</h3>
+                <p>Forty years after his creation, a deactivated Alex Murphy is resurrected by tech-activists to lead a revolution against a corporate surveillance state that has traded Detroit’s freedom for algorithmic security.</p>
+                <div style="margin-top: 10px; font-size: 0.85rem; color: #888;">
+                    🏆 <a href="https://www.officialstuntlist.com/stunt-list-s3/robocop-against-the-machine" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Official Stunt List Selection</a>
+                </div>
+            </div>
+            <a href="scripts/Robocop_AgainstTheMachine_06172024.pdf" class="read-btn" target="_blank">Read Script</a>
+        </div>
+
+        <div class="script-card">
+            <div class="script-info">
+                <span class="script-type">Feature Film</span>
+                <h3>Eagle Trace</h3>
+                <p>Haunted by a tragic military ambush, a stoic skip tracer is hired by a shadowy government front to find a high-level whistleblower, only to realize he is the final loose end in a massive cover-up involving war crimes.</p>
+            </div>
+            <a href="scripts/EagleTraceFeature_March2024.pdf" class="read-btn" target="_blank">Read Script</a>
+        </div>
+
+        <div class="script-card">
+            <div class="script-info">
+                <span class="script-type">TV Pilot</span>
+                <h3>Plume</h3>
+                <p>After her archeologist father is murdered for his collection of magical artifacts, a headstrong young woman and her supernatural guardian set out across the Old West to reclaim her father's legacy from a ruthless outlaw gang.</p>
+                <div style="margin-top: 10px; font-size: 0.85rem; color: #888;">
+                    Based on the hit comic series: <a href="http://plumecomic.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">plumecomic.com</a>
+                </div>
+            </div>
+            <a href="scripts/Plume_Pilot.pdf" class="read-btn" target="_blank">Read Script</a>
+        </div>
+
+        <div class="script-card">
+            <div class="script-info">
+                <span class="script-type">Comic Book // Issue #1 (Art by Brian Rogers)</span>
+                <h3>Marley's Monsters</h3>
+                <p>When thirteen-year-old Marley Pak inherits a mysterious charm bracelet from her late mother, she is pulled into the NetherRealm and must lead a ragtag squad of monsters to stop an ethereal void-king.</p>
+            </div>
+            <a href="scripts/MarleysMonsters-ISSUE 1.pdf" class="read-btn" target="_blank">Read Script</a>
+        </div>
+
+        <div class="script-card">
+            <div class="script-info">
+                <span class="script-type">Short Film // In Pre-Production</span>
+                <h3>BLINK</h3>
+                <p>During a TTRPG game, a man discovers he has the terrifying ability to "blink" people out of existence with a mere thought—a power that quickly spirals into a paranoid nightmare as his closest friends begin to disappear.</p>
+            </div>
+            <a href="mailto:shawnwrites@gmail.com?subject=Script Request: BLINK" class="read-btn request-btn">Available Upon Request</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <h2>Let's Collaborate</h2>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
+                shawnwrites@gmail.com
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Shawn DePasquale. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
