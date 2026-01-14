@@ -62,7 +62,7 @@
 
         /* --- ABOUT CONTENT --- */
         .about-container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
             text-align: left;
@@ -76,15 +76,44 @@
             color: var(--accent);
         }
 
+        /* --- PHOTO LAYOUT --- */
+        .bio-flex {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .headshot {
+            width: 320px; /* Snug for the 801x1200 portrait */
+            border-radius: 15px;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            flex-shrink: 0;
+        }
+
+        .action-shot {
+            width: 100%; /* Spans full width for the 1200x1000 landscape */
+            height: auto;
+            border-radius: 15px;
+            border: 1px solid #333;
+            margin: 40px 0;
+        }
+
         .bio-text p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: #ccc;
             margin-bottom: 25px;
         }
 
-        /* --- REMOVED UNDERLINE FROM BOLD WORDS --- */
         .bio-text strong {
             color: #fff;
+        }
+
+        .ska-highlight {
+            color: var(--accent);
+            font-weight: bold;
+            border-bottom: 1px dashed var(--accent);
         }
 
         /* --- HIGHLIGHT GRID --- */
@@ -110,13 +139,7 @@
             margin-top: 0;
         }
 
-        .highlight-card p {
-            margin-bottom: 0;
-            font-size: 1rem;
-            color: #bbb;
-        }
-
-        /* --- CONTACT FOOTER STYLES --- */
+        /* --- FOOTER STYLES --- */
         footer {
             margin-top: 100px;
             padding: 80px 20px;
@@ -125,32 +148,10 @@
             text-align: center;
         }
 
-        .footer-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        footer h2 {
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .contact-intro {
-            color: #888;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
+        .footer-container { max-width: 800px; margin: 0 auto; }
+        footer h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 4px; font-size: 2rem; margin-bottom: 15px; }
+        .contact-intro { color: #888; font-size: 1.1rem; margin-bottom: 40px; }
+        .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .contact-btn {
             color: var(--text);
             text-decoration: none;
@@ -163,25 +164,14 @@
             border-radius: 5px;
             transition: 0.3s;
         }
-
-        .contact-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(255, 102, 255, 0.05);
-        }
-
-        .copyright {
-            margin-top: 60px;
-            font-size: 0.75rem;
-            color: #444;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .contact-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(255, 102, 255, 0.05); }
+        .copyright { margin-top: 60px; font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
+            .bio-flex { flex-direction: column; align-items: center; text-align: center; }
+            .headshot { width: 100%; max-width: 300px; margin-bottom: 20px; }
+            h1 { font-size: 2.5rem; text-align: center; }
             .highlights-grid { grid-template-columns: 1fr; }
-            .nav-container { gap: 20px; }
         }
     </style>
 </head>
@@ -199,16 +189,24 @@
     <div class="about-container">
         <h1>About Shawn</h1>
         
+        <div class="bio-flex">
+            <img src="./headshot.jpg" alt="Shawn DePasquale" class="headshot">
+            
+            <div class="bio-text">
+                <p><strong>Shawn DePasquale</strong> is a screenwriter, comic book writer and letterer, and producer with over <strong>20 years of experience</strong> bringing stories to life across multiple mediums.</p>
+                
+                <p>As a comic book letterer, Shawn has worked with major publishers including <strong>Image Comics, Oni Press, IDW Publishing, Arcana Studios, and Devil's Due Comics</strong>. His lettering work appears in titles alongside some of the industry's top creators.</p>
+            </div>
+        </div>
+
         <div class="bio-text">
-            <p><strong>Shawn DePasquale</strong> is a screenwriter, comic book writer and letterer, and producer with over <strong>20 years of experience</strong> bringing stories to life across multiple mediums.</p>
+            <p>In film and television, he's held production roles across <strong>NBC, FX, TNT, and ABC</strong>, learning the ins and outs of visual storytelling from script to screen. He currently works as <strong>story editor</strong> for New York Times best-selling author <strong>Charles Soule</strong>.</p>
             
-            <p>As a comic book letterer, Shawn has worked with major publishers including <strong>Image Comics, Oni Press, IDW Publishing, Arcana Studios, and Devil's Due Comics</strong>. His lettering work appears in titles alongside some of the industry's top creators, combining technical precision with an instinctive understanding of how words and art tell stories together.</p>
+            <p>As Chief Creative Officer at Macaulay Culkin's <strong>BunnyEars.com</strong>, Shawn oversaw satirical content and produced viral projects like Culkin's <strong>"Home Alone" Google commercial</strong>.</p>
+
+            <img src="./action-shot.jpg" alt="Shawn in the studio" class="action-shot">
             
-            <p>In film and television, he's held production roles across <strong>NBC, FX, TNT, and ABC</strong>, learning the ins and outs of visual storytelling from script to screen. He currently works as <strong>story editor</strong> for New York Times best-selling author <strong>Charles Soule</strong>, helping shape narratives that connect with millions of readers.</p>
-            
-            <p>As Chief Creative Officer and Editor-in-Chief at Macaulay Culkin's comedy publication <strong>BunnyEars.com</strong>, Shawn oversaw satirical content that blended sharp wit with pop culture commentary—including writing and producing Culkin's viral <strong>"Home Alone" Google commercial</strong>.</p>
-            
-            <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft, an eye for detail, and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <strong>ska music</strong>.</p>
+            <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <span class="ska-highlight">ska music</span>.</p>
         </div>
 
         <div class="highlights-grid">
@@ -226,20 +224,12 @@
     <footer>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
-            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
-            
             <div class="contact-links">
                 <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
                 <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
             </div>
-
-            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
-                shawnwrites@gmail.com
-            </p>
-
-            <p class="copyright">
-                &copy; 2026 Shawn DePasquale. All Rights Reserved.
-            </p>
+            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">shawnwrites@gmail.com</p>
+            <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
         </div>
     </footer>
 
