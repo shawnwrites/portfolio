@@ -76,36 +76,39 @@
             color: var(--accent);
         }
 
-        /* --- REVISED PHOTO SIZES --- */
-        .bio-flex {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            margin-bottom: 40px;
-        }
+/* --- REVISED PHOTO SIZES --- */
+.bio-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
 
-        .headshot {
-            width: 400px; /* Increased size for your portrait photo */
-            height: auto;
-            border-radius: 15px;
-            border: 1px solid #333;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            flex-shrink: 0;
-        }
+.headshot {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
 
-        .action-shot-container {
-            width: 100%;
-            text-align: center; /* Centers the landscape image if it's smaller than the container */
-            margin: 40px 0;
-        }
+.action-shot-container {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+}
 
-        .action-shot {
-            width: 100%;
-            max-width: 800px; /* Limits the width of the landscape image */
-            max-height: 500px; /* Ensures it doesn't take up the whole screen height */
-            object-fit: cover; /* Keeps the aspect ratio clean if it hits the max-height */
-            border-radius: 15px;
-            border: 1px solid #333;
+.action-shot {
+    width: 100%;
+    max-width: 800px;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
         }
 
         .bio-text p {
