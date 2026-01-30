@@ -97,7 +97,7 @@
             margin-bottom: 20px;
         }
 
-        /* --- VIDEO EMBED STYLES --- */
+        /* --- OPTIMIZED VIDEO EMBED STYLES --- */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 Ratio */
@@ -108,6 +108,17 @@
             margin-bottom: 10px;
             background: #000;
             box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            cursor: pointer; /* Indicates it's clickable */
+        }
+
+        .video-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
         }
 
         .video-wrapper iframe {
@@ -116,6 +127,36 @@
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: 10;
+        }
+
+        /* The Custom Play Button */
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px;
+            height: 48px;
+            background-color: rgba(33, 33, 33, 0.8);
+            border-radius: 12px;
+            z-index: 5;
+            transition: background-color 0.2s;
+        }
+
+        .play-btn::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-style: solid;
+            border-width: 10px 0 10px 16px;
+            border-color: transparent transparent transparent #fff;
+        }
+
+        .video-wrapper:hover .play-btn {
+            background-color: #f00; /* YouTube Red on hover */
         }
 
         .video-caption {
@@ -132,7 +173,7 @@
             padding: 40px;
             text-align: center;
             border-top: 1px solid #222;
-            color: #9b9b9b;
+            color: #888;
             font-size: 0.8rem;
         }
     </style>
@@ -147,87 +188,129 @@
             <a href="lettering.html">Lettering</a>
         </div>
     </nav>
-<main>
-    <div class="content-container">
-        <h1>My Time on Red Letter Media</h1>
-        <p>
-            Yes, that was me on the "Black Spine Edition" episode! While I'm best known for writing comics like 
-            <a href="writing.html"><em>Galaxys' For Hire</em></a> and TTRPG adventures like 
-            <a href="writing.html"><em>Immortality Manor</em></a>, appearing on <strong>Red Letter Media (RLM)</strong> 
-            was a definitive career highlight.
-        </p>
-        <p>
-            The opportunity came about through my work with <strong>Bunny Ears</strong>, the comedy brand and production 
-            company created by <strong>Macaulay Culkin</strong>. The story of how I met Mack is a tale for another time, 
-            but our collaboration opened several professional doors—including the one to the RLM studio in [LOCATION REDACTED].
-        </p>
 
-        <h2>The Episodes</h2>
-        <p>
-            We shot several episodes at the studio, along with additional content for the Bunny Ears platform. 
-            All of these appearances were alongside Culkin, who had been a massive fan of the RLM crew for years. 
-            We were heavily promoting BunnyEars.com at the time, and the collaboration was a natural fit.
-        </p>
+    <main>
+        <div class="content-container">
+            <h1>My Time on Red Letter Media</h1>
+            <p>
+                Yes, that was me on the "Black Spine Edition" episode! While I'm best known for writing comics like 
+                <a href="writing.html"><em>Galaxys' For Hire</em></a> and TTRPG adventures like 
+                <a href="writing.html"><em>Immortality Manor</em></a>, appearing on <strong>Red Letter Media (RLM)</strong> 
+                was a definitive career highlight.
+            </p>
+            <p>
+                The opportunity came about through my work with <strong>Bunny Ears</strong>, the comedy brand and production 
+                company created by <strong>Macaulay Culkin</strong>. The story of how I met Mack is a tale for another time, 
+                but our collaboration opened several professional doors—including the one to the RLM studio in [LOCATION REDACTED].
+            </p>
 
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/YaSkO4TosYo?start=1872" frameborder="0" allowfullscreen></iframe>
+            <h2>The Episodes</h2>
+            <p>
+                We shot several episodes at the studio, along with additional content for the Bunny Ears platform. 
+                All of these appearances were alongside Culkin, who had been a massive fan of the RLM crew for years. 
+                We were heavily promoting BunnyEars.com at the time, and the collaboration was a natural fit.
+            </p>
+
+            <div class="video-wrapper" data-id="YaSkO4TosYo" data-start="1872" data-title="Best of the Worst: Hawk Jones">
+                <img src="https://img.youtube.com/vi/YaSkO4TosYo/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Best of the Worst: Hawk Jones, Winterbeast, and ROAR</p>
+
+            <div class="video-wrapper" data-id="ScgaYFvuBFM" data-start="564" data-title="Best of the Worst: Scary Christmas">
+                <img src="https://img.youtube.com/vi/ScgaYFvuBFM/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Best of the Worst: A Very Scary Christmas</p>
+
+            <div class="video-wrapper" data-id="a_FURNuBeQg" data-start="666" data-title="Best of the Worst: Plinketto">
+                <img src="https://img.youtube.com/vi/a_FURNuBeQg/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Best of the Worst: Plinketto #7</p>
+
+            <div class="video-wrapper" data-id="IKdWSYCM8Ug" data-start="495" data-title="Best of the Worst: Episode 78">
+                <img src="https://img.youtube.com/vi/IKdWSYCM8Ug/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Best of the Worst: Episode 78</p>
+
+            <div class="video-wrapper" data-id="9M39zY9OXFA" data-start="1295" data-title="Best of the Worst: Black Spine">
+                <img src="https://img.youtube.com/vi/9M39zY9OXFA/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Best of the Worst: Black Spine Junka 2</p>
+
+
+            <h2>Behind the Scenes with Bunny Ears</h2>
+            <p>
+                Not only was the Red Letter Media gang hilarious and welcoming, but they were also game to participate in several 
+                shorts we produced for the Bunny Ears YouTube channel.
+            </p>
+            
+            <div class="video-wrapper" data-id="f-w1SDtRglg" data-start="0" data-title="BTS: Mack Films an RLM Episode">
+                <img src="https://img.youtube.com/vi/f-w1SDtRglg/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Behind the Scenes: Mack Films an RLM Episode</p>
+
+            <div class="video-wrapper" data-id="5e56SnwL4aE" data-start="0" data-title="How It's Made: RLM">
+                <img src="https://img.youtube.com/vi/5e56SnwL4aE/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">How It's Made: Red Letter Media</p>
+
+            <div class="video-wrapper" data-id="ehMWe0rnyxQ" data-start="0" data-title="Macaulay Culkin Points at Things">
+                <img src="https://img.youtube.com/vi/ehMWe0rnyxQ/maxresdefault.jpg" alt="Video Thumbnail">
+                <div class="play-btn"></div>
+            </div>
+            <p class="video-caption">Macaulay Culkin Points at Things</p>
+
+            <p>
+                The whole collaboration was a thrilling experience and certainly one of my highest "career highs" yet.
+            </p>
+
+            <p style="margin-top: 50px; text-align: center;">
+                <a href="index.html" style="font-weight: bold; font-size: 1.2rem;">&larr; Back to Portfolio</a>
+            </p>
         </div>
-        <p class="video-caption">Best of the Worst: Hawk Jones, Winterbeast, and ROAR</p>
+    </main>
 
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/ScgaYFvuBFM?start=564" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Best of the Worst: A Very Scary Christmas</p>
-
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/a_FURNuBeQg?start=666" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Best of the Worst: Plinketto #7</p>
-
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/IKdWSYCM8Ug?start=495" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Best of the Worst: Episode 78</p>
-
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/9M39zY9OXFA?start=1295" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Best of the Worst: Black Spine Junka 2</p>
-
-
-        <h2>Behind the Scenes with Bunny Ears</h2>
-        <p>
-            Not only was the Red Letter Media gang hilarious and welcoming, but they were also game to participate in several 
-            shorts we produced for the Bunny Ears YouTube channel.
-        </p>
-        
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/f-w1SDtRglg" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Behind the Scenes: Mack Films an RLM Episode</p>
-
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/5e56SnwL4aE" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">How It's Made: Red Letter Media</p>
-
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/ehMWe0rnyxQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Macaulay Culkin Points at Things</p>
-
-        <p>
-            The whole collaboration was a thrilling experience and certainly one of my highest "career highs" yet.
-        </p>
-
-        <p style="margin-top: 50px; text-align: center;">
-            <a href="index.html" style="font-weight: bold; font-size: 1.2rem;">&larr; Back to Portfolio</a>
-        </p>
-    </div>
-</main>
     <footer>
         &copy; 2026 Shawn DePasquale.
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var videoWrappers = document.querySelectorAll('.video-wrapper');
+
+            videoWrappers.forEach(function(wrapper) {
+                wrapper.addEventListener('click', function() {
+                    var videoId = this.getAttribute('data-id');
+                    var start = this.getAttribute('data-start');
+                    var title = this.getAttribute('data-title');
+                    
+                    var iframe = document.createElement('iframe');
+                    
+                    // Uses youtube-nocookie for privacy/performance
+                    var src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
+                    
+                    if (start && start !== "0") {
+                        src += "&start=" + start;
+                    }
+                    
+                    iframe.setAttribute('src', src);
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allowfullscreen', 'true');
+                    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+                    iframe.setAttribute('title', title); // Fixes Accessibility Error
+                    
+                    this.innerHTML = '';
+                    this.appendChild(iframe);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
