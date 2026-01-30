@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lettering Portfolio | Shawn DePasquale</title>
+    
     <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.shawndepasquale.com/lettering.html">
-<meta property="og:title" content="Lettering Portfolio | Shawn DePasquale">
-<meta property="og:description" content="Professional comic book lettering for Image, IDW, Oni Press, and Devil's Due. View samples and rates.">
-<meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta property="og:url" content="https://www.shawndepasquale.com/lettering.html">
+    <meta property="og:title" content="Lettering Portfolio | Shawn DePasquale">
+    <meta property="og:description" content="Professional comic book lettering for Image, IDW, Oni Press, and Devil's Due. View samples and rates.">
+    <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.shawndepasquale.com/lettering.html">
-<meta name="twitter:title" content="Lettering Portfolio | Shawn DePasquale">
-<meta name="twitter:description" content="Professional comic book lettering samples. Credits include Image, IDW, and Oni Press.">
-<meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.shawndepasquale.com/lettering.html">
+    <meta name="twitter:title" content="Lettering Portfolio | Shawn DePasquale">
+    <meta name="twitter:description" content="Professional comic book lettering samples. Credits include Image, IDW, and Oni Press.">
+    <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
+    
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <style>
@@ -75,7 +77,9 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px 20px; }
 
         h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; color: var(--accent); text-align: center;}
-        .intro { color: #888; margin-bottom: 40px; font-size: 1.1rem; text-align: center; }
+        
+        /* FIXED: Lightened text color */
+        .intro { color: #ccc; margin-bottom: 40px; font-size: 1.1rem; text-align: center; }
 
         .gallery {
             display: grid;
@@ -198,8 +202,9 @@
             margin-bottom: 15px;
         }
 
+        /* FIXED: Lightened to #ccc */
         .contact-intro {
-            color: #888;
+            color: #ccc;
             font-size: 1.1rem;
             margin-bottom: 40px;
         }
@@ -230,10 +235,11 @@
             background: rgba(255, 102, 255, 0.05);
         }
 
+        /* FIXED: Lightened to #ccc */
         .copyright {
             margin-top: 60px;
             font-size: 0.75rem;
-            color: #444;
+            color: #ccc;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -258,41 +264,73 @@
         </div>
     </nav>
 
-    <div class="container">
-        <h1>Lettering</h1>
-        <p class="intro">Selection of my professional lettering work for major publishers and independent creators.</p>
+    <main>
+        <div class="container">
+            <h1>Lettering</h1>
+            <p class="intro">Selection of my professional lettering work for major publishers and independent creators.</p>
 
-        <div class="gallery">
-            <a href="./letteringsamples/page1.jpg" target="_blank"><img src="./letteringsamples/page1.jpg" alt="Club Neph"></a>
-            <a href="./letteringsamples/page2.png" target="_blank"><img src="./letteringsamples/page2.png" alt="The Disavowed"></a>
-            <a href="./letteringsamples/page3.png" target="_blank"><img src="./letteringsamples/page3.png" alt="Trailer Park Boys"></a>
-            <a href="./letteringsamples/page4.png" target="_blank"><img src="./letteringsamples/page4.png" alt="Club Neph"></a>
-            <a href="./letteringsamples/page5.jpg" target="_blank"><img src="./letteringsamples/page5.jpg" alt="Galaxys For Hire"></a>
-        </div>
+            <div class="gallery">
+                
+                <a href="./letteringsamples/page1.jpg" target="_blank" aria-label="View Club Neph Page 1 Sample">
+                    <img src="./letteringsamples/page1.jpg" 
+                         alt="Club Neph Page 1" 
+                         width="300" height="300" 
+                         fetchpriority="high">
+                </a>
 
-        <div class="credits-section">
-            <h2>Lettering Career Highlights</h2>
-            <div class="credits-grid">
-                <div class="credits-column">
-                    <h3>Featured Titles</h3>
-                    <ul class="credits-list">
-                        <li><span class="work-title">Galaxy's For Hire - Issues 1-5</span> <span class="publisher">Devil's Due</span></li>
-                        <li><span class="work-title">Collective Courage Remixed - OGN</span> <span class="publisher">TBD</span></li>
-                        <li><span class="work-title">Mercy Sparx: Daddy Issues - Issues 1-4</span> <span class="publisher">Devil's Due</span></li>
-                    </ul>
-                </div>
+                <a href="./letteringsamples/page2.jpg" target="_blank" aria-label="View The Disavowed Sample">
+                    <img src="./letteringsamples/page2.jpg" 
+                         alt="The Disavowed" 
+                         width="300" height="300" 
+                         loading="lazy">
+                </a>
 
-                <div class="credits-column">
-                    <h3>Additional Work</h3>
-                    <ul class="credits-list">
-                        <li><span class="work-title">27 - Full series </span> <span class="publisher">Image</span></li>
-                        <li><span class="work-title">Night Moves - Full series</span> <span class="publisher">IDW</span></li>
-                        <li><span class="work-title">Letter 44 - Issues 1-5</span> <span class="publisher">Oni</span></li>
-                    </ul>
+                <a href="./letteringsamples/page3.jpg" target="_blank" aria-label="View Trailer Park Boys Sample">
+                    <img src="./letteringsamples/page3.jpg" 
+                         alt="Trailer Park Boys" 
+                         width="300" height="300" 
+                         loading="lazy">
+                </a>
+
+                <a href="./letteringsamples/page4.png" target="_blank" aria-label="View Club Neph Page 2 Sample">
+                    <img src="./letteringsamples/page4.png" 
+                         alt="Club Neph Page 2" 
+                         width="300" height="300" 
+                         loading="lazy">
+                </a>
+
+                <a href="./letteringsamples/page5.jpg" target="_blank" aria-label="View Galaxys For Hire Sample">
+                    <img src="./letteringsamples/page5.jpg" 
+                         alt="Galaxys For Hire" 
+                         width="300" height="300" 
+                         loading="lazy">
+                </a>
+            </div>
+
+            <div class="credits-section">
+                <h2>Lettering Career Highlights</h2>
+                <div class="credits-grid">
+                    <div class="credits-column">
+                        <h3>Featured Titles</h3>
+                        <ul class="credits-list">
+                            <li><span class="work-title">Galaxy's For Hire - Issues 1-5</span> <span class="publisher">Devil's Due</span></li>
+                            <li><span class="work-title">Collective Courage Remixed - OGN</span> <span class="publisher">TBD</span></li>
+                            <li><span class="work-title">Mercy Sparx: Daddy Issues - Issues 1-4</span> <span class="publisher">Devil's Due</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-column">
+                        <h3>Additional Work</h3>
+                        <ul class="credits-list">
+                            <li><span class="work-title">27 - Full series </span> <span class="publisher">Image</span></li>
+                            <li><span class="work-title">Night Moves - Full series</span> <span class="publisher">IDW</span></li>
+                            <li><span class="work-title">Letter 44 - Issues 1-5</span> <span class="publisher">Oni</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="footer-container">

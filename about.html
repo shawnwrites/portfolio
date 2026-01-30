@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Shawn DePasquale</title>
+    
     <meta property="og:type" content="profile">
-<meta property="og:url" content="https://www.shawndepasquale.com/about.html">
-<meta property="og:title" content="About Shawn DePasquale | Writer & Producer">
-<meta property="og:description" content="20+ years in media. From story editing NYT Best-Sellers to producing content for Bunny Ears. Read the full bio.">
-<meta property="og:image" content="https://www.shawndepasquale.com/headshot.jpg">
+    <meta property="og:url" content="https://www.shawndepasquale.com/about.html">
+    <meta property="og:title" content="About Shawn DePasquale | Writer & Producer">
+    <meta property="og:description" content="20+ years in media. From story editing NYT Best-Sellers to producing content for Bunny Ears. Read the full bio.">
+    <meta property="og:image" content="https://www.shawndepasquale.com/headshot.jpg">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.shawndepasquale.com/about.html">
-<meta name="twitter:title" content="About Shawn DePasquale">
-<meta name="twitter:description" content="Screenwriter, Comic Creator, and Story Editor. 20+ years of storytelling experience.">
-<meta name="twitter:image" content="https://www.shawndepasquale.com/headshot.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.shawndepasquale.com/about.html">
+    <meta name="twitter:title" content="About Shawn DePasquale">
+    <meta name="twitter:description" content="Screenwriter, Comic Creator, and Story Editor. 20+ years of storytelling experience.">
+    <meta name="twitter:image" content="https://www.shawndepasquale.com/headshot.jpg">
+    
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <style>
@@ -96,7 +98,7 @@
 
         .headshot {
             width: 400px;
-            height: auto;
+            height: auto; /* Maintains aspect ratio */
             border-radius: 15px;
             border: 1px solid #333;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -112,14 +114,13 @@
         .action-shot {
             width: 100%;
             max-width: 800px;
+            height: auto;
             max-height: 500px;
             object-fit: cover;
             object-position: center 15%;
             border-radius: 15px;
             border: 1px solid #333;
         }
-
-        /* --- REMOVED THE EXTRA BRACKET HERE --- */
 
         .bio-text p {
             font-size: 1.1rem;
@@ -152,12 +153,13 @@
             border: 1px solid #222;
         }
 
-        .highlight-card h3 {
+        .highlight-card h2 { /* Changed from h3 to h2 for Accessibility order */
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.9rem;
+            font-size: 1rem; /* Adjusted size since it's now an h2 visually acting like a subtitle */
             margin-top: 0;
+            margin-bottom: 10px;
         }
 
         /* --- FOOTER STYLES --- */
@@ -171,7 +173,9 @@
 
         .footer-container { max-width: 800px; margin: 0 auto; }
         footer h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 4px; font-size: 2rem; margin-bottom: 15px; }
+        
         .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        
         .contact-btn {
             color: var(--text);
             text-decoration: none;
@@ -185,7 +189,9 @@
             transition: 0.3s;
         }
         .contact-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(255, 102, 255, 0.05); }
-        .copyright { margin-top: 60px; font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* FIXED: Lightened to #ccc for better contrast */
+        .copyright { margin-top: 60px; font-size: 0.75rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
             .bio-flex { flex-direction: column; align-items: center; text-align: center; }
@@ -207,42 +213,53 @@
         </div>
     </nav>
 
-    <div class="about-container">
-        <h1>About Shawn</h1>
-        
-        <div class="bio-flex">
-            <img src="./headshot.jpg" alt="Shawn DePasquale" class="headshot">
+    <main>
+        <div class="about-container">
+            <h1>About Shawn</h1>
             
-            <div class="bio-text">
-                <p><strong>Shawn DePasquale</strong> is a screenwriter, comic book writer and letterer, and producer with over <strong>20 years of experience</strong> bringing stories to life across multiple mediums.</p>
+            <div class="bio-flex">
+                <img src="./headshot.jpg" 
+                     alt="Shawn DePasquale" 
+                     class="headshot" 
+                     width="400" 
+                     height="500" 
+                     fetchpriority="high">
                 
-                <p>As a comic book letterer, Shawn has worked with major publishers including <strong>Image Comics, Oni Press, IDW Publishing, Arcana Studios, and Devil's Due Comics</strong>. His lettering work appears in titles alongside some of the industry's top creators.</p>
+                <div class="bio-text">
+                    <p><strong>Shawn DePasquale</strong> is a screenwriter, comic book writer and letterer, and producer with over <strong>20 years of experience</strong> bringing stories to life across multiple mediums.</p>
+                    
+                    <p>As a comic book letterer, Shawn has worked with major publishers including <strong>Image Comics, Oni Press, IDW Publishing, Arcana Studios, and Devil's Due Comics</strong>. His lettering work appears in titles alongside some of the industry's top creators.</p>
+                </div>
+            </div>
+
+            <div class="bio-text">
+                <p>In film and television, he's held production roles across <strong>NBC, FX, TNT, and ABC</strong>, learning the ins and outs of visual storytelling from script to screen. He currently works as <strong>story editor</strong> for New York Times best-selling author <strong>Charles Soule</strong>.</p>
+                
+                <p>As Chief Creative Officer at Macaulay Culkin's <strong>BunnyEars.com</strong>, Shawn oversaw satirical content and produced viral projects like Culkin's <strong>"Home Alone" Google commercial</strong>.</p>
+
+                <div class="action-shot-container">
+                    <img src="./action-shot.jpg" 
+                         alt="Shawn in the studio" 
+                         class="action-shot" 
+                         width="800" 
+                         height="500">
+                </div>
+                
+                <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <span class="ska-highlight">ska music</span>.</p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h2>Narrative Strategy</h2>
+                    <p>Story Editing for NYT Best-Sellers and Script Development for Major Networks.</p>
+                </div>
+                <div class="highlight-card">
+                    <h2>Technical Mastery</h2>
+                    <p>Professional Lettering for the industry's biggest indie publishers and Creative Direction for viral media.</p>
+                </div>
             </div>
         </div>
-
-        <div class="bio-text">
-            <p>In film and television, he's held production roles across <strong>NBC, FX, TNT, and ABC</strong>, learning the ins and outs of visual storytelling from script to screen. He currently works as <strong>story editor</strong> for New York Times best-selling author <strong>Charles Soule</strong>.</p>
-            
-            <p>As Chief Creative Officer at Macaulay Culkin's <strong>BunnyEars.com</strong>, Shawn oversaw satirical content and produced viral projects like Culkin's <strong>"Home Alone" Google commercial</strong>.</p>
-
-            <div class="action-shot-container">
-                <img src="./action-shot.jpg" alt="Shawn in the studio" class="action-shot">
-            </div>
-            
-            <p>Whether he's crafting dialogue for comic panels, polishing screenplay structure, or shaping a story from concept to completion, Shawn brings the same dedication to every project: a love for the craft and an unshakeable belief in the <strong>Oxford comma</strong>. Also coffee. Lots of coffee. And <strong>ska music</strong>.</p>
-        </div>
-
-        <div class="highlights-grid">
-            <div class="highlight-card">
-                <h3>Narrative Strategy</h3>
-                <p>Story Editing for NYT Best-Sellers and Script Development for Major Networks.</p>
-            </div>
-            <div class="highlight-card">
-                <h3>Technical Mastery</h3>
-                <p>Professional Lettering for the industry's biggest indie publishers and Creative Direction for viral media.</p>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer>
         <div class="footer-container">
