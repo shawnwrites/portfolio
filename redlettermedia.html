@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shawn DePasquale on Red Letter Media | Best of the Worst & Bunny Ears</title>
 
-    <meta name="description" content="Shawn DePasquale discusses his appearances on Red Letter Media's Best of the Worst, his work with Macaulay Culkin's Bunny Ears, and the 'Black Spine' episodes.">
+    <meta name="description" content="Shawn DePasquale discusses his appearances on Red Letter Media's Best of the Worst with Macaulay Culkin, his work as CCO at Bunny Ears, and the 'Black Spine' episodes. Behind-the-scenes stories and videos.">
 
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.shawndepasquale.com/redlettermedia.html">
@@ -20,6 +20,81 @@
     <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
 
     <link rel="icon" type="image/png" href="./favicon.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shawn DePasquale",
+      "url": "https://www.shawndepasquale.com",
+      "image": "https://www.shawndepasquale.com/banner.png",
+      "sameAs": [
+        "https://www.imdb.com/name/nm4267249/",
+        "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
+        "https://screenrant.com/author/sdepas/",
+        "https://bunnyears.com/author/bunnyears-sdp/",
+        "https://bsky.app/profile/shawnwrites.bsky.social",
+        "https://www.linkedin.com/in/shawndepasquale/",
+        "https://www.instagram.com/shawnwrites/"
+      ],
+      "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
+      "worksFor": [
+        { "@type": "Organization", "name": "Charles Soule" },
+        { "@type": "Organization", "name": "Screen Rant" },
+        { "@type": "Organization", "name": "Image Comics" },
+        { "@type": "Organization", "name": "IDW Publishing" }
+      ],
+      "knowsAbout": ["Screenwriting", "Comic Books", "Comic Book Lettering", "Film Production", "Television Production", "TTRPG", "Story Editing"],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "BunnyEars.com"
+      },
+      "colleague": [
+        {
+          "@type": "Person",
+          "name": "Macaulay Culkin"
+        },
+        {
+          "@type": "Person",
+          "name": "Charles Soule"
+        }
+      ],
+      "workExample": [
+        {
+          "@type": "CreativeWork",
+          "name": "Home Alone Again with the Google Assistant",
+          "description": "Google commercial reunion of Home Alone",
+          "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
+          "creator": {
+            "@type": "Organization",
+            "name": "Google"
+          },
+          "contributor": [
+            {
+              "@type": "Person",
+              "name": "Shawn DePasquale"
+            },
+            {
+              "@type": "Person",
+              "name": "Macaulay Culkin"
+            }
+          ]
+        },
+        {
+          "@type": "Book",
+          "name": "Trailer Park Boys: Countdown to Liquor Day",
+          "author": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "IDW Publishing"
+          }
+        }
+      ]
+    }
+    </script>
     
     <style>
         :root {
@@ -51,7 +126,14 @@
             backdrop-filter: blur(10px); 
             border-bottom: 1px solid #222;
             padding: 15px 0;
-            text-align: center;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
 
         .nav-container a {
@@ -61,9 +143,15 @@
             font-size: 0.8rem;
             font-weight: bold;
             letter-spacing: 2px;
-            margin: 0 15px;
+            transition: 0.3s;
+            opacity: 0.7;
         }
-        .nav-container a:hover { color: var(--accent); text-decoration: none; }
+
+        .nav-container a:hover {
+            color: var(--accent);
+            opacity: 1;
+            text-decoration: none;
+        }
 
         /* --- PAGE CONTENT --- */
         .content-container {
@@ -168,13 +256,73 @@
             text-align: center;
         }
 
+        /* --- FOOTER STYLES --- */
         footer {
-            margin-top: 60px;
-            padding: 40px;
-            text-align: center;
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: #050505;
             border-top: 1px solid #222;
-            color: #888;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h2 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             font-size: 0.8rem;
+            padding: 12px 24px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(255, 102, 255, 0.05);
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-container { gap: 20px; }
+            .contact-btn { width: 100%; }
         }
     </style>
 </head>
@@ -194,8 +342,8 @@
             <h1>My Time on Red Letter Media</h1>
             <p>
                 Yes, that was me on the "Black Spine Edition" episode! While I'm best known for writing comics like 
-                <a href="writing.html"><em>Galaxys' For Hire</em></a> and TTRPG adventures like 
-                <a href="writing.html"><em>Immortality Manor</em></a>, appearing on <strong>Red Letter Media (RLM)</strong> 
+                <a href="https://www.amazon.com/dp/B07JJN6XG8" target="_blank"><em>Galaxys' For Hire</em></a> and TTRPG adventures like 
+                <a href="https://www.drivethrurpg.com/en/publisher/27946/the-wandering-dm" target="_blank"><em>Immortality Manor</em></a>, appearing on <strong>Red Letter Media (RLM)</strong> 
                 was a definitive career highlight.
             </p>
             <p>
@@ -277,7 +425,18 @@
     </main>
 
     <footer>
-        &copy; 2026 Shawn DePasquale.
+        <div class="footer-container">
+            <h2>Let's Collaborate</h2>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
+            <div class="contact-links">
+                <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
+                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+            </div>
+            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">shawnwrites@gmail.com</p>
+            <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script>
