@@ -21,6 +21,10 @@
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -119,9 +123,9 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(13, 13, 13, 0.8);
+            background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            border-bottom: 1px solid #222;
+            border-bottom: 2px solid #222;
             padding: 15px 0;
         }
 
@@ -137,10 +141,10 @@
             color: var(--text);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
             letter-spacing: 2px;
-            transition: 0.3s;
+            transition: 0.2s;
             opacity: 0.7;
         }
 
@@ -149,12 +153,34 @@
             opacity: 1;
         }
 
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
+        .ska-separator {
+            height: 15px;
+            width: 100%;
+            background-image: 
+                linear-gradient(45deg, #222 25%, transparent 25%), 
+                linear-gradient(-45deg, #222 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #222 75%), 
+                linear-gradient(-45deg, transparent 75%, #222 75%);
+            background-color: #111;
+            background-size: 15px 15px;
+            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
         /* --- CONTENT STYLES --- */
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-        h1 { font-size: 3.5rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; color: var(--accent); }
+        h1 { 
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            margin-bottom: 10px; 
+            color: var(--accent); 
+        }
         
-        /* FIXED: Lightened color to #ccc for contrast */
         .intro { color: #ccc; margin-bottom: 50px; font-size: 1.2rem; border-left: 3px solid var(--accent); padding-left: 20px; text-align: left; }
 
         .script-card {
@@ -186,13 +212,17 @@
             margin-bottom: 10px;
         }
 
-        /* FIXED: Updated CSS selector to target h2 instead of h3 */
-        .script-card h2 { margin: 0 0 15px 0; font-size: 2rem; letter-spacing: -0.5px; line-height: 1.2; }
+        .script-card h2 { 
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0 0 15px 0; 
+            font-size: 2rem; 
+            letter-spacing: 1px; 
+            line-height: 1.2; 
+        }
         
-        /* FIXED: Lightened description text */
         .script-card p { color: #ccc; font-size: 1rem; line-height: 1.6; margin-bottom: 0; }
 
-        /* --- BUTTON STYLES (SNUG FIX) --- */
+        /* --- BUTTON STYLES --- */
         .read-btn {
             display: inline-block;
             width: fit-content; 
@@ -205,20 +235,25 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: 0.3s;
+            transition: 0.2s;
             white-space: nowrap;
         }
 
-        .read-btn:hover { background: var(--accent); color: #000; }
+        .read-btn:hover { 
+            background: var(--accent); 
+            color: #000;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #fff;
+        }
 
         .request-btn {
             border-color: #555;
-            color: #bbb; /* Lightened for contrast */
+            color: #bbb;
         }
         .request-btn:hover {
             border-color: var(--accent);
-            color: var(--accent);
-            background: transparent;
+            color: #000;
+            background: var(--accent);
         }
 
         /* --- FOOTER STYLES --- */
@@ -226,7 +261,6 @@
             margin-top: 100px;
             padding: 80px 20px;
             background: #050505;
-            border-top: 1px solid #222;
             text-align: center;
         }
 
@@ -237,13 +271,13 @@
 
         footer h2 {
             color: var(--accent);
+            font-family: 'Bebas Neue', sans-serif;
             text-transform: uppercase;
             letter-spacing: 4px;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
-        /* FIXED: Lightened to #ccc */
         .contact-intro {
             color: #ccc;
             font-size: 1.1rem;
@@ -262,23 +296,24 @@
             width: fit-content; 
             color: var(--text);
             text-decoration: none;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.8rem;
+            font-size: 1rem;
             padding: 12px 24px;
-            border: 1px solid #333;
+            border: 2px solid #333;
             border-radius: 5px;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         .contact-btn:hover {
             border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(255, 102, 255, 0.05);
+            color: #000;
+            background: var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #fff;
         }
 
-        /* FIXED: Lightened to #ccc */
         .copyright {
             margin-top: 60px;
             font-size: 0.75rem;
@@ -301,7 +336,7 @@
             
             h1 { font-size: 2.5rem; text-align: center; }
             .nav-container { gap: 15px; }
-            .nav-container a { font-size: 0.7rem; }
+            .nav-container a { font-size: 1.1rem; }
             .contact-btn { width: 100%; }
         }
     </style>
@@ -316,6 +351,8 @@
             <a href="lettering.html">Lettering</a>
         </div>
     </nav>
+
+    <div class="ska-separator"></div>
 
     <main>
         <div class="container">
@@ -386,6 +423,8 @@
 
         </div>
     </main>
+
+    <div class="ska-separator" style="margin-top: 80px;"></div>
 
     <footer>
         <div class="footer-container">
