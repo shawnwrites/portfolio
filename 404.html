@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404: Roll for Initiative | Shawn DePasquale</title>
+    
+    <link rel="icon" type="image/png" href="./favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg: #0d0d0d;
@@ -17,25 +24,75 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            position: relative;
         }
 
+        /* --- SKA CHECKERBOARD TOP --- */
+        .ska-separator {
+            position: fixed;
+            top: 0;
+            height: 15px;
+            width: 100%;
+            background-image: 
+                linear-gradient(45deg, #222 25%, transparent 25%), 
+                linear-gradient(-45deg, #222 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #222 75%), 
+                linear-gradient(-45deg, transparent 75%, #222 75%);
+            background-color: #111;
+            background-size: 15px 15px;
+            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
+            border-bottom: 1px solid #333;
+            z-index: 100;
+        }
+
+        .ska-separator.bottom {
+            top: auto;
+            bottom: 0;
+            border-bottom: none;
+            border-top: 1px solid #333;
+        }
+
+        /* --- WALT JABSCO SILHOUETTE --- */
+        .walt-silhouette {
+            position: fixed;
+            right: 60px;
+            bottom: 100px;
+            width: 180px;
+            height: auto;
+            opacity: 0.12;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .walt-silhouette img {
+            width: 100%;
+            height: auto;
+            filter: brightness(0) saturate(100%) invert(49%) sepia(88%) saturate(6238%) hue-rotate(295deg) brightness(101%) contrast(101%);
+        }
+
+        /* --- ERROR CONTAINER --- */
         .error-container {
-            max-width: 600px;
-            padding: 20px;
+            max-width: 700px;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
         }
 
         .error-code {
-            font-size: 8rem;
-            font-weight: 900;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 10rem;
+            font-weight: 400;
             margin: 0;
             color: #1a1a1a;
             position: relative;
             line-height: 1;
+            letter-spacing: 10px;
         }
 
         .error-code::after {
@@ -45,68 +102,103 @@
             left: 50%;
             transform: translateX(-50%);
             color: var(--accent);
-            text-shadow: 0 0 20px var(--accent);
-            animation: glitch 3s infinite;
+            text-shadow: 0 0 30px var(--accent), 0 0 60px var(--accent);
+            animation: glitch 4s infinite;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-top: 20px;
+            letter-spacing: 6px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #fff;
         }
 
         p {
             font-size: 1.2rem;
-            color: #888;
-            margin-bottom: 40px;
-            line-height: 1.6;
+            color: #bbb;
+            margin-bottom: 50px;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .back-btn {
             display: inline-block;
-            padding: 15px 35px;
-            border: 2px solid var(--accent);
-            color: var(--accent);
+            padding: 15px 40px;
+            border: 2px solid #333;
+            color: var(--text);
+            background: #000;
             text-decoration: none;
             text-transform: uppercase;
+            font-family: 'Bebas Neue', sans-serif;
             font-weight: bold;
             letter-spacing: 2px;
-            border-radius: 8px;
-            transition: 0.3s;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: 0.2s;
         }
 
         .back-btn:hover {
             background: var(--accent);
             color: #000;
-            box-shadow: 0 0 30px var(--accent);
+            border-color: var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #fff;
         }
 
         @keyframes glitch {
             0% { transform: translateX(-50%) skew(0deg); }
-            2% { transform: translateX(-52%) skew(10deg); }
-            4% { transform: translateX(-48%) skew(-10deg); }
+            2% { transform: translateX(-52%) skew(5deg); }
+            4% { transform: translateX(-48%) skew(-5deg); }
             6% { transform: translateX(-50%) skew(0deg); }
             100% { transform: translateX(-50%) skew(0deg); }
         }
 
         .ska-note {
             position: fixed;
-            bottom: 20px;
-            font-size: 0.7rem;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: #333;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .error-code { font-size: 6rem; }
+            h1 { font-size: 2rem; }
+            .walt-silhouette { 
+                width: 100px; 
+                right: 20px;
+                bottom: 70px;
+                opacity: 0.08;
+            }
+            .ska-note { font-size: 0.7rem; bottom: 20px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- SKA SEPARATORS -->
+    <div class="ska-separator"></div>
+    <div class="ska-separator bottom"></div>
+
+    <!-- WALT JABSCO SILHOUETTE -->
+    <div class="walt-silhouette">
+        <img src="walt-jabsco.png" alt="" aria-hidden="true">
+    </div>
+
     <div class="error-container">
         <div class="error-code">404</div>
         <h1>Critical Failure!</h1>
         <p>
-            You rolled a Nat 1 on your navigation check. This page has been blinked out of existence or moved to a different reality. 
+            You rolled a Nat 1 on your navigation check. This page has been blinked out of existence or moved to a different reality.
         </p>
         <a href="index.html" class="back-btn">Return to Safety</a>
     </div>

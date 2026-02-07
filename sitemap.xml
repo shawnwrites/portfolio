@@ -2,31 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.shawndepasquale.com/</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://www.shawndepasquale.com/redlettermedia.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.shawndepasquale.com/about.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.shawndepasquale.com/about.html</loc>
-    <lastmod>2026-01-30</lastmod>
-    <priority>0.80</priority>
+    <loc>https://www.shawndepasquale.com/credits.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.shawndepasquale.com/writing.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.shawndepasquale.com/lettering.html</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.shawndepasquale.com/redlettermedia.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.70</priority>
   </url>
 </urlset>
