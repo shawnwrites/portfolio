@@ -7,28 +7,32 @@
     
     <link rel="canonical" href="https://www.shawndepasquale.com/" />
     
-    <meta name="description" content="Official portfolio of Shawn DePasquale, writer, letterer, and editor for ScreenRant, Bunny Ears, and Devil's Due. Co-creator of 'Galaxys' For Hire', 'Marley's Monsters', and 'Immortality Manor'.">
+    <meta name="description" content="Shawn DePasquale is a screenwriter, comic book writer, and letterer. Co-writer of Google's Home Alone commercial with Macaulay Culkin. Former CCO of BunnyEars.com. Story editor for NYT bestselling author Charles Soule. Credits include Image Comics, IDW, Trailer Park Boys, and Red Letter Media.">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.shawndepasquale.com/">
-    <meta property="og:title" content="Shawn DePasquale | Comic Book Writer, Editor & Letterer">
-    <meta property="og:description" content="The official portfolio of Shawn DePasquale. Writer for Screen Rant, editor for Charles Soule, and creator of 'Galaxys' For Hire'.">
+    <meta property="og:title" content="Shawn DePasquale | Screenwriter & Comic Book Creator">
+    <meta property="og:description" content="Co-writer of Google's Home Alone commercial with Macaulay Culkin. Writer and letterer for Image Comics, IDW, and Trailer Park Boys. Story editor for Charles Soule.">
     <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.shawndepasquale.com/">
-    <meta name="twitter:title" content="Shawn DePasquale | Comic Book Writer">
-    <meta name="twitter:description" content="The official portfolio of Shawn DePasquale. Writer for Screen Rant and creator of 'Galaxys' For Hire'.">
+    <meta name="twitter:title" content="Shawn DePasquale | Screenwriter & Comic Book Writer">
+    <meta name="twitter:description" content="Co-writer of Google's Home Alone commercial with Macaulay Culkin. Comic book writer and letterer for major publishers.">
     <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
     
     <link rel="icon" type="image/png" href="./favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --bg: #0d0d0d;
             --accent: #ff66ff; 
             --text: #ffffff;
-            --award: #ffcc00; /* Gold for Stunt List/Awards */
+            --award: #ffcc00;
         }
 
         body {
@@ -46,9 +50,9 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(13, 13, 13, 0.8);
+            background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            border-bottom: 1px solid #222;
+            border-bottom: 2px solid #222;
             padding: 15px 0;
         }
 
@@ -64,14 +68,30 @@
             color: var(--text);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
             letter-spacing: 2px;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         .nav-container a:hover {
             color: var(--accent);
+        }
+
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
+        .ska-separator {
+            height: 15px;
+            width: 100%;
+            background-image: 
+                linear-gradient(45deg, #222 25%, transparent 25%), 
+                linear-gradient(-45deg, #222 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #222 75%), 
+                linear-gradient(-45deg, transparent 75%, #222 75%);
+            background-color: #111;
+            background-size: 15px 15px;
+            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
         /* --- LOGO / BANNER AREA --- */
@@ -91,7 +111,7 @@
             margin: 0 auto;
         }
 
-        /* --- SHORT BIO SECTION (THE HOOK) --- */
+        /* --- SHORT BIO SECTION --- */
         .short-bio {
             max-width: 800px;
             margin: 0 auto 60px auto;
@@ -111,11 +131,10 @@
             margin-top: 15px;
             color: var(--text);
             text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.8rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
             letter-spacing: 2px;
-            border-bottom: 1px solid var(--accent);
+            border-bottom: 2px solid var(--accent);
             padding-bottom: 5px;
             transition: 0.3s;
         }
@@ -136,17 +155,17 @@
         .gateway-card {
             position: relative;
             height: 500px;
-            border-radius: 15px;
+            border-radius: 8px;
             overflow: hidden;
             text-decoration: none;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 2px solid #222;
             background-color: #000;
         }
 
         .gateway-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px var(--accent);
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0px var(--accent);
             border-color: var(--accent);
         }
 
@@ -190,11 +209,12 @@
         }
 
         .card-content h2 {
-            font-size: 2.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 900;
+            font-weight: 400;
             color: var(--accent);
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
@@ -208,53 +228,11 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
-        /* --- BUTTON FIX & AWARD STYLES --- */
-        .contact-btn, .read-btn {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            padding: 12px 24px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            transition: 0.3s;
-            display: inline-block; 
-            box-sizing: border-box; 
-        }
-
-        /* Specific fix for cards (used on writing.html) */
-        .card-btn {
-            display: block; 
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .contact-btn:hover, .read-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(255, 102, 255, 0.05);
-        }
-
-        .award-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            color: var(--award);
-            margin: 15px 0;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* --- CONTACT FOOTER STYLES --- */
+        /* --- FOOTER STYLES --- */
         footer {
             margin-top: 100px;
             padding: 80px 20px;
             background: #050505;
-            border-top: 1px solid #222;
             text-align: center;
         }
 
@@ -265,13 +243,12 @@
 
         footer h2 {
             color: var(--accent);
-            text-transform: uppercase;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
             letter-spacing: 4px;
-            font-size: 2rem;
             margin-bottom: 15px;
         }
 
-        /* --- FIXED: Lighter color for accessibility --- */
         .contact-intro {
             color: #ccc; 
             font-size: 1.1rem;
@@ -285,7 +262,29 @@
             flex-wrap: wrap;
         }
 
-        /* --- FIXED: Lighter color for accessibility --- */
+        .contact-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            padding: 12px 24px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: 0.2s;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent);
+            color: #000;
+            background: var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #fff;
+        }
+
         .copyright {
             margin-top: 60px;
             font-size: 0.75rem;
@@ -298,7 +297,9 @@
             .gateway-grid { grid-template-columns: 1fr; }
             .gateway-card { height: 350px; }
             footer h2 { font-size: 1.5rem; }
-            .contact-btn { width: 100%; } 
+            .contact-btn { width: 100%; }
+            .nav-container { gap: 20px; }
+            .nav-container a { font-size: 1.1rem; }
         }
     </style>
    
@@ -308,22 +309,72 @@
       "@type": "Person",
       "name": "Shawn DePasquale",
       "url": "https://www.shawndepasquale.com",
+      "image": "https://www.shawndepasquale.com/banner.png",
       "sameAs": [
+        "https://www.imdb.com/name/nm4267249/",
+        "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
         "https://screenrant.com/author/sdepas/",
         "https://bunnyears.com/author/bunnyears-sdp/",
-        "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
         "https://bsky.app/profile/shawnwrites.bsky.social",
         "https://www.linkedin.com/in/shawndepasquale/",
-        "https://www.imdb.com/name/nm4267249/",
         "https://www.instagram.com/shawnwrites/"
       ],
-      "jobTitle": ["Comic Book Writer", "Editor", "Letterer"],
+      "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
       "worksFor": [
+        { "@type": "Organization", "name": "Charles Soule" },
         { "@type": "Organization", "name": "Screen Rant" },
-        { "@type": "Organization", "name": "Devil's Due Comics" },
-        { "@type": "Organization", "name": "Bunny Ears" }
+        { "@type": "Organization", "name": "Image Comics" },
+        { "@type": "Organization", "name": "IDW Publishing" }
       ],
-      "knowsAbout": ["Comic Books", "TTRPG", "Screenwriting", "Lettering", "Comic Book Lettering", "Film/TV"]
+      "knowsAbout": ["Screenwriting", "Comic Books", "Comic Book Lettering", "Film Production", "Television Production", "TTRPG", "Story Editing"],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "BunnyEars.com"
+      },
+      "colleague": [
+        {
+          "@type": "Person",
+          "name": "Macaulay Culkin"
+        },
+        {
+          "@type": "Person",
+          "name": "Charles Soule"
+        }
+      ],
+      "workExample": [
+        {
+          "@type": "CreativeWork",
+          "name": "Home Alone Again with the Google Assistant",
+          "description": "Google commercial reunion of Home Alone",
+          "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
+          "creator": {
+            "@type": "Organization",
+            "name": "Google"
+          },
+          "contributor": [
+            {
+              "@type": "Person",
+              "name": "Shawn DePasquale"
+            },
+            {
+              "@type": "Person",
+              "name": "Macaulay Culkin"
+            }
+          ]
+        },
+        {
+          "@type": "Book",
+          "name": "Trailer Park Boys: Countdown to Liquor Day",
+          "author": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "IDW Publishing"
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -337,6 +388,9 @@
             <a href="lettering.html">Lettering</a>
         </div>
     </nav>
+
+    <!-- SKA SEPARATOR AFTER NAV -->
+    <div class="ska-separator"></div>
 
     <main>
 
@@ -376,12 +430,16 @@
         </div>
 
         <div style="margin-top: 50px; margin-bottom: 20px;">
-            <a href="redlettermedia.html" style="color: #ff3131; font-size: 1.2rem; font-weight: bold; text-decoration: underline; text-transform: uppercase; letter-spacing: 1px;">
+            <a href="redlettermedia.html" style="font-family: 'Bebas Neue', sans-serif; color: #ff3131; font-size: 1.5rem; font-weight: bold; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #ff3131; transition: 0.3s;">
                 Read about my appearance on Red Letter Media HERE &rarr;
             </a>
         </div>
 
     </main>
+
+    <!-- SKA SEPARATOR BEFORE FOOTER -->
+    <div class="ska-separator" style="margin-top: 80px;"></div>
+
     <footer>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
@@ -389,9 +447,9 @@
             
             <div class="contact-links">
                 <a href="mailto:shawnwrites@gmail.com" class="contact-btn">Email Me</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
                 <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
                 <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
             </div>
 
             <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
