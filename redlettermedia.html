@@ -21,6 +21,10 @@
 
     <link rel="icon" type="image/png" href="./favicon.png">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -109,7 +113,7 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding-top: 80px; /* Space for fixed nav */
+            padding-top: 80px;
             line-height: 1.6;
         }
 
@@ -122,9 +126,9 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(13, 13, 13, 0.9);
+            background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            border-bottom: 1px solid #222;
+            border-bottom: 2px solid #222;
             padding: 15px 0;
         }
 
@@ -140,10 +144,10 @@
             color: var(--text);
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
             letter-spacing: 2px;
-            transition: 0.3s;
+            transition: 0.2s;
             opacity: 0.7;
         }
 
@@ -151,6 +155,22 @@
             color: var(--accent);
             opacity: 1;
             text-decoration: none;
+        }
+
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
+        .ska-separator {
+            height: 15px;
+            width: 100%;
+            background-image: 
+                linear-gradient(45deg, #222 25%, transparent 25%), 
+                linear-gradient(-45deg, #222 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #222 75%), 
+                linear-gradient(-45deg, transparent 75%, #222 75%);
+            background-color: #111;
+            background-size: 15px 15px;
+            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
         /* --- PAGE CONTENT --- */
@@ -162,6 +182,7 @@
         }
 
         h1 {
+            font-family: 'Bebas Neue', sans-serif;
             font-size: 2.5rem;
             color: var(--accent);
             text-transform: uppercase;
@@ -171,7 +192,8 @@
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
             color: #fff;
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
@@ -188,7 +210,7 @@
         /* --- OPTIMIZED VIDEO EMBED STYLES --- */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 8px;
@@ -196,7 +218,7 @@
             margin-bottom: 10px;
             background: #000;
             box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-            cursor: pointer; /* Indicates it's clickable */
+            cursor: pointer;
         }
 
         .video-wrapper img {
@@ -218,7 +240,6 @@
             z-index: 10;
         }
 
-        /* The Custom Play Button */
         .play-btn {
             position: absolute;
             top: 50%;
@@ -244,7 +265,7 @@
         }
 
         .video-wrapper:hover .play-btn {
-            background-color: #f00; /* YouTube Red on hover */
+            background-color: #f00;
         }
 
         .video-caption {
@@ -261,7 +282,6 @@
             margin-top: 100px;
             padding: 80px 20px;
             background: #050505;
-            border-top: 1px solid #222;
             text-align: center;
         }
 
@@ -272,9 +292,10 @@
 
         footer h2 {
             color: var(--accent);
+            font-family: 'Bebas Neue', sans-serif;
             text-transform: uppercase;
             letter-spacing: 4px;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
@@ -294,20 +315,22 @@
         .contact-btn {
             color: var(--text);
             text-decoration: none;
-            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.8rem;
+            font-size: 1rem;
             padding: 12px 24px;
-            border: 1px solid #333;
+            border: 2px solid #333;
             border-radius: 5px;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         .contact-btn:hover {
             border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(255, 102, 255, 0.05);
+            color: #000;
+            background: var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #fff;
             text-decoration: none;
         }
 
@@ -336,6 +359,8 @@
             <a href="lettering.html">Lettering</a>
         </div>
     </nav>
+
+    <div class="ska-separator"></div>
 
     <main>
         <div class="content-container">
@@ -419,10 +444,12 @@
             </p>
 
             <p style="margin-top: 50px; text-align: center;">
-                <a href="index.html" style="font-weight: bold; font-size: 1.2rem;">&larr; Back to Portfolio</a>
+                <a href="index.html" style="font-family: 'Bebas Neue', sans-serif; font-weight: bold; font-size: 1.5rem;">&larr; Back to Portfolio</a>
             </p>
         </div>
     </main>
+
+    <div class="ska-separator" style="margin-top: 80px;"></div>
 
     <footer>
         <div class="footer-container">
@@ -451,7 +478,6 @@
                     
                     var iframe = document.createElement('iframe');
                     
-                    // Uses youtube-nocookie for privacy/performance
                     var src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
                     
                     if (start && start !== "0") {
@@ -462,7 +488,7 @@
                     iframe.setAttribute('frameborder', '0');
                     iframe.setAttribute('allowfullscreen', 'true');
                     iframe.setAttribute('allow', 'autoplay; encrypted-media');
-                    iframe.setAttribute('title', title); // Fixes Accessibility Error
+                    iframe.setAttribute('title', title);
                     
                     this.innerHTML = '';
                     this.appendChild(iframe);
