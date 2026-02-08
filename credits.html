@@ -17,7 +17,7 @@
     <meta name="twitter:url" content="https://shawndepasquale.com/credits.html">
     <meta name="twitter:title" content="Credits & Work | Shawn DePasquale">
     <meta name="twitter:description" content="Complete professional credits and published work across film, TV, comics, and games.">
-    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
+    <meta name="twitter:image" content="https://shawndepasquale.com/banner.png">
     
     <link rel="canonical" href="https://shawndepasquale.com/credits.html">
     
@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
     
     <script type="application/ld+json">
     {
@@ -56,14 +57,8 @@
         "name": "BunnyEars.com"
       },
       "colleague": [
-        {
-          "@type": "Person",
-          "name": "Macaulay Culkin"
-        },
-        {
-          "@type": "Person",
-          "name": "Charles Soule"
-        }
+        { "@type": "Person", "name": "Macaulay Culkin" },
+        { "@type": "Person", "name": "Charles Soule" }
       ],
       "workExample": [
         {
@@ -71,40 +66,22 @@
           "name": "Home Alone Again with the Google Assistant",
           "description": "Google commercial reunion of Home Alone",
           "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
-          "creator": {
-            "@type": "Organization",
-            "name": "Google"
-          },
+          "creator": { "@type": "Organization", "name": "Google" },
           "contributor": [
-            {
-              "@type": "Person",
-              "name": "Shawn DePasquale"
-            },
-            {
-              "@type": "Person",
-              "name": "Macaulay Culkin"
-            }
+            { "@type": "Person", "name": "Shawn DePasquale" },
+            { "@type": "Person", "name": "Macaulay Culkin" }
           ]
         },
         {
           "@type": "Book",
           "name": "Trailer Park Boys: Countdown to Liquor Day",
-          "author": {
-            "@type": "Person",
-            "name": "Shawn DePasquale"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "IDW Publishing"
-          }
+          "author": { "@type": "Person", "name": "Shawn DePasquale" },
+          "publisher": { "@type": "Organization", "name": "IDW Publishing" }
         },
         {
           "@type": "Book",
           "name": "Galaxy's For Hire",
-          "author": {
-            "@type": "Person",
-            "name": "Shawn DePasquale"
-          },
+          "author": { "@type": "Person", "name": "Shawn DePasquale" },
           "url": "https://www.amazon.com/dp/B07JJN6XG8"
         }
       ]
@@ -124,7 +101,7 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding-top: 80px;
+            padding-top: 90px; /* Standardized for new nav */
             line-height: 1.6;
         }
 
@@ -135,9 +112,9 @@
             width: 100%;
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid #222;
-            padding: 15px 0;
+            backdrop-filter: blur(10px); 
+            padding-top: 15px;
+            padding-bottom: 0; 
         }
 
         .nav-container {
@@ -147,7 +124,7 @@
             justify-content: center;
             gap: 40px;
             list-style: none;
-            padding: 0;
+            padding: 0 0 15px 0;
         }
 
         .nav-container li {
@@ -170,9 +147,9 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR --- */
+        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
         .ska-separator {
-            height: 15px;
+            height: 24px; 
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -180,10 +157,9 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 15px 15px;
-            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
+            background-size: 24px 24px; 
+            background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+            border: none;
         }
 
         /* --- PAGE HEADER --- */
@@ -256,10 +232,15 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 12px;
-            border: 3px solid var(--accent);
+            border-radius: 8px;
+            border: 2px solid #333;
             background: #000;
-            box-shadow: 0 15px 40px rgba(255, 102, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            transition: border-color 0.3s ease;
+        }
+
+        .video-wrapper:hover {
+            border-color: var(--accent);
         }
 
         .video-wrapper iframe {
@@ -436,7 +417,7 @@
         /* --- FOOTER STYLES --- */
         footer {
             margin-top: 0;
-            padding: 80px 20px;
+            padding: 50px 20px;
             background: #050505;
             text-align: center;
         }
@@ -479,6 +460,8 @@
             border: 2px solid #333;
             border-radius: 5px;
             transition: 0.2s;
+            display: inline-block;
+            box-sizing: border-box;
         }
 
         .contact-btn:hover {
@@ -492,8 +475,16 @@
         .copyright {
             margin-top: 60px;
             font-size: 0.75rem;
-            color: #ccc;
+            color: #9b9b9b;
             text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
             letter-spacing: 1px;
         }
 
@@ -508,14 +499,6 @@
             margin-right: auto;
         }
 
-        .contact-email {
-            margin-top: 25px;
-            font-size: 1rem;
-            color: var(--accent);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
         .additional-work-grid {
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
@@ -525,7 +508,6 @@
             border-color: #444;
         }
 
-        /* --- TEXT UTILITY CLASSES --- */
         .text-accent {
             color: var(--accent);
         }
@@ -553,18 +535,15 @@
             <li><a href="writing.html">Writing</a></li>
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
+        <div class="ska-separator"></div>
     </nav>
 
-    <div class="ska-separator"></div>
-
     <main>
-        <!-- PAGE HEADER -->
         <div class="page-header">
             <h1>Credits & Work</h1>
             <p>A selected overview of professional credits across screenwriting, comics, lettering, and editorial work spanning 20+ years</p>
         </div>
 
-        <!-- GOOGLE COMMERCIAL SECTION -->
         <section class="credit-section">
             <div class="section-inner">
                 <h2 class="section-title">Google Home Alone Commercial</h2>
@@ -582,9 +561,8 @@
             </div>
         </section>
 
-        <div class="ska-separator"></div>
+        <div class="ska-separator" style="margin: 0; border: none;"></div>
 
-        <!-- TRAILER PARK BOYS SECTION -->
         <section class="credit-section alt-bg">
             <div class="section-inner">
                 <h2 class="section-title">Trailer Park Boys Comics</h2>
@@ -638,9 +616,8 @@
             </div>
         </section>
 
-        <div class="ska-separator"></div>
+        <div class="ska-separator" style="margin: 0; border: none;"></div>
 
-        <!-- COMICS & PUBLISHED WORK SECTION -->
         <section class="credit-section">
             <div class="section-inner">
                 <h2 class="section-title">Comics & Published Work</h2>
@@ -698,9 +675,8 @@
             </div>
         </section>
 
-        <div class="ska-separator"></div>
+        <div class="ska-separator" style="margin: 0; border: none;"></div>
 
-        <!-- TTRPG & OTHER WORK SECTION -->
         <section class="credit-section alt-bg">
             <div class="section-inner">
                 <h2 class="section-title">Additional Work</h2>
@@ -743,7 +719,7 @@
 
     </main>
 
-    <div class="ska-separator"></div>
+    <div class="ska-separator" style="margin-top: 80px;"></div>
 
     <footer>
         <div class="footer-container">
