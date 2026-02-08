@@ -8,31 +8,32 @@
     <meta name="description" content="Complete credits and published work of Shawn DePasquale. Co-writer of Google's Home Alone commercial with Macaulay Culkin. Writer, letterer, and editor for Trailer Park Boys comics (IDW). Published works include Galaxy's For Hire, Space MN, Pixies, Immortality Manor, and more.">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.shawndepasquale.com/credits.html">
+    <meta property="og:url" content="https://shawndepasquale.com/credits.html">
     <meta property="og:title" content="Credits & Work | Shawn DePasquale">
     <meta property="og:description" content="Google Home Alone commercial writer, Trailer Park Boys comics, Galaxy's For Hire, and 20+ years of published work.">
-    <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.shawndepasquale.com/credits.html">
+    <meta name="twitter:url" content="https://shawndepasquale.com/credits.html">
     <meta name="twitter:title" content="Credits & Work | Shawn DePasquale">
     <meta name="twitter:description" content="Complete professional credits and published work across film, TV, comics, and games.">
-    <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
+    
+    <link rel="canonical" href="https://shawndepasquale.com/credits.html">
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Shawn DePasquale",
-      "url": "https://www.shawndepasquale.com",
-      "image": "https://www.shawndepasquale.com/banner.png",
+      "url": "https://shawndepasquale.com",
+      "image": "https://shawndepasquale.com/banner.png",
       "sameAs": [
         "https://www.imdb.com/name/nm4267249/",
         "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
@@ -45,7 +46,6 @@
       ],
       "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
       "worksFor": [
-        { "@type": "Organization", "name": "Charles Soule" },
         { "@type": "Organization", "name": "Screen Rant" },
         { "@type": "Organization", "name": "Image Comics" },
         { "@type": "Organization", "name": "IDW Publishing" }
@@ -146,6 +146,12 @@
             display: flex;
             justify-content: center;
             gap: 40px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-container li {
+            display: inline;
         }
 
         .nav-container a {
@@ -491,6 +497,43 @@
             letter-spacing: 1px;
         }
 
+        /* --- UTILITY CLASSES --- */
+        .google-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #bbb;
+            margin-top: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .additional-work-grid {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        .film-link {
+            background: #222;
+            border-color: #444;
+        }
+
+        /* --- TEXT UTILITY CLASSES --- */
+        .text-accent {
+            color: var(--accent);
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
         @media (max-width: 768px) {
             .page-header h1 { font-size: 3rem; }
             .section-title { font-size: 2.5rem; }
@@ -503,13 +546,13 @@
 <body>
 
     <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="credits.html" class="active">Credits</a>
-            <a href="writing.html">Writing</a>
-            <a href="lettering.html">Lettering</a>
-        </div>
+        <ul class="nav-container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="credits.html" class="active">Credits</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="lettering.html">Lettering</a></li>
+        </ul>
     </nav>
 
     <div class="ska-separator"></div>
@@ -518,7 +561,7 @@
         <!-- PAGE HEADER -->
         <div class="page-header">
             <h1>Credits & Work</h1>
-            <p>20+ years of storytelling across film, television, comics, and games</p>
+            <p>A selected overview of professional credits across screenwriting, comics, lettering, and editorial work spanning 20+ years</p>
         </div>
 
         <!-- GOOGLE COMMERCIAL SECTION -->
@@ -529,12 +572,12 @@
                 
                 <div class="video-container">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/-lfHXKbsMLE?si=Ufu2UhzZruc-AznX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Google Home Alone Commercial featuring Macaulay Culkin" loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/-lfHXKbsMLE?si=Ufu2UhzZruc-AznX" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Google Home Alone Commercial featuring Macaulay Culkin" loading="lazy"></iframe>
                     </div>
                 </div>
 
-                <p style="text-align: center; font-size: 1.2rem; color: #bbb; margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    In 2018, I co-wrote this viral reunion commercial starring <strong style="color: var(--accent);">Macaulay Culkin</strong> reprising his iconic role as Kevin McCallister. Produced during my time as <strong style="color: #fff;">Chief Creative Officer at BunnyEars.com</strong>.
+                <p class="google-intro">
+                    In 2018, I co-wrote this viral reunion commercial starring <strong class="text-accent">Macaulay Culkin</strong> reprising his iconic role as Kevin McCallister. Produced during my time as <strong class="text-white">Chief Creative Officer at BunnyEars.com</strong>.
                 </p>
             </div>
         </section>
@@ -555,40 +598,40 @@
                                 <h3>Bagged & Boarded</h3>
                                 <span class="role">20th Anniversary</span>
                             </div>
-                            <a href="https://www.amazon.com/Bagged-Boarded-20th-Anniversary-Comic/dp/B0D9C5YC54" target="_blank">Buy on Amazon</a>
+                            <a href="https://www.amazon.com/Bagged-Boarded-20th-Anniversary-Comic/dp/B0D9C5YC54" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <img src="covers/cover-tpb-big.jpg" alt="TPB Big A$$ Collection" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-tpb-big.jpg" alt="Trailer Park Boys Big Collection" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>Big A$$ Collection</h3>
                                 <span class="role">Trade Paperback</span>
                             </div>
-                            <a href="https://www.amazon.com/Trailer-Park-Boys-Comic-Collection/dp/1737050595" target="_blank">Buy on Amazon</a>
+                            <a href="https://www.amazon.com/Trailer-Park-Boys-Comic-Collection/dp/1737050595" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <img src="covers/cover-tpb-conkys.jpg" alt="House of 1000 Conkys" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-tpb-conkys.jpg" alt="Trailer Park Boys House of 1000 Conkys" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>House of 1000 Conkys</h3>
                                 <span class="role">Mini-Series</span>
                             </div>
-                            <a href="https://www.amazon.com/Trailer-Park-Boys-House-Conkys-ebook/dp/B0B2KTN6JF" target="_blank">Buy on Amazon</a>
+                            <a href="https://www.amazon.com/Trailer-Park-Boys-House-Conkys-ebook/dp/B0B2KTN6JF" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <img src="covers/cover-tpb-gutters.jpg" alt="TPB In The Gutters" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-tpb-gutters.jpg" alt="Trailer Park Boys In The Gutters" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>In The Gutters</h3>
                                 <span class="role">Ongoing Series</span>
                             </div>
-                            <a href="https://www.amazon.com/Trailer-Park-Boys-Allison-Mick-ebook/dp/B0BBWBJVST" target="_blank">Buy on Amazon</a>
+                            <a href="https://www.amazon.com/Trailer-Park-Boys-Allison-Mick-ebook/dp/B0BBWBJVST" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
                 </div>
@@ -604,53 +647,53 @@
 
                 <div class="book-grid">
                     <div class="book-card">
-                        <img src="covers/cover-galaxys.jpg" alt="Galaxys For Hire" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-galaxys.jpg" alt="Galaxy's For Hire comic book cover" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>Galaxy's For Hire</h3>
                                 <span class="role">Writer</span> <span class="role">Creator</span>
                             </div>
-                            <a href="https://www.amazon.com/dp/B07JJN6XG8" target="_blank">Read on Amazon</a>
+                            <a href="https://www.amazon.com/dp/B07JJN6XG8" target="_blank" rel="noopener noreferrer">Read on Amazon</a>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <img src="covers/cover-spacemn.jpg" alt="Space, MN" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-spacemn.jpg" alt="Space, MN comic book cover" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>Space, MN</h3>
                                 <span class="role">Writer</span> <span class="role">Creator</span>
                             </div>
-                            <a href="https://www.amazon.com/Space-MN-Shawn-Depasquale/dp/1926914635" target="_blank">Buy on Amazon</a>
+                            <a href="https://www.amazon.com/Space-MN-Shawn-Depasquale/dp/1926914635" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <img src="covers/cover-pixies.jpg" alt="Pixies" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-pixies.jpg" alt="Pixies comic and film cover" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>Pixies</h3>
                                 <span class="role">Writer (Comic & Film)</span>
                             </div>
-                            <a href="https://www.amazon.com/Pixies-Shawn-DePasquale-ebook/dp/B0897ZRBQ2" target="_blank">Comic →</a>
-                            <a href="https://www.amazon.com/Pixies/dp/B078XZWV7G" target="_blank" style="background: #222; border-color: #444;">Film →</a>
+                            <a href="https://www.amazon.com/Pixies-Shawn-DePasquale-ebook/dp/B0897ZRBQ2" target="_blank" rel="noopener noreferrer">Comic →</a>
+                            <a href="https://www.amazon.com/Pixies/dp/B078XZWV7G" target="_blank" rel="noopener noreferrer" class="film-link">Film →</a>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <img src="covers/cover-aoc.jpg" alt="AOC Freshman Force" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-aoc.jpg" alt="AOC Freshman Force comic book cover" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>AOC: Freshman Force</h3>
                                 <span class="role">Contributing Writer</span>
                             </div>
-                            <a href="https://www.amazon.com/Alexandria-Ocasio-Cortez-Freshman-Force-Party-ebook/dp/B07Q521XQY" target="_blank">Read on Amazon</a>
+                            <a href="https://www.amazon.com/Alexandria-Ocasio-Cortez-Freshman-Force-Party-ebook/dp/B07Q521XQY" target="_blank" rel="noopener noreferrer">Read on Amazon</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="big-link">
-                    <a href="https://www.amazon.com/stores/Shawn-Depasquale/author/B00669TD0W" target="_blank">View Complete Amazon Author Page</a>
+                    <a href="https://www.amazon.com/stores/Shawn-Depasquale/author/B00669TD0W" target="_blank" rel="noopener noreferrer">View Complete Amazon Author Page</a>
                 </div>
             </div>
         </section>
@@ -662,22 +705,22 @@
             <div class="section-inner">
                 <h2 class="section-title">Additional Work</h2>
 
-                <div class="book-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                <div class="book-grid additional-work-grid">
                     <div class="book-card">
-                        <img src="covers/cover-immortality.jpg" alt="Immortality Manor" class="book-cover" style="height: 240px; object-position: center top;" width="300" height="240" loading="lazy">
+                        <img src="covers/cover-immortality.jpg" alt="Immortality Manor TTRPG adventure cover" class="book-cover" style="height: 240px; object-position: center top;" width="300" height="240" loading="lazy">
                         <div class="book-info">
                             <div>
                                 <h3>Immortality Manor</h3>
                                 <span class="role">TTRPG Adventure</span>
                                 <p>Extended adventure bundle featuring gothic horror and full campaign setting.</p>
                             </div>
-                            <a href="https://www.drivethrurpg.com/en/product/505312/immortality-manor-extended-adventure-bundle" target="_blank">Buy on DriveThruRPG</a>
+                            <a href="https://www.drivethrurpg.com/en/product/505312/immortality-manor-extended-adventure-bundle" target="_blank" rel="noopener noreferrer">Buy on DriveThruRPG</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="mini-section">
-                    <h3><a href="https://bunnyears.com" target="_blank">BunnyEars.com</a></h3>
+                    <h3><a href="https://bunnyears.com" target="_blank" rel="noopener noreferrer">BunnyEars.com</a></h3>
                     <span class="role">Chief Creative Officer</span>
                     <p>Served as CCO for Macaulay Culkin's comedy brand and production company, overseeing satirical content and viral media projects including collaborations with Red Letter Media.</p>
                     <p><a href="redlettermedia.html">Read about my Red Letter Media appearances →</a></p>
@@ -709,12 +752,12 @@
             
             <div class="contact-links">
                 <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
-                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
+                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
 
-            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
+            <p class="contact-email">
                 sjd427@proton.me
             </p>
 

@@ -7,6 +7,12 @@
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shawndepasquale.com/404.html">
+    <meta property="og:title" content="404: Page Not Found | Shawn DePasquale">
+    <meta property="og:description" content="This page doesn't exist. You rolled a Nat 1. Return to the portfolio.">
+    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -33,7 +39,7 @@
             position: relative;
         }
 
-        /* --- SKA CHECKERBOARD TOP --- */
+        /* --- SKA CHECKERBOARD DECORATION --- */
         .ska-separator {
             position: fixed;
             top: 0;
@@ -61,19 +67,23 @@
         /* --- WALT JABSCO SILHOUETTE --- */
         .walt-silhouette {
             position: fixed;
-            right: 60px;
-            bottom: 100px;
-            width: 180px;
-            height: auto;
-            opacity: 0.12;
+            left: 20px; /* Positioned on the LEFT */
+            bottom: 0px; /* Anchored to bottom */
+            width: auto;
+            height: 85vh; /* Takes up 85% of screen height */
             z-index: 1;
             pointer-events: none;
+            opacity: 0.8; /* High visibility */
+            /* Mix-blend-mode helps the black parts of the JPG blend if needed, 
+               but since we are using filters, normal is fine. */
         }
 
         .walt-silhouette img {
-            width: 100%;
-            height: auto;
-            filter: brightness(0) saturate(100%) invert(49%) sepia(88%) saturate(6238%) hue-rotate(295deg) brightness(101%) contrast(101%);
+            height: 100%;
+            width: auto;
+            display: block;
+            /* Since the image is Black on White, we invert it to make the figure White on Dark */
+            filter: invert(1); 
         }
 
         /* --- ERROR CONTAINER --- */
@@ -82,6 +92,8 @@
             padding: 40px 20px;
             position: relative;
             z-index: 10;
+            /* Push content slightly right so it doesn't overlap Walt on desktop */
+            margin-left: 150px; 
         }
 
         .error-code {
@@ -93,8 +105,10 @@
             position: relative;
             line-height: 1;
             letter-spacing: 10px;
+            user-select: none; 
         }
 
+        /* Glitch Effect on the Overlay Text */
         .error-code::after {
             content: "404";
             position: absolute;
@@ -168,38 +182,40 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             color: #444;
+            z-index: 10;
         }
 
         @media (max-width: 768px) {
             .error-code { font-size: 6rem; }
             h1 { font-size: 2rem; }
             .walt-silhouette { 
-                width: 100px; 
-                right: 20px;
-                bottom: 70px;
-                opacity: 0.08;
+                height: 40vh; /* Smaller on mobile */
+                left: -20px; /* Pull him slightly off screen */
+                bottom: 20px;
+                opacity: 0.15; /* More faded on mobile so text is readable over him */
             }
+            .error-container { margin-left: 0; } /* Center text on mobile */
             .ska-note { font-size: 0.7rem; bottom: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- SKA SEPARATORS -->
     <div class="ska-separator"></div>
     <div class="ska-separator bottom"></div>
 
-    <!-- WALT JABSCO SILHOUETTE -->
     <div class="walt-silhouette">
-        <img src="walt-jabsco.png" alt="" aria-hidden="true">
+        <img src="walt-jabsco.jpg" alt="" aria-hidden="true">
     </div>
 
     <div class="error-container">
-        <div class="error-code">404</div>
+        <div class="error-code" aria-label="Error 404">404</div>
+        
         <h1>Critical Failure!</h1>
         <p>
             You rolled a Nat 1 on your navigation check. This page has been blinked out of existence or moved to a different reality.
         </p>
+        
         <a href="index.html" class="back-btn">Return to Safety</a>
     </div>
 

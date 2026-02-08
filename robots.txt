@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.shawndepasquale.com/sitemap.xml
+Sitemap: https://shawndepasquale.com/sitemap.xml

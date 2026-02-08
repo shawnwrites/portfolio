@@ -8,16 +8,18 @@
     <meta name="description" content="Screenwriting and comic book writing portfolio of Shawn DePasquale. Read samples including 'Robocop: Against The Machine' (Official Stunt List), 'Marley's Monsters', feature films, TV pilots, and more. Available for screenwriting assignments.">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.shawndepasquale.com/writing.html">
+    <meta property="og:url" content="https://shawndepasquale.com/writing.html">
     <meta property="og:title" content="Writing Portfolio | Shawn DePasquale">
     <meta property="og:description" content="Read samples of my work, including 'Galaxys' For Hire', 'Immortality Manor', and screenplays available for option.">
-    <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.shawndepasquale.com/writing.html">
+    <meta name="twitter:url" content="https://shawndepasquale.com/writing.html">
     <meta name="twitter:title" content="Writing Portfolio | Shawn DePasquale">
     <meta name="twitter:description" content="Comic books, TTRPGs, and Screenplays. Explore the writing portfolio of Shawn DePasquale.">
-    <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta name="twitter:image" content="https://shawndepasquale.com/banner.png">
+    
+    <link rel="canonical" href="https://shawndepasquale.com/writing.html">
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
@@ -31,8 +33,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Shawn DePasquale",
-      "url": "https://www.shawndepasquale.com",
-      "image": "https://www.shawndepasquale.com/banner.png",
+      "url": "https://shawndepasquale.com",
+      "image": "https://shawndepasquale.com/banner.png",
       "sameAs": [
         "https://www.imdb.com/name/nm4267249/",
         "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
@@ -44,7 +46,6 @@
       ],
       "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
       "worksFor": [
-        { "@type": "Organization", "name": "Charles Soule" },
         { "@type": "Organization", "name": "Screen Rant" },
         { "@type": "Organization", "name": "Image Comics" },
         { "@type": "Organization", "name": "IDW Publishing" }
@@ -55,14 +56,8 @@
         "name": "BunnyEars.com"
       },
       "colleague": [
-        {
-          "@type": "Person",
-          "name": "Macaulay Culkin"
-        },
-        {
-          "@type": "Person",
-          "name": "Charles Soule"
-        }
+        { "@type": "Person", "name": "Macaulay Culkin" },
+        { "@type": "Person", "name": "Charles Soule" }
       ],
       "workExample": [
         {
@@ -70,32 +65,17 @@
           "name": "Home Alone Again with the Google Assistant",
           "description": "Google commercial reunion of Home Alone",
           "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
-          "creator": {
-            "@type": "Organization",
-            "name": "Google"
-          },
+          "creator": { "@type": "Organization", "name": "Google" },
           "contributor": [
-            {
-              "@type": "Person",
-              "name": "Shawn DePasquale"
-            },
-            {
-              "@type": "Person",
-              "name": "Macaulay Culkin"
-            }
+            { "@type": "Person", "name": "Shawn DePasquale" },
+            { "@type": "Person", "name": "Macaulay Culkin" }
           ]
         },
         {
           "@type": "Book",
           "name": "Trailer Park Boys: Countdown to Liquor Day",
-          "author": {
-            "@type": "Person",
-            "name": "Shawn DePasquale"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "IDW Publishing"
-          }
+          "author": { "@type": "Person", "name": "Shawn DePasquale" },
+          "publisher": { "@type": "Organization", "name": "IDW Publishing" }
         }
       ]
     }
@@ -136,6 +116,12 @@
             display: flex;
             justify-content: center;
             gap: 40px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-container li {
+            display: inline;
         }
 
         .nav-container a {
@@ -257,6 +243,67 @@
             background: var(--accent);
         }
 
+        /* --- UTILITY CLASSES --- */
+        .meta-note {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+
+        .section-spacing-lg {
+            margin-top: 80px;
+        }
+
+        /* --- FEATURED SCRIPT TREATMENT --- */
+        .script-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(255, 102, 255, 0.05) 0%, var(--card) 100%);
+        }
+
+        .script-card.featured .script-type {
+            background: rgba(255, 102, 255, 0.15);
+            padding: 5px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .stunt-list-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 204, 0, 0.1);
+            border: 1px solid #ffcc00;
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .stunt-list-badge img {
+            height: 30px;
+            width: auto;
+            filter: invert(1) brightness(1.2);
+        }
+
+        .stunt-list-badge a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .stunt-list-badge a:hover {
+            color: #fff;
+        }
+
+        /* --- CONTACT EMAIL UTILITY --- */
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
         /* --- FOOTER STYLES --- */
         footer {
             margin-top: 100px;
@@ -345,13 +392,13 @@
 <body>
 
     <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="credits.html">Credits</a>
-            <a href="writing.html" class="active">Writing</a>
-            <a href="lettering.html">Lettering</a>
-        </div>
+        <ul class="nav-container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="writing.html" class="active">Writing</a></li>
+            <li><a href="lettering.html">Lettering</a></li>
+        </ul>
     </nav>
 
     <div class="ska-separator"></div>
@@ -361,26 +408,27 @@
             <h1>Writing</h1>
             <p class="intro">Screenplays, Television Pilots, and Comic Book Scripts.</p>
 
+            <div class="script-card featured">
+                <div class="script-info">
+                    <span class="script-type">Feature Film</span>
+                    <h2>Robocop: Against The Machine</h2>
+                    <p>Forty years after his creation, a deactivated Alex Murphy is resurrected by tech-activists to lead a revolution against a corporate surveillance state that has traded Detroit's freedom for algorithmic security.</p>
+                    
+                    <div class="stunt-list-badge">
+                        <span style="font-size: 1.5rem;">🏆</span> 
+                        <a href="https://www.officialstuntlist.com/stunt-list-s3/robocop-against-the-machine" target="_blank" rel="noopener noreferrer">Official Stunt List Selection</a>
+                    </div>
+                </div>
+                <a href="scripts/Robocop_AgainstTheMachine_06172024.pdf" class="read-btn" target="_blank" aria-label="Read the script for Robocop: Against The Machine">Read Script</a>
+            </div>
+
             <div class="script-card">
                 <div class="script-info">
                     <span class="script-type">Feature Film</span>
                     <h2>Grow A Pair</h2>
                     <p>After witnessing a kidnapping, a timid paralegal finally decides to "grow a pair" and pursues the captors across state lines, only to discover that the woman he is trying to rescue might be far more dangerous than the men who took her.</p>
                 </div>
-                <a href="scripts/Grow_A_Pair_04_2025.pdf" class="read-btn" target="_blank">Read Script</a>
-            </div>
-
-            <div class="script-card">
-                <div class="script-info">
-                    <span class="script-type">Feature Film</span>
-                    <h2>Robocop: Against The Machine</h2>
-                    <p>Forty years after his creation, a deactivated Alex Murphy is resurrected by tech-activists to lead a revolution against a corporate surveillance state that has traded Detroit's freedom for algorithmic security.</p>
-                    
-                    <div style="margin-top: 10px; font-size: 0.85rem; color: #ccc;">
-                        🏆 <a href="https://www.officialstuntlist.com/stunt-list-s3/robocop-against-the-machine" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">Official Stunt List Selection</a>
-                    </div>
-                </div>
-                <a href="scripts/Robocop_AgainstTheMachine_06172024.pdf" class="read-btn" target="_blank">Read Script</a>
+                <a href="scripts/Grow_A_Pair_04_2025.pdf" class="read-btn" target="_blank" aria-label="Read the script for Grow A Pair">Read Script</a>
             </div>
 
             <div class="script-card">
@@ -389,7 +437,7 @@
                     <h2>Eagle Trace</h2>
                     <p>Haunted by a tragic military ambush, a stoic skip tracer is hired by a shadowy government front to find a high-level whistleblower, only to realize he is the final loose end in a massive cover-up involving war crimes.</p>
                 </div>
-                <a href="scripts/EagleTraceFeature_March2024.pdf" class="read-btn" target="_blank">Read Script</a>
+                <a href="scripts/EagleTraceFeature_March2024.pdf" class="read-btn" target="_blank" aria-label="Read the script for Eagle Trace">Read Script</a>
             </div>
 
             <div class="script-card">
@@ -398,11 +446,11 @@
                     <h2>Plume</h2>
                     <p>After her archeologist father is murdered for his collection of magical artifacts, a headstrong young woman and her supernatural guardian set out across the Old West to reclaim her father's legacy from a ruthless outlaw gang.</p>
                     
-                    <div style="margin-top: 10px; font-size: 0.85rem; color: #ccc;">
+                    <div class="meta-note">
                         Based on the hit comic series: <a href="http://plumecomic.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">plumecomic.com</a>
                     </div>
                 </div>
-                <a href="scripts/Plume_Pilot.pdf" class="read-btn" target="_blank">Read Script</a>
+                <a href="scripts/Plume_Pilot.pdf" class="read-btn" target="_blank" aria-label="Read the pilot script for Plume">Read Script</a>
             </div>
 
             <div class="script-card">
@@ -411,7 +459,7 @@
                     <h2>Marley's Monsters</h2>
                     <p>When thirteen-year-old Marley Pak inherits a mysterious charm bracelet from her late mother, she is pulled into the NetherRealm and must lead a ragtag squad of monsters to stop an ethereal void-king.</p>
                 </div>
-                <a href="scripts/MarleysMonsters-ISSUE 1.pdf" class="read-btn" target="_blank">Read Script</a>
+                <a href="scripts/MarleysMonsters-ISSUE 1.pdf" class="read-btn" target="_blank" aria-label="Read the comic script for Marley's Monsters Issue 1">Read Script</a>
             </div>
 
             <div class="script-card">
@@ -420,13 +468,13 @@
                     <h2>BLINK</h2>
                     <p>During a TTRPG game, a man discovers he has the terrifying ability to "blink" people out of existence with a mere thought—a power that quickly spirals into a paranoid nightmare as his closest friends begin to disappear.</p>
                 </div>
-                <a href="mailto:sjd427@proton.me?subject=Script Request: BLINK" class="read-btn request-btn">Available Upon Request</a>
+                <a href="mailto:sjd427@proton.me?subject=Script Request: BLINK" class="read-btn request-btn" aria-label="Request the script for BLINK via email">Available Upon Request</a>
             </div>
 
         </div>
     </main>
 
-    <div class="ska-separator" style="margin-top: 80px;"></div>
+    <div class="ska-separator section-spacing-lg"></div>
 
     <footer>
         <div class="footer-container">
@@ -435,12 +483,12 @@
             
             <div class="contact-links">
                 <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
-                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
+                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
 
-            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">
+            <p class="contact-email">
                 sjd427@proton.me
             </p>
 

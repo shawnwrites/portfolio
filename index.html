@@ -5,28 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shawn DePasquale | Comic Book Writer, Editor & Letterer</title>
     
-    <link rel="canonical" href="https://www.shawndepasquale.com/" />
+    <link rel="canonical" href="https://shawndepasquale.com/" />
     
     <meta name="description" content="Shawn DePasquale is a screenwriter, comic book writer, and letterer. Co-writer of Google's Home Alone commercial with Macaulay Culkin. Former CCO of BunnyEars.com. Story editor for NYT bestselling author Charles Soule. Credits include Image Comics, IDW, Trailer Park Boys, and Red Letter Media.">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.shawndepasquale.com/">
+    <meta property="og:url" content="https://shawndepasquale.com/">
     <meta property="og:title" content="Shawn DePasquale | Screenwriter & Comic Book Creator">
     <meta property="og:description" content="Co-writer of Google's Home Alone commercial with Macaulay Culkin. Writer and letterer for Image Comics, IDW, and Trailer Park Boys. Story editor for Charles Soule.">
-    <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.shawndepasquale.com/">
+    <meta name="twitter:url" content="https://shawndepasquale.com/">
     <meta name="twitter:title" content="Shawn DePasquale | Screenwriter & Comic Book Writer">
     <meta name="twitter:description" content="Co-writer of Google's Home Alone commercial with Macaulay Culkin. Comic book writer and letterer for major publishers.">
-    <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta name="twitter:image" content="https://shawndepasquale.com/banner.png">
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
     <link rel="preload" href="./banner.png" as="image">
     
     <style>
@@ -43,7 +42,7 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             text-align: center;
-            padding-top: 70px; 
+            padding-top: 80px; /* Standardized to match sub-pages */
         }
 
         /* --- STICKY NAVIGATION BAR --- */
@@ -64,6 +63,12 @@
             display: flex;
             justify-content: center;
             gap: 40px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-container li {
+            display: inline;
         }
 
         .nav-container a {
@@ -74,10 +79,12 @@
             font-size: 1.3rem;
             letter-spacing: 2px;
             transition: 0.2s;
+            opacity: 0.7;
         }
 
-        .nav-container a:hover {
+        .nav-container a:hover, .nav-container a.active {
             color: var(--accent);
+            opacity: 1;
         }
 
         /* --- SKA CHECKERBOARD SEPARATOR --- */
@@ -176,7 +183,7 @@
             width: 100%;
             background-size: cover;
             background-position: center;
-            transition: transform 0.6s ease, filter 0.5s ease;
+            transition: transform 0.6s ease;
             position: absolute;
             top: 0;
             left: 0;
@@ -190,14 +197,15 @@
             background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('writing-cover.jpg'); 
         }
 
-        .gateway-card:hover .lettering-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('lettering-cover.jpg');
+        .gateway-card:hover .lettering-bg, 
+        .gateway-card:hover .writing-bg {
             transform: scale(1.05);
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('lettering-cover.jpg'); /* Simplified for CSS consistency */
         }
 
+        /* Re-applying specific images for hover scale consistency */
         .gateway-card:hover .writing-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('writing-cover.jpg');
-            transform: scale(1.05);
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('writing-cover.jpg');
         }
 
         .card-content {
@@ -228,6 +236,24 @@
             letter-spacing: 4px;
             margin-top: 10px;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* --- SPECIAL FEATURE LINK --- */
+        .special-feature-link {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ff3131;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #ff3131;
+            transition: 0.3s;
+        }
+
+        .special-feature-link:hover {
+            color: #fff;
+            border-bottom-color: #fff;
         }
 
         /* --- FOOTER STYLES --- */
@@ -295,6 +321,19 @@
             letter-spacing: 1px;
         }
 
+        /* --- ACCESSIBILITY HELPER --- */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         @media (max-width: 768px) {
             .gateway-grid { grid-template-columns: 1fr; }
             .gateway-card { height: 350px; }
@@ -310,8 +349,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Shawn DePasquale",
-      "url": "https://www.shawndepasquale.com",
-      "image": "https://www.shawndepasquale.com/banner.png",
+      "url": "https://shawndepasquale.com",
+      "image": "https://shawndepasquale.com/banner.png",
       "sameAs": [
         "https://www.imdb.com/name/nm4267249/",
         "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
@@ -323,7 +362,6 @@
       ],
       "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
       "worksFor": [
-        { "@type": "Organization", "name": "Charles Soule" },
         { "@type": "Organization", "name": "Screen Rant" },
         { "@type": "Organization", "name": "Image Comics" },
         { "@type": "Organization", "name": "IDW Publishing" }
@@ -334,47 +372,26 @@
         "name": "BunnyEars.com"
       },
       "colleague": [
-        {
-          "@type": "Person",
-          "name": "Macaulay Culkin"
-        },
-        {
-          "@type": "Person",
-          "name": "Charles Soule"
-        }
+        { "@type": "Person", "name": "Macaulay Culkin" },
+        { "@type": "Person", "name": "Charles Soule" }
       ],
       "workExample": [
         {
           "@type": "CreativeWork",
           "name": "Home Alone Again with the Google Assistant",
-          "description": "Google commercial reunion of Home Alone",
           "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
-          "creator": {
-            "@type": "Organization",
-            "name": "Google"
-          },
-          "contributor": [
-            {
-              "@type": "Person",
-              "name": "Shawn DePasquale"
-            },
-            {
-              "@type": "Person",
-              "name": "Macaulay Culkin"
-            }
-          ]
+          "creator": { "@type": "Organization", "name": "Google" }
+        },
+        {
+          "@type": "ScreenplayWork",
+          "name": "Robocop: Against The Machine",
+          "description": "Official Stunt List Season 3 Selection",
+          "url": "https://www.officialstuntlist.com/stunt-list-s3/robocop-against-the-machine"
         },
         {
           "@type": "Book",
           "name": "Trailer Park Boys: Countdown to Liquor Day",
-          "author": {
-            "@type": "Person",
-            "name": "Shawn DePasquale"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "IDW Publishing"
-          }
+          "publisher": { "@type": "Organization", "name": "IDW Publishing" }
         }
       ]
     }
@@ -383,19 +400,19 @@
 <body>
 
     <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="credits.html">Credits</a>
-            <a href="writing.html">Writing</a>
-            <a href="lettering.html">Lettering</a>
-        </div>
+        <ul class="nav-container">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="lettering.html">Lettering</a></li>
+        </ul>
     </nav>
 
-    <!-- SKA SEPARATOR AFTER NAV -->
     <div class="ska-separator"></div>
 
     <main>
+        <h1 class="visually-hidden">Shawn DePasquale - Screenwriter, Comic Book Writer, and Letterer</h1>
 
         <div class="banner-container">
             <img src="banner.png" 
@@ -411,11 +428,10 @@
                 <strong>Shawn DePasquale</strong> is a Los Angeles-based screenwriter, producer, and comic book creator specializing in high-concept genre storytelling. From <strong>Official Stunt List</strong> selections to professional lettering for <strong>Image</strong> and <strong>IDW</strong>, he builds worlds across every medium.
             </p>
             <a href="about.html" class="bio-link">Read Full Bio →</a>
-            <br><br>
         </div>
 
         <div class="gateway-grid">
-            <a href="writing.html" class="gateway-card">
+            <a href="writing.html" class="gateway-card" aria-label="View writing portfolio - screenplays and comics">
                 <div class="writing-bg"></div>
                 <div class="card-content">
                     <h2>Writing</h2>
@@ -423,7 +439,7 @@
                 </div>
             </a>
 
-            <a href="lettering.html" class="gateway-card">
+            <a href="lettering.html" class="gateway-card" aria-label="View lettering portfolio - comic book lettering samples">
                 <div class="lettering-bg"></div>
                 <div class="card-content">
                     <h2>Lettering</h2>
@@ -433,14 +449,13 @@
         </div>
 
         <div style="margin-top: 50px; margin-bottom: 20px;">
-            <a href="redlettermedia.html" style="font-family: 'Bebas Neue', sans-serif; color: #ff3131; font-size: 1.5rem; font-weight: bold; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #ff3131; transition: 0.3s;">
+            <a href="redlettermedia.html" class="special-feature-link">
                 Read about my appearance on Red Letter Media HERE &rarr;
             </a>
         </div>
 
     </main>
 
-    <!-- SKA SEPARATOR BEFORE FOOTER -->
     <div class="ska-separator" style="margin-top: 80px;"></div>
 
     <footer>
@@ -450,9 +465,9 @@
             
             <div class="contact-links">
                 <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
-                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
+                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
 
             <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">

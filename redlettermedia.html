@@ -8,31 +8,32 @@
     <meta name="description" content="Shawn DePasquale discusses his appearances on Red Letter Media's Best of the Worst with Macaulay Culkin, his work as CCO at Bunny Ears, and the 'Black Spine' episodes. Behind-the-scenes stories and videos.">
 
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.shawndepasquale.com/redlettermedia.html">
+    <meta property="og:url" content="https://shawndepasquale.com/redlettermedia.html">
     <meta property="og:title" content="My Appearance on Red Letter Media | Best of the Worst">
     <meta property="og:description" content="The behind-the-scenes story of how I ended up on the Black Spine Edition of Best of the Worst with Macaulay Culkin.">
-    <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta property="og:image" content="https://shawndepasquale.com/banner.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.shawndepasquale.com/redlettermedia.html">
+    <meta name="twitter:url" content="https://shawndepasquale.com/redlettermedia.html">
     <meta name="twitter:title" content="My Time on Red Letter Media">
     <meta name="twitter:description" content="Behind the scenes of the 'Black Spine' episode and filming with the RLM crew.">
-    <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
+    <meta name="twitter:image" content="https://shawndepasquale.com/banner.png">
+
+    <link rel="canonical" href="https://shawndepasquale.com/redlettermedia.html">
 
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Shawn DePasquale",
-      "url": "https://www.shawndepasquale.com",
-      "image": "https://www.shawndepasquale.com/banner.png",
+      "url": "https://shawndepasquale.com",
+      "image": "https://shawndepasquale.com/banner.png",
       "sameAs": [
         "https://www.imdb.com/name/nm4267249/",
         "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
@@ -44,7 +45,6 @@
       ],
       "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
       "worksFor": [
-        { "@type": "Organization", "name": "Charles Soule" },
         { "@type": "Organization", "name": "Screen Rant" },
         { "@type": "Organization", "name": "Image Comics" },
         { "@type": "Organization", "name": "IDW Publishing" }
@@ -139,6 +139,12 @@
             display: flex;
             justify-content: center;
             gap: 40px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-container li {
+            display: inline;
         }
 
         .nav-container a {
@@ -343,6 +349,30 @@
             letter-spacing: 1px;
         }
 
+        /* --- UTILITY CLASSES --- */
+        .back-link-spacing {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .section-spacing-lg {
+            margin-top: 80px;
+        }
+
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .nav-container { gap: 20px; }
@@ -353,13 +383,13 @@
 <body>
 
     <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="credits.html">Credits</a>
-            <a href="writing.html">Writing</a>
-            <a href="lettering.html">Lettering</a>
-        </div>
+        <ul class="nav-container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="lettering.html">Lettering</a></li>
+        </ul>
     </nav>
 
     <div class="ska-separator"></div>
@@ -369,8 +399,8 @@
             <h1>My Time on Red Letter Media</h1>
             <p>
                 Yes, that was me on the "Black Spine Edition" episode! While I'm best known for writing comics like 
-                <a href="https://www.amazon.com/dp/B07JJN6XG8" target="_blank"><em>Galaxys' For Hire</em></a> and TTRPG adventures like 
-                <a href="https://www.drivethrurpg.com/en/publisher/27946/the-wandering-dm" target="_blank"><em>Immortality Manor</em></a>, appearing on <strong>Red Letter Media (RLM)</strong> 
+                <a href="https://www.amazon.com/dp/B07JJN6XG8" target="_blank" rel="noopener noreferrer"><em>Galaxys' For Hire</em></a> and TTRPG adventures like 
+                <a href="https://www.drivethrurpg.com/en/publisher/27946/the-wandering-dm" target="_blank" rel="noopener noreferrer"><em>Immortality Manor</em></a>, appearing on <strong>Red Letter Media (RLM)</strong> 
                 was a definitive career highlight.
             </p>
             <p>
@@ -386,31 +416,31 @@
                 We were heavily promoting BunnyEars.com at the time, and the collaboration was a natural fit.
             </p>
 
-            <div class="video-wrapper" data-id="YaSkO4TosYo" data-start="1872" data-title="Best of the Worst: Hawk Jones">
+            <div class="video-wrapper" data-id="YaSkO4TosYo" data-start="1872" data-title="Best of the Worst: Hawk Jones" role="button" tabindex="0" aria-label="Play video: Best of the Worst - Hawk Jones">
                 <img src="https://img.youtube.com/vi/YaSkO4TosYo/maxresdefault.jpg" alt="Red Letter Media Best of the Worst: Hawk Jones episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">Best of the Worst: Hawk Jones, Winterbeast, and ROAR</p>
 
-            <div class="video-wrapper" data-id="ScgaYFvuBFM" data-start="564" data-title="Best of the Worst: Scary Christmas">
+            <div class="video-wrapper" data-id="ScgaYFvuBFM" data-start="564" data-title="Best of the Worst: Scary Christmas" role="button" tabindex="0" aria-label="Play video: Best of the Worst - A Very Scary Christmas">
                 <img src="https://img.youtube.com/vi/ScgaYFvuBFM/maxresdefault.jpg" alt="Red Letter Media Best of the Worst: A Very Scary Christmas episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">Best of the Worst: A Very Scary Christmas</p>
 
-            <div class="video-wrapper" data-id="a_FURNuBeQg" data-start="666" data-title="Best of the Worst: Plinketto">
+            <div class="video-wrapper" data-id="a_FURNuBeQg" data-start="666" data-title="Best of the Worst: Plinketto" role="button" tabindex="0" aria-label="Play video: Best of the Worst - Plinketto #7">
                 <img src="https://img.youtube.com/vi/a_FURNuBeQg/maxresdefault.jpg" alt="Red Letter Media Best of the Worst: Plinketto #7 episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">Best of the Worst: Plinketto #7</p>
 
-            <div class="video-wrapper" data-id="IKdWSYCM8Ug" data-start="495" data-title="Best of the Worst: Episode 78">
+            <div class="video-wrapper" data-id="IKdWSYCM8Ug" data-start="495" data-title="Best of the Worst: Episode 78" role="button" tabindex="0" aria-label="Play video: Best of the Worst - Episode 78">
                 <img src="https://img.youtube.com/vi/IKdWSYCM8Ug/maxresdefault.jpg" alt="Red Letter Media Best of the Worst: Episode 78 thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">Best of the Worst: Episode 78</p>
 
-            <div class="video-wrapper" data-id="9M39zY9OXFA" data-start="1295" data-title="Best of the Worst: Black Spine">
+            <div class="video-wrapper" data-id="9M39zY9OXFA" data-start="1295" data-title="Best of the Worst: Black Spine" role="button" tabindex="0" aria-label="Play video: Best of the Worst - Black Spine Junka 2">
                 <img src="https://img.youtube.com/vi/9M39zY9OXFA/maxresdefault.jpg" alt="Red Letter Media Best of the Worst: Black Spine Junka 2 episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
@@ -423,19 +453,19 @@
                 shorts we produced for the Bunny Ears YouTube channel.
             </p>
             
-            <div class="video-wrapper" data-id="f-w1SDtRglg" data-start="0" data-title="BTS: Mack Films an RLM Episode">
+            <div class="video-wrapper" data-id="f-w1SDtRglg" data-start="0" data-title="BTS: Mack Films an RLM Episode" role="button" tabindex="0" aria-label="Play video: Behind the Scenes - Mack Films an RLM Episode">
                 <img src="https://img.youtube.com/vi/f-w1SDtRglg/maxresdefault.jpg" alt="Bunny Ears behind the scenes: Macaulay Culkin films Red Letter Media episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">Behind the Scenes: Mack Films an RLM Episode</p>
 
-            <div class="video-wrapper" data-id="5e56SnwL4aE" data-start="0" data-title="How It's Made: RLM">
+            <div class="video-wrapper" data-id="5e56SnwL4aE" data-start="0" data-title="How It's Made: RLM" role="button" tabindex="0" aria-label="Play video: How It's Made - Red Letter Media">
                 <img src="https://img.youtube.com/vi/5e56SnwL4aE/maxresdefault.jpg" alt="Bunny Ears: How It's Made - Red Letter Media parody episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
             <p class="video-caption">How It's Made: Red Letter Media</p>
 
-            <div class="video-wrapper" data-id="ehMWe0rnyxQ" data-start="0" data-title="Macaulay Culkin Points at Things">
+            <div class="video-wrapper" data-id="ehMWe0rnyxQ" data-start="0" data-title="Macaulay Culkin Points at Things" role="button" tabindex="0" aria-label="Play video: Macaulay Culkin Points at Things">
                 <img src="https://img.youtube.com/vi/ehMWe0rnyxQ/maxresdefault.jpg" alt="Bunny Ears: Macaulay Culkin Points at Things episode thumbnail" loading="lazy" width="1280" height="720">
                 <div class="play-btn"></div>
             </div>
@@ -445,13 +475,13 @@
                 The whole collaboration was a thrilling experience and certainly one of my highest "career highs" yet.
             </p>
 
-            <p style="margin-top: 50px; text-align: center;">
-                <a href="index.html" style="font-family: 'Bebas Neue', sans-serif; font-weight: bold; font-size: 1.5rem;">&larr; Back to Portfolio</a>
+            <p class="back-link-spacing">
+                <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
             </p>
         </div>
     </main>
 
-    <div class="ska-separator" style="margin-top: 80px;"></div>
+    <div class="ska-separator section-spacing-lg"></div>
 
     <footer>
         <div class="footer-container">
@@ -459,11 +489,11 @@
             <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
             <div class="contact-links">
                 <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
-                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
+                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
-            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">sjd427@proton.me</p>
+            <p class="contact-email">sjd427@proton.me</p>
             <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
         </div>
     </footer>
@@ -472,28 +502,41 @@
         document.addEventListener("DOMContentLoaded", function() {
             var videoWrappers = document.querySelectorAll('.video-wrapper');
 
+            function loadVideo(wrapper) {
+                var videoId = wrapper.getAttribute('data-id');
+                var start = wrapper.getAttribute('data-start');
+                var title = wrapper.getAttribute('data-title');
+                
+                var iframe = document.createElement('iframe');
+                
+                var src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
+                
+                if (start && start !== "0") {
+                    src += "&start=" + start;
+                }
+                
+                iframe.setAttribute('src', src);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', 'true');
+                iframe.setAttribute('allow', 'autoplay; encrypted-media');
+                iframe.setAttribute('title', title);
+                
+                wrapper.innerHTML = '';
+                wrapper.appendChild(iframe);
+            }
+
             videoWrappers.forEach(function(wrapper) {
+                // Click handler
                 wrapper.addEventListener('click', function() {
-                    var videoId = this.getAttribute('data-id');
-                    var start = this.getAttribute('data-start');
-                    var title = this.getAttribute('data-title');
-                    
-                    var iframe = document.createElement('iframe');
-                    
-                    var src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
-                    
-                    if (start && start !== "0") {
-                        src += "&start=" + start;
+                    loadVideo(this);
+                });
+
+                // Keyboard handler (Enter or Space)
+                wrapper.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        loadVideo(this);
                     }
-                    
-                    iframe.setAttribute('src', src);
-                    iframe.setAttribute('frameborder', '0');
-                    iframe.setAttribute('allowfullscreen', 'true');
-                    iframe.setAttribute('allow', 'autoplay; encrypted-media');
-                    iframe.setAttribute('title', title);
-                    
-                    this.innerHTML = '';
-                    this.appendChild(iframe);
                 });
             });
         });
