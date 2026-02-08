@@ -26,7 +26,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
     
     <script type="application/ld+json">
     {
@@ -95,7 +94,7 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             line-height: 1.6;
-            padding-top: 80px; 
+            padding-top: 90px; /* Standardized to match new nav height */
         }
 
         /* --- STICKY NAVIGATION BAR --- */
@@ -106,8 +105,8 @@
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            border-bottom: 2px solid #222;
-            padding: 15px 0;
+            padding-top: 15px;
+            padding-bottom: 0; 
         }
 
         .nav-container {
@@ -117,7 +116,7 @@
             justify-content: center;
             gap: 40px;
             list-style: none;
-            padding: 0;
+            padding: 0 0 15px 0;
         }
 
         .nav-container li {
@@ -140,9 +139,9 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR --- */
+        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
         .ska-separator {
-            height: 15px;
+            height: 24px; 
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -150,10 +149,9 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 15px 15px;
-            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
+            background-size: 24px 24px; 
+            background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+            border: none;
         }
 
         /* --- CONTENT STYLES --- */
@@ -166,9 +164,17 @@
             letter-spacing: 4px; 
             margin-bottom: 10px; 
             color: var(--accent); 
+            text-align: center; /* Centered Title */
         }
         
-        .intro { color: #ccc; margin-bottom: 50px; font-size: 1.2rem; border-left: 3px solid var(--accent); padding-left: 20px; text-align: left; }
+        .intro { 
+            color: #ccc; 
+            margin-bottom: 50px; 
+            font-size: 1.2rem; 
+            border-left: 3px solid var(--accent); 
+            padding-left: 20px; 
+            text-align: left; 
+        }
 
         .script-card {
             background: var(--card);
@@ -250,10 +256,6 @@
             color: #ccc;
         }
 
-        .section-spacing-lg {
-            margin-top: 80px;
-        }
-
         /* --- FEATURED SCRIPT TREATMENT --- */
         .script-card.featured {
             border-color: var(--accent);
@@ -278,12 +280,6 @@
             margin-top: 15px;
         }
 
-        .stunt-list-badge img {
-            height: 30px;
-            width: auto;
-            filter: invert(1) brightness(1.2);
-        }
-
         .stunt-list-badge a {
             color: #ffcc00;
             text-decoration: none;
@@ -295,19 +291,10 @@
             color: #fff;
         }
 
-        /* --- CONTACT EMAIL UTILITY --- */
-        .contact-email {
-            margin-top: 25px;
-            font-size: 1rem;
-            color: var(--accent);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
         /* --- FOOTER STYLES --- */
         footer {
-            margin-top: 100px;
-            padding: 80px 20px;
+            margin-top: 0;
+            padding: 50px 20px;
             background: #050505;
             text-align: center;
         }
@@ -362,6 +349,14 @@
             box-shadow: 4px 4px 0px #fff;
         }
 
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
         .copyright {
             margin-top: 60px;
             font-size: 0.75rem;
@@ -382,7 +377,7 @@
                 display: block; 
             }
             
-            h1 { font-size: 2.5rem; text-align: center; }
+            h1 { font-size: 2.5rem; }
             .nav-container { gap: 15px; }
             .nav-container a { font-size: 1.1rem; }
             .contact-btn { width: 100%; }
@@ -399,9 +394,8 @@
             <li><a href="writing.html" class="active">Writing</a></li>
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
+        <div class="ska-separator"></div>
     </nav>
-
-    <div class="ska-separator"></div>
 
     <main>
         <div class="container">
@@ -474,7 +468,7 @@
         </div>
     </main>
 
-    <div class="ska-separator section-spacing-lg"></div>
+    <div class="ska-separator" style="margin-top: 80px;"></div>
 
     <footer>
         <div class="footer-container">
