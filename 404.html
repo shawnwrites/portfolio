@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404: Roll for Initiative | Shawn DePasquale</title>
+    <title>404: It's a SKAtastrophe! | Shawn DePasquale</title>
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shawndepasquale.com/404.html">
-    <meta property="og:title" content="404: Page Not Found | Shawn DePasquale">
-    <meta property="og:description" content="This page doesn't exist. You rolled a Nat 1. Return to the portfolio.">
+    <meta property="og:title" content="404: It's a SKAtastrophe! | Shawn DePasquale">
+    <meta property="og:description" content="You've skanked your way to a dead link. This page has ghosted you, rude boy.">
     <meta property="og:image" content="https://shawndepasquale.com/banner.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,21 +67,20 @@
         /* --- WALT JABSCO SILHOUETTE --- */
         .walt-silhouette {
             position: fixed;
-            left: 50px; /* Adjusts horizontal distance from the left edge */
-            top: 50%;   /* Puts the top edge at the vertical middle */
-            transform: translateY(-50%); /* Pulls it up by half its height to perfectly center it */
+            left: 50px; 
+            top: 50%;   
+            transform: translateY(-50%); 
             width: auto;
-            height: 70vh; /* Adjusts size relative to screen height */
+            height: 70vh; 
             z-index: 1;
             pointer-events: none;
-            opacity: 1; /* Full visibility since the black bg blends with the page */
+            opacity: 1; 
         }
 
         .walt-silhouette img {
             height: 100%;
             width: auto;
             display: block;
-            /* Filter removed so the image displays naturally (White figure on Black bg) */
         }
 
         /* --- ERROR CONTAINER --- */
@@ -90,7 +89,6 @@
             padding: 40px 20px;
             position: relative;
             z-index: 10;
-            /* Push text to the right so it doesn't overlap Walt */
             margin-left: 150px; 
         }
 
@@ -138,28 +136,37 @@
             margin-right: auto;
         }
 
+        /* --- SKA BUTTON (Checkerboard Treatment) --- */
         .back-btn {
             display: inline-block;
-            padding: 15px 40px;
-            border: 2px solid #333;
-            color: var(--text);
-            background: #000;
+            padding: 15px 50px;
             text-decoration: none;
             text-transform: uppercase;
             font-family: 'Bebas Neue', sans-serif;
             font-weight: bold;
             letter-spacing: 2px;
-            font-size: 1.2rem;
-            border-radius: 5px;
+            font-size: 1.4rem;
+            border-radius: 6px;
             transition: 0.2s;
+            color: #fff;
+            border: 2px solid #fff;
+            
+            /* Dark Checkerboard Pattern Background */
+            background-color: #000;
+            background-image: 
+                linear-gradient(45deg, #222 25%, transparent 25%), 
+                linear-gradient(-45deg, #222 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #222 75%), 
+                linear-gradient(-45deg, transparent 75%, #222 75%);
+            background-size: 10px 10px; /* Small, subtle pattern */
+            background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
         }
 
         .back-btn:hover {
-            background: var(--accent);
-            color: #000;
             border-color: var(--accent);
+            color: var(--accent);
             transform: translate(-2px, -2px);
-            box-shadow: 4px 4px 0px #fff;
+            box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2);
         }
 
         @keyframes glitch {
@@ -188,13 +195,13 @@
             h1 { font-size: 2rem; }
             .walt-silhouette { 
                 height: 40vh; 
-                left: -40px; /* Pull him slightly off screen on mobile */
-                top: auto;   /* Reset top */
-                bottom: 20px; /* Stick to bottom on mobile */
-                transform: none; /* Remove centering transform on mobile */
-                opacity: 0.3; /* Fade him out so text is readable over him */
+                left: -40px; 
+                top: auto;   
+                bottom: 20px; 
+                transform: none; 
+                opacity: 0.3; 
             }
-            .error-container { margin-left: 0; } /* Center text on mobile */
+            .error-container { margin-left: 0; } 
             .ska-note { font-size: 0.7rem; bottom: 20px; }
         }
     </style>
@@ -211,12 +218,12 @@
     <div class="error-container">
         <div class="error-code" aria-label="Error 404">404</div>
         
-        <h1>Critical Failure!</h1>
+        <h1>It's a SKAtastrophe!</h1>
         <p>
-            You rolled a Nat 1 on your navigation check. This page has been blinked out of existence or moved to a different reality.
+            You’ve skanked your way to a dead link. This page has ghosted you, rude boy. Pick it up, pick it up, and head back to safety.
         </p>
         
-        <a href="index.html" class="back-btn">Return to Safety</a>
+        <a href="index.html" class="back-btn">Return Home</a>
     </div>
 
     <div class="ska-note">Pick it up, pick it up, pick it up!</div>
