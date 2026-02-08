@@ -67,23 +67,21 @@
         /* --- WALT JABSCO SILHOUETTE --- */
         .walt-silhouette {
             position: fixed;
-            left: 20px; /* Positioned on the LEFT */
-            bottom: 0px; /* Anchored to bottom */
+            left: 50px; /* Adjusts horizontal distance from the left edge */
+            top: 50%;   /* Puts the top edge at the vertical middle */
+            transform: translateY(-50%); /* Pulls it up by half its height to perfectly center it */
             width: auto;
-            height: 85vh; /* Takes up 85% of screen height */
+            height: 70vh; /* Adjusts size relative to screen height */
             z-index: 1;
             pointer-events: none;
-            opacity: 0.8; /* High visibility */
-            /* Mix-blend-mode helps the black parts of the JPG blend if needed, 
-               but since we are using filters, normal is fine. */
+            opacity: 1; /* Full visibility since the black bg blends with the page */
         }
 
         .walt-silhouette img {
             height: 100%;
             width: auto;
             display: block;
-            /* Since the image is Black on White, we invert it to make the figure White on Dark */
-            filter: invert(1); 
+            /* Filter removed so the image displays naturally (White figure on Black bg) */
         }
 
         /* --- ERROR CONTAINER --- */
@@ -92,7 +90,7 @@
             padding: 40px 20px;
             position: relative;
             z-index: 10;
-            /* Push content slightly right so it doesn't overlap Walt on desktop */
+            /* Push text to the right so it doesn't overlap Walt */
             margin-left: 150px; 
         }
 
@@ -189,10 +187,12 @@
             .error-code { font-size: 6rem; }
             h1 { font-size: 2rem; }
             .walt-silhouette { 
-                height: 40vh; /* Smaller on mobile */
-                left: -20px; /* Pull him slightly off screen */
-                bottom: 20px;
-                opacity: 0.15; /* More faded on mobile so text is readable over him */
+                height: 40vh; 
+                left: -40px; /* Pull him slightly off screen on mobile */
+                top: auto;   /* Reset top */
+                bottom: 20px; /* Stick to bottom on mobile */
+                transform: none; /* Remove centering transform on mobile */
+                opacity: 0.3; /* Fade him out so text is readable over him */
             }
             .error-container { margin-left: 0; } /* Center text on mobile */
             .ska-note { font-size: 0.7rem; bottom: 20px; }
