@@ -58,47 +58,19 @@
         "name": "BunnyEars.com"
       },
       "colleague": [
-        {
-          "@type": "Person",
-          "name": "Macaulay Culkin"
-        },
-        {
-          "@type": "Person",
-          "name": "Charles Soule"
-        }
+        { "@type": "Person", "name": "Macaulay Culkin" },
+        { "@type": "Person", "name": "Charles Soule" }
       ],
       "workExample": [
         {
           "@type": "CreativeWork",
           "name": "Home Alone Again with the Google Assistant",
-          "description": "Google commercial reunion of Home Alone",
-          "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
-          "creator": {
-            "@type": "Organization",
-            "name": "Google"
-          },
-          "contributor": [
-            {
-              "@type": "Person",
-              "name": "Shawn DePasquale"
-            },
-            {
-              "@type": "Person",
-              "name": "Macaulay Culkin"
-            }
-          ]
+          "creator": { "@type": "Organization", "name": "Google" }
         },
         {
           "@type": "Book",
           "name": "Trailer Park Boys: Countdown to Liquor Day",
-          "author": {
-            "@type": "Person",
-            "name": "Shawn DePasquale"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "IDW Publishing"
-          }
+          "publisher": { "@type": "Organization", "name": "IDW Publishing" }
         }
       ]
     }
@@ -117,7 +89,7 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding-top: 100px; 
+            padding-top: 90px; /* Standardized for new nav */
             line-height: 1.8;
         }
 
@@ -129,8 +101,8 @@
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            border-bottom: 2px solid #222;
-            padding: 15px 0;
+            padding-top: 15px;
+            padding-bottom: 0; 
         }
 
         .nav-container {
@@ -139,6 +111,12 @@
             display: flex;
             justify-content: center;
             gap: 40px;
+            list-style: none;
+            padding: 0 0 15px 0;
+        }
+
+        .nav-container li {
+            display: inline;
         }
 
         .nav-container a {
@@ -152,14 +130,14 @@
             opacity: 0.7;
         }
 
-        .nav-container a:hover {
+        .nav-container a:hover, .nav-container a.active {
             color: var(--accent);
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR --- */
+        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
         .ska-separator {
-            height: 15px;
+            height: 24px; 
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -167,10 +145,9 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 15px 15px;
-            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
+            background-size: 24px 24px; 
+            background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+            border: none;
         }
 
         /* --- ABOUT CONTENT --- */
@@ -188,6 +165,7 @@
             letter-spacing: 4px;
             margin-bottom: 30px;
             color: var(--accent);
+            text-align: center; /* Centered Title */
         }
 
         .bio-flex {
@@ -198,12 +176,27 @@
         }
 
         .headshot {
-            width: 400px;
+            width: 350px;
             height: auto;
             border-radius: 15px;
-            border: 1px solid #333;
+            border: 2px solid #222;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             flex-shrink: 0;
+            transition: border-color 0.3s ease;
+        }
+        
+        .headshot:hover {
+            border-color: var(--accent);
+        }
+
+        .bio-text p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .bio-text strong {
+            color: #fff;
         }
 
         .action-shot-container {
@@ -220,17 +213,12 @@
             object-fit: cover;
             object-position: center 15%;
             border-radius: 15px;
-            border: 1px solid #333;
+            border: 2px solid #222;
+            transition: border-color 0.3s ease;
         }
-
-        .bio-text p {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-bottom: 25px;
-        }
-
-        .bio-text strong {
-            color: #fff;
+        
+        .action-shot:hover {
+            border-color: var(--accent);
         }
 
         .ska-highlight {
@@ -250,7 +238,13 @@
             background: var(--card);
             padding: 30px;
             border-radius: 15px;
-            border: 1px solid #222;
+            border: 2px solid #222;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .highlight-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
         }
 
         .highlight-card h2 {
@@ -258,15 +252,22 @@
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-card p {
+            color: #bbb;
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.6;
         }
 
         /* --- FOOTER STYLES --- */
         footer {
-            margin-top: 100px;
-            padding: 80px 20px;
+            margin-top: 0;
+            padding: 50px 20px;
             background: #050505;
             text-align: center;
         }
@@ -282,9 +283,17 @@
             margin-bottom: 15px; 
         }
         
+        .contact-intro {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
         .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         
         .contact-btn {
+            display: inline-block;
+            width: fit-content; 
             color: var(--text);
             text-decoration: none;
             font-family: 'Bebas Neue', sans-serif;
@@ -305,6 +314,14 @@
             box-shadow: 4px 4px 0px #fff;
         }
         
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
         .copyright { 
             margin-top: 60px; 
             font-size: 0.75rem; 
@@ -326,16 +343,15 @@
 <body>
 
     <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="about.html" style="color: var(--accent); opacity: 1;">About</a>
-            <a href="credits.html">Credits</a>
-            <a href="writing.html">Writing</a>
-            <a href="lettering.html">Lettering</a>
-        </div>
+        <ul class="nav-container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="lettering.html">Lettering</a></li>
+        </ul>
+        <div class="ska-separator"></div>
     </nav>
-
-    <div class="ska-separator"></div>
 
     <main>
         <div class="about-container">
@@ -391,14 +407,22 @@
     <footer>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
+            
             <div class="contact-links">
                 <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
-                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" class="contact-btn">Goodreads</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" class="contact-btn">Instagram</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
+                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
-            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">sjd427@proton.me</p>
-            <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
+
+            <p class="contact-email">
+                sjd427@proton.me
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Shawn DePasquale. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
