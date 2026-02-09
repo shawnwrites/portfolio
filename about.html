@@ -23,11 +23,12 @@
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-<script type="application/ld+json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preload" href="./headshot.jpg" as="image">
+    
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -55,19 +56,47 @@
         "name": "BunnyEars.com"
       },
       "colleague": [
-        { "@type": "Person", "name": "Macaulay Culkin" },
-        { "@type": "Person", "name": "Charles Soule" }
+        {
+          "@type": "Person",
+          "name": "Macaulay Culkin"
+        },
+        {
+          "@type": "Person",
+          "name": "Charles Soule"
+        }
       ],
       "workExample": [
         {
           "@type": "CreativeWork",
           "name": "Home Alone Again with the Google Assistant",
-          "creator": { "@type": "Organization", "name": "Google" }
+          "description": "Google commercial reunion of Home Alone",
+          "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
+          "creator": {
+            "@type": "Organization",
+            "name": "Google"
+          },
+          "contributor": [
+            {
+              "@type": "Person",
+              "name": "Shawn DePasquale"
+            },
+            {
+              "@type": "Person",
+              "name": "Macaulay Culkin"
+            }
+          ]
         },
         {
           "@type": "Book",
           "name": "Trailer Park Boys: Countdown to Liquor Day",
-          "publisher": { "@type": "Organization", "name": "IDW Publishing" }
+          "author": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "IDW Publishing"
+          }
         }
       ]
     }
@@ -86,7 +115,7 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding-top: 90px; /* Standardized for new nav */
+            padding-top: 90px; 
             line-height: 1.8;
         }
 
@@ -99,7 +128,7 @@
             background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
             padding-top: 15px;
-            padding-bottom: 0; 
+            padding-bottom: 0;
         }
 
         .nav-container {
@@ -132,9 +161,9 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
         .ska-separator {
-            height: 24px; 
+            height: 24px;
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -142,7 +171,7 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 24px 24px; 
+            background-size: 24px 24px;
             background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
             border: none;
         }
@@ -162,7 +191,6 @@
             letter-spacing: 4px;
             margin-bottom: 30px;
             color: var(--accent);
-            text-align: center; /* Centered Title */
         }
 
         .bio-flex {
@@ -173,27 +201,12 @@
         }
 
         .headshot {
-            width: 350px;
+            width: 400px;
             height: auto;
             border-radius: 15px;
-            border: 2px solid #222;
+            border: 1px solid #333;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             flex-shrink: 0;
-            transition: border-color 0.3s ease;
-        }
-        
-        .headshot:hover {
-            border-color: var(--accent);
-        }
-
-        .bio-text p {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-bottom: 25px;
-        }
-
-        .bio-text strong {
-            color: #fff;
         }
 
         .action-shot-container {
@@ -210,12 +223,17 @@
             object-fit: cover;
             object-position: center 15%;
             border-radius: 15px;
-            border: 2px solid #222;
-            transition: border-color 0.3s ease;
+            border: 1px solid #333;
         }
-        
-        .action-shot:hover {
-            border-color: var(--accent);
+
+        .bio-text p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .bio-text strong {
+            color: #fff;
         }
 
         .ska-highlight {
@@ -235,13 +253,7 @@
             background: var(--card);
             padding: 30px;
             border-radius: 15px;
-            border: 2px solid #222;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        
-        .highlight-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
+            border: 1px solid #222;
         }
 
         .highlight-card h2 {
@@ -249,22 +261,15 @@
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-top: 0;
-            margin-bottom: 15px;
-        }
-        
-        .highlight-card p {
-            color: #bbb;
-            font-size: 1.1rem;
-            margin: 0;
-            line-height: 1.6;
+            margin-bottom: 10px;
         }
 
         /* --- FOOTER STYLES --- */
         footer {
-            margin-top: 0;
-            padding: 50px 20px;
+            margin-top: 100px;
+            padding: 80px 20px;
             background: #050505;
             text-align: center;
         }
@@ -280,17 +285,9 @@
             margin-bottom: 15px; 
         }
         
-        .contact-intro {
-            color: #ccc;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
         .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         
         .contact-btn {
-            display: inline-block;
-            width: fit-content; 
             color: var(--text);
             text-decoration: none;
             font-family: 'Bebas Neue', sans-serif;
@@ -311,14 +308,6 @@
             box-shadow: 4px 4px 0px #fff;
         }
         
-        .contact-email {
-            margin-top: 25px;
-            font-size: 1rem;
-            color: var(--accent);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
         .copyright { 
             margin-top: 60px; 
             font-size: 0.75rem; 
@@ -339,13 +328,14 @@
             h1 { font-size: 2.5rem; text-align: center; }
             .highlights-grid { grid-template-columns: 1fr; }
             .contact-btn { width: 100%; }
+            .nav-container { gap: 20px; }
+            .nav-container a { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
 
     <nav class="main-nav">
-<<<<<<< HEAD
         <ul class="nav-container">
             <li><a href="/">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
@@ -354,16 +344,6 @@
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
         <div class="ska-separator"></div>
-=======
-        <ul class="nav-container">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="credits.html">Credits</a></li>
-            <li><a href="writing.html">Writing</a></li>
-            <li><a href="lettering.html">Lettering</a></li>
-        </ul>
-        <div class="ska-separator"></div>
->>>>>>> 2c6e14116960c91b3713af2b200ec77c06948480
     </nav>
 
     <main>
@@ -420,32 +400,12 @@
     <footer>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
-            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
-            
             <div class="contact-links">
-<<<<<<< HEAD
                 <a href="contact.html" class="contact-btn">Send a Message</a>
                 <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
                 <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
-=======
-                <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
-                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
-                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
->>>>>>> 2c6e14116960c91b3713af2b200ec77c06948480
             </div>
-<<<<<<< HEAD
             <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
-=======
-
-            <p class="contact-email">
-                sjd427@proton.me
-            </p>
-
-            <p class="copyright">
-                &copy; 2026 Shawn DePasquale. All Rights Reserved.
-            </p>
->>>>>>> 2c6e14116960c91b3713af2b200ec77c06948480
         </div>
     </footer>
 
