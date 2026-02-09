@@ -26,7 +26,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shawn DePasquale",
+      "url": "https://shawndepasquale.com",
+      "image": "https://shawndepasquale.com/banner.png",
+      "sameAs": [
+        "https://comicvine.gamespot.com/shawn-depasquale/4040-51976/",
+        "https://www.linkedin.com/in/shawndepasquale/",
+        "https://www.instagram.com/shawnwrites/"
+      ],
+      "jobTitle": "Comic Book Letterer",
+      "worksFor": [
+        { "@type": "Organization", "name": "Image Comics" },
+        { "@type": "Organization", "name": "IDW Publishing" },
+        { "@type": "Organization", "name": "Oni Press" },
+        { "@type": "Organization", "name": "Devil's Due Comics" },
+        { "@type": "Organization", "name": "Arcana Studios" },
+        { "@type": "Organization", "name": "Archaia Studios" },
+        { "@type": "Organization", "name": "Advent Comics" }
+      ],
+      "knowsAbout": ["Comic Book Lettering", "Typography", "Sequential Art"],
+      "colleague": [
+        {
+          "@type": "Person",
+          "name": "Charles Soule"
+        },
+        {
+          "@type": "Person",
+          "name": "Josh Blaylock"
+        },
+        {
+          "@type": "Person",
+          "name": "Robert Kirkman"
+        }
+      ],
+      "workExample": [
+        {
+          "@type": "ComicStory",
+          "name": "Letter 44",
+          "author": {
+            "@type": "Person",
+            "name": "Charles Soule"
+          },
+          "letterer": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Oni Press"
+          }
+        },
+        {
+          "@type": "ComicStory",
+          "name": "27",
+          "author": {
+            "@type": "Person",
+            "name": "Charles Soule"
+          },
+          "letterer": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Image Comics"
+          }
+        },
+        {
+          "@type": "ComicStory",
+          "name": "Mercy Sparx",
+          "author": {
+            "@type": "Person",
+            "name": "Josh Blaylock"
+          },
+          "letterer": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Devil's Due Comics"
+          }
+        },
+        {
+          "@type": "ComicStory",
+          "name": "Space Ace",
+          "author": {
+            "@type": "Person",
+            "name": "Robert Kirkman"
+          },
+          "letterer": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "url": "https://comicvine.gamespot.com/space-ace-4/4000-194951/"
+        }
+      ]
+    }
+    </script>
     
     <style>
         :root {
@@ -43,7 +145,7 @@
             margin: 0;
             line-height: 1.6;
             overflow-x: hidden;
-            padding-top: 90px; /* Standardized to match new nav height */
+            padding-top: 80px; 
         }
 
         /* --- STICKY NAVIGATION BAR --- */
@@ -54,8 +156,8 @@
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            padding-top: 15px;
-            padding-bottom: 0; 
+            border-bottom: 2px solid #222;
+            padding: 15px 0;
         }
 
         .nav-container {
@@ -65,7 +167,7 @@
             justify-content: center;
             gap: 40px;
             list-style: none;
-            padding: 0 0 15px 0;
+            padding: 0;
         }
 
         .nav-container li {
@@ -88,9 +190,9 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
         .ska-separator {
-            height: 24px; 
+            height: 15px;
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -98,9 +200,10 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 24px 24px; 
-            background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
-            border: none;
+            background-size: 15px 15px;
+            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
         /* --- CONTENT STYLES --- */
@@ -111,27 +214,16 @@
             font-size: 3rem; 
             text-transform: uppercase; 
             letter-spacing: 4px; 
-            margin-bottom: 15px; 
+            margin-bottom: 10px; 
             color: var(--accent); 
             text-align: center;
         }
         
-        /* Updated Intro Text Size */
-        .intro { 
-            color: #fff; 
-            margin-bottom: 40px; 
-            font-size: 1.4rem; 
-            font-weight: 300;
-            text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .intro { color: #ccc; margin-bottom: 40px; font-size: 1.1rem; text-align: center; }
 
-        /* --- GALLERY GRID --- */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 25px;
             margin-bottom: 80px;
             padding: 20px 0;
@@ -146,7 +238,7 @@
 
         .gallery img {
             width: 100%;
-            height: 350px; 
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
             cursor: zoom-in;
@@ -167,7 +259,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
 
-        /* --- CREDITS SECTION --- */
         .credits-section {
             background: var(--card);
             padding: 40px;
@@ -210,35 +301,10 @@
         .work-title { font-weight: bold; color: #eee; padding-right: 10px; }
         .publisher { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; }
 
-        /* --- GOOGLE FORM EMBED --- */
-        .form-container {
-            margin: 60px auto;
-            text-align: center;
-            max-width: 700px;
-        }
-
-        .form-wrapper {
-            position: relative;
-            padding-bottom: 100%; /* Adjusts aspect ratio */
-            height: 0;
-            overflow: hidden;
-            background: #fff;
-            border-radius: 8px;
-        }
-
-        .form-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* --- FOOTER STYLES --- */
+        /* --- CONTACT FOOTER STYLES --- */
         footer {
-            margin-top: 0;
-            padding: 50px 20px;
+            margin-top: 100px;
+            padding: 80px 20px;
             background: #050505;
             text-align: center;
         }
@@ -321,84 +387,55 @@
             box-shadow: 4px 4px 0px #fff;
         }
 
+        .comic-vine-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* --- FRAMING TEXT --- */
+        .gallery-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* --- QUIET CTA --- */
         .quiet-cta {
             text-align: center;
-            margin: 60px auto 20px auto;
-            max-width: 800px;
+            margin: 60px auto;
+            max-width: 700px;
             padding: 0 20px;
         }
 
         .quiet-cta p {
-            font-size: 1.5rem; /* Made larger */
-            color: #fff; /* Brighter white */
-            line-height: 1.4;
-            font-weight: bold;
+            font-size: 1.2rem;
+            color: #999;
+            line-height: 1.7;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .section-spacing-lg {
+            margin-top: 80px;
         }
 
         @media (max-width: 768px) {
             .credits-grid { grid-template-columns: 1fr; }
             h1 { font-size: 2rem; }
-            .intro { font-size: 1.2rem; }
             .gallery a:hover img { transform: scale(1.05); }
             .nav-container { gap: 20px; }
-            .contact-btn { width: 100%; display: inline-block; box-sizing: border-box; }
+            .contact-btn { width: 100%; }
         }
     </style>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Shawn DePasquale",
-      "url": "https://shawndepasquale.com",
-      "image": "https://shawndepasquale.com/banner.png",
-      "sameAs": [
-        "https://comicvine.gamespot.com/shawn-depasquale/4040-51976/",
-        "https://www.linkedin.com/in/shawndepasquale/",
-        "https://www.instagram.com/shawnwrites/"
-      ],
-      "jobTitle": "Comic Book Letterer",
-      "worksFor": [
-        { "@type": "Organization", "name": "Image Comics" },
-        { "@type": "Organization", "name": "IDW Publishing" },
-        { "@type": "Organization", "name": "Oni Press" },
-        { "@type": "Organization", "name": "Devil's Due Comics" }
-      ],
-      "knowsAbout": ["Comic Book Lettering", "Typography", "Sequential Art"],
-      "colleague": [
-        { "@type": "Person", "name": "Charles Soule" },
-        { "@type": "Person", "name": "Josh Blaylock" },
-        { "@type": "Person", "name": "Robert Kirkman" }
-      ],
-      "workExample": [
-        {
-          "@type": "ComicStory",
-          "name": "Letter 44",
-          "author": { "@type": "Person", "name": "Charles Soule" },
-          "letterer": { "@type": "Person", "name": "Shawn DePasquale" },
-          "publisher": { "@type": "Organization", "name": "Oni Press" }
-        },
-        {
-          "@type": "ComicStory",
-          "name": "27",
-          "author": { "@type": "Person", "name": "Charles Soule" },
-          "publisher": { "@type": "Organization", "name": "Image Comics" }
-        },
-        {
-          "@type": "ComicStory",
-          "name": "Mercy Sparx",
-          "publisher": { "@type": "Organization", "name": "Devil's Due Comics" }
-        }
-      ]
-    }
-    </script>
 </head>
 <body>
 
     <nav class="main-nav">
         <ul class="nav-container">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="credits.html">Credits</a></li>
             <li><a href="writing.html">Writing</a></li>
@@ -412,9 +449,11 @@
             <h1>Lettering</h1>
             <p class="intro">Selection of my professional lettering work for major publishers and independent creators.</p>
 
-            <div style="text-align: center; margin-bottom: 50px;">
+            <div class="comic-vine-container">
                 <a href="https://comicvine.gamespot.com/shawn-depasquale/4040-51976/" target="_blank" rel="noopener noreferrer" class="comic-vine-btn">View Complete Credits on Comic Vine →</a>
             </div>
+
+            <p class="gallery-intro">Selected pages highlighting dialogue clarity, sound effect integration, and tonal control across multiple genres and publishers.</p>
 
             <div class="gallery">
                 
@@ -495,28 +534,20 @@
     </main>
 
     <div class="quiet-cta">
-        <p>Available for writing and/or lettering ongoing series, miniseries, and graphic novels.</p>
+        <p>Available for lettering ongoing series, miniseries, and graphic novels.</p>
     </div>
 
-    <div class="form-container">
-        <div class="form-wrapper">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpbxmEMADG8Vmj6qqF1gWRUWDlMiNZvrCRWnUPJj_R3trD9A/viewform?embedded=true">Loading…</iframe>
-        </div>
-    </div>
-
-    <div class="ska-separator" style="margin-top: 80px;"></div>
+    <div class="ska-separator section-spacing-lg"></div>
 
     <footer>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
-            <p class="contact-intro">Currently available for professional lettering projects.</p>
+            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
             <div class="contact-links">
-                <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
+                <a href="contact.html" class="contact-btn">Send a Message</a>
                 <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
                 <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
-            <p style="margin-top: 25px; font-size: 1rem; color: var(--accent); font-weight: bold; letter-spacing: 1px;">sjd427@proton.me</p>
             <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
         </div>
     </footer>

@@ -23,13 +23,11 @@
     
     <link rel="icon" type="image/png" href="./favicon.png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
-    <link rel="preload" href="./headshot.jpg" as="image">
-    
-    <script type="application/ld+json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -47,7 +45,6 @@
       ],
       "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
       "worksFor": [
-        { "@type": "Organization", "name": "Charles Soule" },
         { "@type": "Organization", "name": "Screen Rant" },
         { "@type": "Organization", "name": "Image Comics" },
         { "@type": "Organization", "name": "IDW Publishing" }
@@ -330,6 +327,11 @@
             letter-spacing: 1px; 
         }
 
+        /* --- UTILITY CLASSES --- */
+        .section-spacing-lg {
+            margin-top: 80px;
+        }
+
         @media (max-width: 768px) {
             .bio-flex { flex-direction: column; align-items: center; text-align: center; }
             .headshot { width: 100%; max-width: 320px; margin-bottom: 20px; }
@@ -343,6 +345,16 @@
 <body>
 
     <nav class="main-nav">
+<<<<<<< HEAD
+        <ul class="nav-container">
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="lettering.html">Lettering</a></li>
+        </ul>
+        <div class="ska-separator"></div>
+=======
         <ul class="nav-container">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
@@ -351,6 +363,7 @@
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
         <div class="ska-separator"></div>
+>>>>>>> 2c6e14116960c91b3713af2b200ec77c06948480
     </nav>
 
     <main>
@@ -402,7 +415,7 @@
         </div>
     </main>
 
-    <div class="ska-separator" style="margin-top: 80px;"></div>
+    <div class="ska-separator section-spacing-lg"></div>
 
     <footer>
         <div class="footer-container">
@@ -410,11 +423,20 @@
             <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
             
             <div class="contact-links">
+<<<<<<< HEAD
+                <a href="contact.html" class="contact-btn">Send a Message</a>
+                <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
+                <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
+=======
                 <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
                 <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
                 <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
                 <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
+>>>>>>> 2c6e14116960c91b3713af2b200ec77c06948480
             </div>
+<<<<<<< HEAD
+            <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
+=======
 
             <p class="contact-email">
                 sjd427@proton.me
@@ -423,6 +445,7 @@
             <p class="copyright">
                 &copy; 2026 Shawn DePasquale. All Rights Reserved.
             </p>
+>>>>>>> 2c6e14116960c91b3713af2b200ec77c06948480
         </div>
     </footer>
 

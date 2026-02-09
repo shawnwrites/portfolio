@@ -55,8 +55,14 @@
         "name": "BunnyEars.com"
       },
       "colleague": [
-        { "@type": "Person", "name": "Macaulay Culkin" },
-        { "@type": "Person", "name": "Charles Soule" }
+        {
+          "@type": "Person",
+          "name": "Macaulay Culkin"
+        },
+        {
+          "@type": "Person",
+          "name": "Charles Soule"
+        }
       ],
       "workExample": [
         {
@@ -64,17 +70,32 @@
           "name": "Home Alone Again with the Google Assistant",
           "description": "Google commercial reunion of Home Alone",
           "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
-          "creator": { "@type": "Organization", "name": "Google" },
+          "creator": {
+            "@type": "Organization",
+            "name": "Google"
+          },
           "contributor": [
-            { "@type": "Person", "name": "Shawn DePasquale" },
-            { "@type": "Person", "name": "Macaulay Culkin" }
+            {
+              "@type": "Person",
+              "name": "Shawn DePasquale"
+            },
+            {
+              "@type": "Person",
+              "name": "Macaulay Culkin"
+            }
           ]
         },
         {
           "@type": "Book",
           "name": "Trailer Park Boys: Countdown to Liquor Day",
-          "author": { "@type": "Person", "name": "Shawn DePasquale" },
-          "publisher": { "@type": "Organization", "name": "IDW Publishing" }
+          "author": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "IDW Publishing"
+          }
         }
       ]
     }
@@ -94,7 +115,7 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             line-height: 1.6;
-            padding-top: 90px; /* Standardized to match new nav height */
+            padding-top: 80px; 
         }
 
         /* --- STICKY NAVIGATION BAR --- */
@@ -105,8 +126,8 @@
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            padding-top: 15px;
-            padding-bottom: 0; 
+            border-bottom: 2px solid #222;
+            padding: 15px 0;
         }
 
         .nav-container {
@@ -116,7 +137,7 @@
             justify-content: center;
             gap: 40px;
             list-style: none;
-            padding: 0 0 15px 0;
+            padding: 0;
         }
 
         .nav-container li {
@@ -139,9 +160,9 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
         .ska-separator {
-            height: 24px; 
+            height: 15px;
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -149,9 +170,10 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 24px 24px; 
-            background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
-            border: none;
+            background-size: 15px 15px;
+            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
         /* --- CONTENT STYLES --- */
@@ -164,17 +186,9 @@
             letter-spacing: 4px; 
             margin-bottom: 10px; 
             color: var(--accent); 
-            text-align: center; /* Centered Title */
         }
         
-        .intro { 
-            color: #ccc; 
-            margin-bottom: 50px; 
-            font-size: 1.2rem; 
-            border-left: 3px solid var(--accent); 
-            padding-left: 20px; 
-            text-align: left; 
-        }
+        .intro { color: #ccc; margin-bottom: 50px; font-size: 1.2rem; border-left: 3px solid var(--accent); padding-left: 20px; text-align: left; }
 
         .script-card {
             background: var(--card);
@@ -256,6 +270,15 @@
             color: #ccc;
         }
 
+        .meta-note a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .section-spacing-lg {
+            margin-top: 80px;
+        }
+
         /* --- FEATURED SCRIPT TREATMENT --- */
         .script-card.featured {
             border-color: var(--accent);
@@ -280,6 +303,12 @@
             margin-top: 15px;
         }
 
+        .stunt-list-badge img {
+            height: 30px;
+            width: auto;
+            filter: invert(1) brightness(1.2);
+        }
+
         .stunt-list-badge a {
             color: #ffcc00;
             text-decoration: none;
@@ -291,10 +320,19 @@
             color: #fff;
         }
 
+        /* --- CONTACT EMAIL UTILITY --- */
+        .contact-email {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
         /* --- FOOTER STYLES --- */
         footer {
-            margin-top: 0;
-            padding: 50px 20px;
+            margin-top: 100px;
+            padding: 80px 20px;
             background: #050505;
             text-align: center;
         }
@@ -349,14 +387,6 @@
             box-shadow: 4px 4px 0px #fff;
         }
 
-        .contact-email {
-            margin-top: 25px;
-            font-size: 1rem;
-            color: var(--accent);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
         .copyright {
             margin-top: 60px;
             font-size: 0.75rem;
@@ -377,7 +407,7 @@
                 display: block; 
             }
             
-            h1 { font-size: 2.5rem; }
+            h1 { font-size: 2.5rem; text-align: center; }
             .nav-container { gap: 15px; }
             .nav-container a { font-size: 1.1rem; }
             .contact-btn { width: 100%; }
@@ -388,14 +418,15 @@
 
     <nav class="main-nav">
         <ul class="nav-container">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="credits.html">Credits</a></li>
             <li><a href="writing.html" class="active">Writing</a></li>
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
-        <div class="ska-separator"></div>
     </nav>
+
+    <div class="ska-separator"></div>
 
     <main>
         <div class="container">
@@ -409,7 +440,7 @@
                     <p>Forty years after his creation, a deactivated Alex Murphy is resurrected by tech-activists to lead a revolution against a corporate surveillance state that has traded Detroit's freedom for algorithmic security.</p>
                     
                     <div class="stunt-list-badge">
-                        <span style="font-size: 1.5rem;">🏆</span> 
+                        <img src="Stunt_List_Transparent_Laurel.png" alt="Official Stunt List Laurel">
                         <a href="https://www.officialstuntlist.com/stunt-list-s3/robocop-against-the-machine" target="_blank" rel="noopener noreferrer">Official Stunt List Selection</a>
                     </div>
                 </div>
@@ -441,7 +472,7 @@
                     <p>After her archeologist father is murdered for his collection of magical artifacts, a headstrong young woman and her supernatural guardian set out across the Old West to reclaim her father's legacy from a ruthless outlaw gang.</p>
                     
                     <div class="meta-note">
-                        Based on the hit comic series: <a href="http://plumecomic.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">plumecomic.com</a>
+                        Based on the hit comic series: <a href="http://plumecomic.com" target="_blank" rel="noopener noreferrer">plumecomic.com</a>
                     </div>
                 </div>
                 <a href="scripts/Plume_Pilot.pdf" class="read-btn" target="_blank" aria-label="Read the pilot script for Plume">Read Script</a>
@@ -468,7 +499,7 @@
         </div>
     </main>
 
-    <div class="ska-separator" style="margin-top: 80px;"></div>
+    <div class="ska-separator section-spacing-lg"></div>
 
     <footer>
         <div class="footer-container">
@@ -476,15 +507,11 @@
             <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
             
             <div class="contact-links">
-                <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
+                <a href="contact.html" class="contact-btn">Send a Message</a>
                 <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
                 <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
                 <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
-
-            <p class="contact-email">
-                sjd427@proton.me
-            </p>
 
             <p class="copyright">
                 &copy; 2026 Shawn DePasquale. All Rights Reserved.

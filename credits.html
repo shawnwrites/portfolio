@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credits & Work | Shawn DePasquale</title>
     
-    <meta name="description" content="Complete credits and published work of Shawn DePasquale. Co-writer of Google's Home Alone commercial with Macaulay Culkin. Writer, letterer, and editor for Trailer Park Boys comics (IDW). Published works include Galaxy's For Hire, Space MN, Pixies, Immortality Manor, and more.">
+    <meta name="description" content="Complete credits and published work of Shawn DePasquale. Co-writer of Google's Home Alone commercial with Macaulay Culkin. Writer, letterer, and editor for Trailer Park Boys comics (IDW).">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shawndepasquale.com/credits.html">
@@ -16,17 +16,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://shawndepasquale.com/credits.html">
     <meta name="twitter:title" content="Credits & Work | Shawn DePasquale">
-    <meta name="twitter:description" content="Complete professional credits and published work across film, TV, comics, and games.">
     <meta name="twitter:image" content="https://shawndepasquale.com/banner.png">
     
     <link rel="canonical" href="https://shawndepasquale.com/credits.html">
-    
     <link rel="icon" type="image/png" href="./favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
     
     <script type="application/ld+json">
     {
@@ -38,20 +35,14 @@
       "sameAs": [
         "https://www.imdb.com/name/nm4267249/",
         "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
-        "https://www.amazon.com/stores/Shawn-Depasquale/author/B00669TD0W",
-        "https://screenrant.com/author/sdepas/",
-        "https://bunnyears.com/author/bunnyears-sdp/",
-        "https://bsky.app/profile/shawnwrites.bsky.social",
-        "https://www.linkedin.com/in/shawndepasquale/",
         "https://www.instagram.com/shawnwrites/"
       ],
-      "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
+      "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer"],
       "worksFor": [
         { "@type": "Organization", "name": "Screen Rant" },
         { "@type": "Organization", "name": "Image Comics" },
         { "@type": "Organization", "name": "IDW Publishing" }
       ],
-      "knowsAbout": ["Screenwriting", "Comic Books", "Comic Book Lettering", "Film Production", "Television Production", "TTRPG", "Story Editing"],
       "alumniOf": {
         "@type": "Organization",
         "name": "BunnyEars.com"
@@ -64,7 +55,6 @@
         {
           "@type": "CreativeWork",
           "name": "Home Alone Again with the Google Assistant",
-          "description": "Google commercial reunion of Home Alone",
           "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
           "creator": { "@type": "Organization", "name": "Google" },
           "contributor": [
@@ -74,15 +64,14 @@
         },
         {
           "@type": "Book",
-          "name": "Trailer Park Boys: Countdown to Liquor Day",
+          "name": "Trailer Park Boys: Bagged & Boarded",
           "author": { "@type": "Person", "name": "Shawn DePasquale" },
           "publisher": { "@type": "Organization", "name": "IDW Publishing" }
         },
         {
           "@type": "Book",
           "name": "Galaxy's For Hire",
-          "author": { "@type": "Person", "name": "Shawn DePasquale" },
-          "url": "https://www.amazon.com/dp/B07JJN6XG8"
+          "author": { "@type": "Person", "name": "Shawn DePasquale" }
         }
       ]
     }
@@ -101,8 +90,9 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding-top: 90px; /* Standardized for new nav */
+            padding-top: 90px; 
             line-height: 1.6;
+            text-align: center;
         }
 
         /* --- STICKY NAVIGATION BAR --- */
@@ -147,7 +137,7 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR (THICKER) --- */
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
         .ska-separator {
             height: 24px; 
             width: 100%;
@@ -162,38 +152,40 @@
             border: none;
         }
 
+        .section-spacing-lg {
+            margin-top: 80px;
+        }
+
         /* --- PAGE HEADER --- */
         .page-header {
-            text-align: center;
-            padding: 40px 20px 20px 20px;
+            padding: 40px 20px;
             max-width: 900px;
             margin: 0 auto;
         }
 
         .page-header h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 4.5rem;
+            font-size: 4rem;
             color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 6px;
-            margin: 0 0 20px 0;
+            letter-spacing: 4px;
+            margin: 0 0 10px 0;
         }
 
         .page-header p {
-            font-size: 1.3rem;
-            color: #888;
-            max-width: 600px;
+            font-size: 1.2rem;
+            color: #bbb;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         /* --- SECTION STYLES --- */
         .credit-section {
-            padding: 80px 20px;
-            position: relative;
+            padding: 60px 20px;
         }
 
         .credit-section.alt-bg {
-            background: rgba(255, 102, 255, 0.03);
+            background: rgba(255, 102, 255, 0.02);
         }
 
         .section-inner {
@@ -203,44 +195,34 @@
 
         .section-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: #fff;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 0 0 15px 0;
-            text-align: center;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--accent);
-            text-transform: uppercase;
             letter-spacing: 3px;
-            font-weight: bold;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        /* --- VIDEO EMBED --- */
-        .video-container {
-            max-width: 900px;
+        .google-intro {
+            color: #bbb;
+            max-width: 800px;
             margin: 0 auto;
         }
 
+        .google-intro strong {
+            color: var(--accent);
+        }
+
+        /* --- VIDEO EMBED --- */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 8px;
-            border: 2px solid #333;
+            border: 2px solid #222;
             background: #000;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-            transition: border-color 0.3s ease;
-        }
-
-        .video-wrapper:hover {
-            border-color: var(--accent);
+            max-width: 900px;
+            margin: 0 auto 30px auto;
         }
 
         .video-wrapper iframe {
@@ -251,12 +233,13 @@
             height: 100%;
         }
 
-        /* --- BOOK/COMIC GRID WITH COVERS --- */
+        /* --- BOOK GRID --- */
         .book-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 30px;
             margin-top: 40px;
+            text-align: left;
         }
 
         .book-card {
@@ -264,7 +247,7 @@
             border: 2px solid #222;
             border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: 0.3s;
             display: flex;
             flex-direction: column;
         }
@@ -280,7 +263,6 @@
             height: 360px;
             object-fit: cover;
             border-bottom: 2px solid #222;
-            background: #000;
         }
 
         .book-info {
@@ -288,138 +270,85 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .book-card h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--accent);
             margin: 0 0 10px 0;
             letter-spacing: 1px;
-            line-height: 1.2;
         }
 
-        .book-card .role {
+        .role-tag {
             display: inline-block;
-            background: rgba(255, 102, 255, 0.15);
+            background: rgba(255, 102, 255, 0.1);
             color: var(--accent);
             font-size: 0.7rem;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 5px 12px;
-            border-radius: 4px;
-            margin: 0 5px 15px 0;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
-        .book-card p {
-            color: #bbb;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        .book-card a {
+        .buy-btn {
             display: block;
             text-align: center;
             color: var(--text);
-            background: #000;
             text-decoration: none;
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1rem;
             letter-spacing: 1px;
-            padding: 12px;
+            padding: 10px;
             border: 2px solid #333;
             border-radius: 5px;
-            margin-top: 10px;
             transition: 0.2s;
+            margin-top: auto;
         }
 
-        .book-card a:hover {
+        .buy-btn:hover {
             background: var(--accent);
             color: #000;
             border-color: var(--accent);
         }
 
-        /* --- BIG LINK CTA --- */
-        .big-link {
-            text-align: center;
-            margin: 60px 0 0 0;
-        }
-
-        .big-link a {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            color: #000;
-            text-decoration: none;
-            background: var(--accent);
-            padding: 20px 50px;
-            border-radius: 8px;
-            display: inline-block;
-            letter-spacing: 2px;
-            transition: 0.2s;
-            box-shadow: 0 8px 20px rgba(255, 102, 255, 0.4);
-        }
-
-        .big-link a:hover {
-            background: #fff;
-            color: #000;
-            transform: translate(-3px, -3px);
-            box-shadow: 6px 6px 0px var(--accent);
-        }
-
-        /* --- MINI SECTION --- */
+        /* --- MINI SECTIONS --- */
         .mini-section {
             background: var(--card);
             border: 2px solid #222;
-            border-radius: 12px;
-            padding: 40px;
-            margin-top: 40px;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: left;
         }
 
         .mini-section h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: var(--accent);
-            margin: 0 0 20px 0;
-            letter-spacing: 2px;
-        }
-
-        .mini-section h3 a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .mini-section h3 a:hover {
-            color: #fff;
-        }
-
-        .mini-section p {
-            color: #bbb;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin: 15px 0;
+            margin: 0 0 10px 0;
         }
 
         .mini-section a {
             color: var(--accent);
-            font-weight: bold;
             text-decoration: none;
-            transition: 0.2s;
+            font-weight: bold;
         }
 
         .mini-section a:hover {
             color: #fff;
         }
 
+        .mini-section strong {
+            color: var(--accent);
+        }
+
         /* --- FOOTER STYLES --- */
         footer {
-            margin-top: 0;
             padding: 50px 20px;
             background: #050505;
-            text-align: center;
         }
 
         .footer-container {
@@ -430,15 +359,8 @@
         footer h2 {
             color: var(--accent);
             font-family: 'Bebas Neue', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 4px;
             font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .contact-intro {
-            color: #ccc;
-            font-size: 1.1rem;
+            letter-spacing: 4px;
             margin-bottom: 40px;
         }
 
@@ -455,13 +377,10 @@
             font-family: 'Bebas Neue', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 1rem;
             padding: 12px 24px;
             border: 2px solid #333;
             border-radius: 5px;
             transition: 0.2s;
-            display: inline-block;
-            box-sizing: border-box;
         }
 
         .contact-btn:hover {
@@ -477,51 +396,15 @@
             font-size: 0.75rem;
             color: #9b9b9b;
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contact-email {
-            margin-top: 25px;
-            font-size: 1rem;
-            color: var(--accent);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        /* --- UTILITY CLASSES --- */
-        .google-intro {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #bbb;
-            margin-top: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .additional-work-grid {
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        }
-
-        .film-link {
-            background: #222;
-            border-color: #444;
-        }
-
-        .text-accent {
-            color: var(--accent);
-        }
-
-        .text-white {
-            color: #fff;
         }
 
         @media (max-width: 768px) {
             .page-header h1 { font-size: 3rem; }
             .section-title { font-size: 2.5rem; }
             .book-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-btn { width: 100%; }
-            .big-link a { font-size: 1.5rem; padding: 15px 30px; }
+            .contact-btn { width: 100%; box-sizing: border-box; }
+            .nav-container { gap: 20px; }
+            .nav-container a { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -529,7 +412,7 @@
 
     <nav class="main-nav">
         <ul class="nav-container">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="credits.html" class="active">Credits</a></li>
             <li><a href="writing.html">Writing</a></li>
@@ -541,205 +424,95 @@
     <main>
         <div class="page-header">
             <h1>Credits & Work</h1>
-            <p>A selected overview of professional credits across screenwriting, comics, lettering, and editorial work spanning 20+ years</p>
+            <p>Professional credits across screenwriting, comics, lettering, and editorial work spanning 20+ years.</p>
         </div>
 
         <section class="credit-section">
             <div class="section-inner">
                 <h2 class="section-title">Google Home Alone Commercial</h2>
-                <p class="section-subtitle">Co-Writer • 2018</p>
-                
-                <div class="video-container">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/-lfHXKbsMLE?si=Ufu2UhzZruc-AznX" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Google Home Alone Commercial featuring Macaulay Culkin" loading="lazy"></iframe>
-                    </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/-lfHXKbsMLE" allowfullscreen loading="lazy" title="Google Home Alone commercial featuring Macaulay Culkin"></iframe>
                 </div>
-
                 <p class="google-intro">
-                    In 2018, I co-wrote this viral reunion commercial starring <strong class="text-accent">Macaulay Culkin</strong> reprising his iconic role as Kevin McCallister. Produced during my time as <strong class="text-white">Chief Creative Officer at BunnyEars.com</strong>.
+                    Co-wrote the viral 2018 reunion commercial starring <strong>Macaulay Culkin</strong>. Produced during my time as Chief Creative Officer at BunnyEars.com.
                 </p>
             </div>
         </section>
 
-        <div class="ska-separator" style="margin: 0; border: none;"></div>
+        <div class="ska-separator"></div>
 
         <section class="credit-section alt-bg">
             <div class="section-inner">
                 <h2 class="section-title">Trailer Park Boys Comics</h2>
-                <p class="section-subtitle">Writer • Letterer • Editor • IDW Publishing</p>
-
                 <div class="book-grid">
                     <div class="book-card">
-                        <img src="covers/cover-tpb-bagged.jpg" alt="TPB Bagged & Boarded" class="book-cover" width="240" height="360" loading="lazy">
+                        <img src="covers/cover-tpb-bagged.jpg" alt="Trailer Park Boys Bagged and Boarded comic collection" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
-                            <div>
-                                <h3>Bagged & Boarded</h3>
-                                <span class="role">20th Anniversary</span>
-                            </div>
-                            <a href="https://www.amazon.com/Bagged-Boarded-20th-Anniversary-Comic/dp/B0D9C5YC54" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+                            <span class="role-tag">Writer / Editor</span>
+                            <h3>Bagged & Boarded</h3>
+                            <a href="https://www.amazon.com/dp/B0D9C5YC54" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
-
                     <div class="book-card">
                         <img src="covers/cover-tpb-big.jpg" alt="Trailer Park Boys Big Collection" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
-                            <div>
-                                <h3>Big A$$ Collection</h3>
-                                <span class="role">Trade Paperback</span>
-                            </div>
-                            <a href="https://www.amazon.com/Trailer-Park-Boys-Comic-Collection/dp/1737050595" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="book-card">
-                        <img src="covers/cover-tpb-conkys.jpg" alt="Trailer Park Boys House of 1000 Conkys" class="book-cover" width="240" height="360" loading="lazy">
-                        <div class="book-info">
-                            <div>
-                                <h3>House of 1000 Conkys</h3>
-                                <span class="role">Mini-Series</span>
-                            </div>
-                            <a href="https://www.amazon.com/Trailer-Park-Boys-House-Conkys-ebook/dp/B0B2KTN6JF" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="book-card">
-                        <img src="covers/cover-tpb-gutters.jpg" alt="Trailer Park Boys In The Gutters" class="book-cover" width="240" height="360" loading="lazy">
-                        <div class="book-info">
-                            <div>
-                                <h3>In The Gutters</h3>
-                                <span class="role">Ongoing Series</span>
-                            </div>
-                            <a href="https://www.amazon.com/Trailer-Park-Boys-Allison-Mick-ebook/dp/B0BBWBJVST" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+                            <span class="role-tag">Writer / Editor</span>
+                            <h3>Big A$$ Collection</h3>
+                            <a href="https://www.amazon.com/dp/1737050595" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="ska-separator" style="margin: 0; border: none;"></div>
+        <div class="ska-separator"></div>
 
         <section class="credit-section">
             <div class="section-inner">
                 <h2 class="section-title">Comics & Published Work</h2>
-
                 <div class="book-grid">
                     <div class="book-card">
                         <img src="covers/cover-galaxys.jpg" alt="Galaxy's For Hire comic book cover" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
-                            <div>
-                                <h3>Galaxy's For Hire</h3>
-                                <span class="role">Writer</span> <span class="role">Creator</span>
-                            </div>
-                            <a href="https://www.amazon.com/dp/B07JJN6XG8" target="_blank" rel="noopener noreferrer">Read on Amazon</a>
+                            <span class="role-tag">Writer / Creator</span>
+                            <h3>Galaxy's For Hire</h3>
+                            <a href="https://www.amazon.com/dp/B07JJN6XG8" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
-
                     <div class="book-card">
                         <img src="covers/cover-spacemn.jpg" alt="Space, MN comic book cover" class="book-cover" width="240" height="360" loading="lazy">
                         <div class="book-info">
-                            <div>
-                                <h3>Space, MN</h3>
-                                <span class="role">Writer</span> <span class="role">Creator</span>
-                            </div>
-                            <a href="https://www.amazon.com/Space-MN-Shawn-Depasquale/dp/1926914635" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
-                        </div>
-                    </div>
-
-                    <div class="book-card">
-                        <img src="covers/cover-pixies.jpg" alt="Pixies comic and film cover" class="book-cover" width="240" height="360" loading="lazy">
-                        <div class="book-info">
-                            <div>
-                                <h3>Pixies</h3>
-                                <span class="role">Writer (Comic & Film)</span>
-                            </div>
-                            <a href="https://www.amazon.com/Pixies-Shawn-DePasquale-ebook/dp/B0897ZRBQ2" target="_blank" rel="noopener noreferrer">Comic →</a>
-                            <a href="https://www.amazon.com/Pixies/dp/B078XZWV7G" target="_blank" rel="noopener noreferrer" class="film-link">Film →</a>
-                        </div>
-                    </div>
-
-                    <div class="book-card">
-                        <img src="covers/cover-aoc.jpg" alt="AOC Freshman Force comic book cover" class="book-cover" width="240" height="360" loading="lazy">
-                        <div class="book-info">
-                            <div>
-                                <h3>AOC: Freshman Force</h3>
-                                <span class="role">Contributing Writer</span>
-                            </div>
-                            <a href="https://www.amazon.com/Alexandria-Ocasio-Cortez-Freshman-Force-Party-ebook/dp/B07Q521XQY" target="_blank" rel="noopener noreferrer">Read on Amazon</a>
+                            <span class="role-tag">Writer / Creator</span>
+                            <h3>Space, MN</h3>
+                            <a href="https://www.amazon.com/dp/1926914635" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="big-link">
-                    <a href="https://www.amazon.com/stores/Shawn-Depasquale/author/B00669TD0W" target="_blank" rel="noopener noreferrer">View Complete Amazon Author Page</a>
+                <div class="mini-section">
+                    <h3>BunnyEars.com</h3>
+                    <p>Chief Creative Officer for Macaulay Culkin's comedy brand, overseeing viral media and editorial content.</p>
+                </div>
+
+                <div class="mini-section">
+                    <h3>Story Editor</h3>
+                    <p>Current story editor for NYT Best-selling author <strong>Charles Soule</strong> on various projects.</p>
                 </div>
             </div>
         </section>
-
-        <div class="ska-separator" style="margin: 0; border: none;"></div>
-
-        <section class="credit-section alt-bg">
-            <div class="section-inner">
-                <h2 class="section-title">Additional Work</h2>
-
-                <div class="book-grid additional-work-grid">
-                    <div class="book-card">
-                        <img src="covers/cover-immortality.jpg" alt="Immortality Manor TTRPG adventure cover" class="book-cover" style="height: 240px; object-position: center top;" width="300" height="240" loading="lazy">
-                        <div class="book-info">
-                            <div>
-                                <h3>Immortality Manor</h3>
-                                <span class="role">TTRPG Adventure</span>
-                                <p>Extended adventure bundle featuring gothic horror and full campaign setting.</p>
-                            </div>
-                            <a href="https://www.drivethrurpg.com/en/product/505312/immortality-manor-extended-adventure-bundle" target="_blank" rel="noopener noreferrer">Buy on DriveThruRPG</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mini-section">
-                    <h3><a href="https://bunnyears.com" target="_blank" rel="noopener noreferrer">BunnyEars.com</a></h3>
-                    <span class="role">Chief Creative Officer</span>
-                    <p>Served as CCO for Macaulay Culkin's comedy brand and production company, overseeing satirical content and viral media projects including collaborations with Red Letter Media.</p>
-                    <p><a href="redlettermedia.html">Read about my Red Letter Media appearances →</a></p>
-                </div>
-
-                <div class="mini-section">
-                    <h3>Story Editor for Charles Soule</h3>
-                    <span class="role">Story Editor</span>
-                    <p>Currently working as story editor for New York Times best-selling author Charles Soule on multiple comic book and novel projects.</p>
-                </div>
-
-                <div class="mini-section">
-                    <h3>Professional Lettering</h3>
-                    <span class="role">20+ Years Experience</span>
-                    <p>Over two decades of professional comic book lettering for Image Comics, IDW Publishing, Oni Press, Arcana Studios, and Devil's Due Comics.</p>
-                    <p><a href="lettering.html">View lettering portfolio →</a></p>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <div class="ska-separator" style="margin-top: 80px;"></div>
+    <div class="ska-separator section-spacing-lg"></div>
 
     <footer>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
-            <p class="contact-intro">Currently available for screenwriting assignments, script doctoring, and professional lettering projects.</p>
-            
             <div class="contact-links">
-                <a href="mailto:sjd427@proton.me" class="contact-btn">Email Me</a>
+                <a href="contact.html" class="contact-btn">Send a Message</a>
                 <a href="https://www.imdb.com/name/nm4267249/" target="_blank" rel="noopener noreferrer" class="contact-btn">IMDb</a>
-                <a href="https://www.goodreads.com/author/show/6082925.Shawn_DePasquale" target="_blank" rel="noopener noreferrer" class="contact-btn">Goodreads</a>
                 <a href="https://instagram.com/shawnwrites" target="_blank" rel="noopener noreferrer" class="contact-btn">Instagram</a>
             </div>
-
-            <p class="contact-email">
-                sjd427@proton.me
-            </p>
-
-            <p class="copyright">
-                &copy; 2026 Shawn DePasquale. All Rights Reserved.
-            </p>
+            <p class="copyright">&copy; 2026 Shawn DePasquale. All Rights Reserved.</p>
         </div>
     </footer>
 
