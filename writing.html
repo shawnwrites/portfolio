@@ -126,8 +126,8 @@
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
             backdrop-filter: blur(10px); 
-            border-bottom: 2px solid #222;
-            padding: 15px 0;
+            padding-top: 15px;
+            padding-bottom: 0;
         }
 
         .nav-container {
@@ -137,7 +137,7 @@
             justify-content: center;
             gap: 40px;
             list-style: none;
-            padding: 0;
+            padding: 0 0 15px 0;
         }
 
         .nav-container li {
@@ -162,7 +162,7 @@
 
         /* --- SKA CHECKERBOARD SEPARATOR --- */
         .ska-separator {
-            height: 15px;
+            height: 24px;
             width: 100%;
             background-image: 
                 linear-gradient(45deg, #222 25%, transparent 25%), 
@@ -170,10 +170,9 @@
                 linear-gradient(45deg, transparent 75%, #222 75%), 
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
-            background-size: 15px 15px;
-            background-position: 0 0, 0 7.5px, 7.5px -7.5px, -7.5px 0px;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
+            background-size: 24px 24px;
+            background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+            border: none;
         }
 
         /* --- CONTENT STYLES --- */
@@ -424,9 +423,8 @@
             <li><a href="writing.html" class="active">Writing</a></li>
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
+        <div class="ska-separator"></div>
     </nav>
-
-    <div class="ska-separator"></div>
 
     <main>
         <div class="container">
@@ -499,7 +497,7 @@
         </div>
     </main>
 
-    <div class="ska-separator section-spacing-lg"></div>
+    <div class="ska-separator"></div>
 
     <footer>
         <div class="footer-container">
