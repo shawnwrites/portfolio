@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing Credits | Shawn DePasquale</title>
+    <title>Creative Credits | Shawn DePasquale</title>
     
     <meta name="description" content="Published works by Shawn DePasquale: Trailer Park Boys graphic novels, Google's Home Alone commercial, Pixies, and original screenplays.">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.shawndepasquale.com/writing.html">
-    <meta property="og:title" content="Writing Credits | Shawn DePasquale">
+    <meta property="og:title" content="Creative Credits | Shawn DePasquale">
     <meta property="og:description" content="From viral Google commercials to Trailer Park Boys graphic novels. View the full portfolio.">
     <meta property="og:image" content="https://www.shawndepasquale.com/banner.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.shawndepasquale.com/writing.html">
-    <meta name="twitter:title" content="Writing Credits | Shawn DePasquale">
+    <meta name="twitter:title" content="Creative Credits | Shawn DePasquale">
     <meta name="twitter:description" content="From viral Google commercials to Trailer Park Boys graphic novels. View the full portfolio.">
     <meta name="twitter:image" content="https://www.shawndepasquale.com/banner.png">
     
@@ -25,6 +25,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+       <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shawn DePasquale",
+      "url": "https://shawndepasquale.com",
+      "image": "https://shawndepasquale.com/headshot.jpg",
+      "sameAs": [
+        "https://www.imdb.com/name/nm4267249/",
+        "https://www.goodreads.com/author/show/6082925.Shawn_DePasquale",
+        "https://screenrant.com/author/sdepas/",
+        "https://bunnyears.com/author/bunnyears-sdp/",
+        "https://bsky.app/profile/shawnwrites.bsky.social",
+        "https://www.linkedin.com/in/shawndepasquale/",
+        "https://www.instagram.com/shawnwrites/"
+      ],
+      "jobTitle": ["Screenwriter", "Comic Book Writer", "Editor", "Letterer", "Producer"],
+      "worksFor": [
+        { "@type": "Organization", "name": "Screen Rant" },
+        { "@type": "Organization", "name": "Image Comics" },
+        { "@type": "Organization", "name": "IDW Publishing" }
+      ],
+      "knowsAbout": ["Screenwriting", "Comic Books", "Comic Book Lettering", "Film Production", "Television Production", "TTRPG", "Story Editing"],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "BunnyEars.com"
+      },
+      "colleague": [
+        {
+          "@type": "Person",
+          "name": "Macaulay Culkin"
+        },
+        {
+          "@type": "Person",
+          "name": "Charles Soule"
+        }
+      ],
+      "workExample": [
+        {
+          "@type": "CreativeWork",
+          "name": "Home Alone Again with the Google Assistant",
+          "description": "Google commercial reunion of Home Alone",
+          "url": "https://www.youtube.com/watch?v=-lfHXKbsMLE",
+          "creator": {
+            "@type": "Organization",
+            "name": "Google"
+          },
+          "contributor": [
+            {
+              "@type": "Person",
+              "name": "Shawn DePasquale"
+            },
+            {
+              "@type": "Person",
+              "name": "Macaulay Culkin"
+            }
+          ]
+        },
+        {
+          "@type": "Book",
+          "name": "Trailer Park Boys: Countdown to Liquor Day",
+          "author": {
+            "@type": "Person",
+            "name": "Shawn DePasquale"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "IDW Publishing"
+          }
+        }
+      ]
+    }
+    </script>
     
     <style>
         :root {
@@ -35,17 +109,16 @@
             --award: #ffcc00;
         }
 
-        body {
+          body {
             background-color: var(--bg);
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            line-height: 1.6;
-            padding-top: 90px; /* Aligned with fixed nav height */
-            text-align: center;
+            padding-top: 90px; 
+            line-height: 1.8;
         }
 
-        /* --- STICKY NAVIGATION BAR (Aligned with Index/About) --- */
+        /* --- STICKY NAVIGATION BAR --- */
         nav.main-nav {
             position: fixed;
             top: 0;
@@ -65,6 +138,10 @@
             gap: 40px;
             list-style: none;
             padding: 0 0 15px 0;
+        }
+
+        .nav-container li {
+            display: inline;
         }
 
         .nav-container a {
@@ -251,15 +328,27 @@
         }
         .read-btn:hover { background: var(--accent); color: #000; }
 
-        /* --- FOOTER --- */
+        /* --- FOOTER STYLES --- */
         footer {
-            padding: 50px 20px;
+            margin-top: 100px;
+            padding: 80px 20px;
             background: #050505;
             text-align: center;
         }
-        footer h2 { color: var(--accent); font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; letter-spacing: 4px; margin-bottom: 15px; }
-        .contact-intro { color: #ccc; font-size: 1.1rem; margin-bottom: 40px; }
+
+        .footer-container { max-width: 800px; margin: 0 auto; }
+        
+        footer h2 { 
+            color: var(--accent); 
+            font-family: 'Bebas Neue', sans-serif;
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+        }
+        
         .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        
         .contact-btn {
             color: var(--text);
             text-decoration: none;
@@ -272,32 +361,38 @@
             border-radius: 5px;
             transition: 0.2s;
         }
-        .contact-btn:hover { border-color: var(--accent); color: #000; background: var(--accent); transform: translate(-2px, -2px); box-shadow: 4px 4px 0px #fff; }
         
-        .section-spacing-lg { margin-top: 80px; }
-
-        @media (max-width: 768px) {
-            .book-grid { grid-template-columns: repeat(2, 1fr); }
-            .spec-card { flex-direction: column; text-align: center; gap: 20px; }
-            h1 { font-size: 3rem; }
-            .nav-container { gap: 20px; }
-            .nav-container a { font-size: 1.1rem; }
-            .contact-btn { width: 100%; box-sizing: border-box; }
+        .contact-btn:hover { 
+            border-color: var(--accent); 
+            color: #000; 
+            background: var(--accent);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #fff;
         }
+        
+        .copyright { 
+            margin-top: 60px; 
+            font-size: 0.75rem; 
+            color: #ccc; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }    
     </style>
 </head>
 <body>
 
     <nav class="main-nav">
         <ul class="nav-container">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="writing.html" class="active">Writing</a></li>
+            <li><a href="credits.html" class="active">Credits</a></li>
+            <li><a href="writing.html">Writing</a></li>
             <li><a href="lettering.html">Lettering</a></li>
         </ul>
         <div class="ska-separator"></div>
     </nav>
 
+     <main>   
     <div class="container">
         <h1>Credits & Works</h1>
         <p class="intro">A selection of produced commercials, published graphic novels, and available screenplays.</p>
@@ -305,7 +400,7 @@
         <div class="section-header">Viral & Commercial</div>
         <div class="video-highlight">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/watch?v=-lfHXKbsMLE" title="Home Alone Again with the Google Assistant" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-lfHXKbsMLE?si=6Y-4xvo-pTsxdzzN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div style="padding: 20px; text-align: center;">
                 <h2 style="font-family: 'Bebas Neue', sans-serif; margin: 0; font-size: 2rem;">Home Alone Again (Google)</h2>
@@ -467,7 +562,7 @@
             </div>
         </div>
     </div>
-
+</main>
    <footer>
         <div class="ska-separator section-spacing-lg"></div>
         <div class="footer-container">
