@@ -1,0 +1,23 @@
+SHAWN DEPASQUALE - BRAND STYLE GUIDE
+
+1. COLOR PALETTE
+------------------------------------------------
+CORE BACKGROUND:   #0d0d0d  (Void Black - Main BG)
+SECONDARY BG:      #1a1a1a  (Card/Section BG)
+ACCENT / LINKS:    #ff66ff  (Neon Magenta - The "Ska" Pop)
+TEXT MAIN:         #ffffff  (White - Headings)
+TEXT BODY:         #d1d1d1  (Light Grey - Reading Text)
+AWARD GOLD:        #ffcc00  (Stunt List / Premium Highlights)
+CHECKERBOARD:      #111111 & #222222 (The Two-Tone Pattern)
+
+2. TYPOGRAPHY
+------------------------------------------------
+HEADINGS: "Bebas Neue" (Condensed, Uppercase, Bold)
+BODY:     "Helvetica Neue", Arial, sans-serif
+
+3. VISUAL MOTIFS
+------------------------------------------------
+- 2-Tone Ska Checkerboard strips (24px height).
+- High contrast (White text on dark).
+- Neon borders on hover.
+- "Cards" with rounded corners (8px - 15px radius).

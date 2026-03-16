@@ -1,0 +1,17 @@
+/* TEAM */
+  Creator: Shawn DePasquale
+  Role: Screenwriter, Letterer, Producer
+  Site: www.shawndepasquale.com
+  Location: Los Angeles, CA
+
+/* SITE */
+  Last update: 2026/02/07
+  Standards: HTML5, CSS3
+  Components: Google Fonts (Bebas Neue), FontAwesome
+  Software: VS Code, GitHub Pages
+
+/* THANKS */
+  My wife (for love)
+  My Mom (for birth)
+  Macaulay Culkin (for the gigs)
+  The Ska Community (for the tunes)
