@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://docs.google.com; img-src 'self' https://img.youtube.com data:; connect-src 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shawn DePasquale on Red Letter Media | Best of the Worst & Bunny Ears</title>
 
@@ -496,22 +497,24 @@
                 var videoId = wrapper.getAttribute('data-id');
                 var start = wrapper.getAttribute('data-start');
                 var title = wrapper.getAttribute('data-title');
-                
+
+                if (!videoId || !/^[a-zA-Z0-9_-]+$/.test(videoId)) return;
+
                 var iframe = document.createElement('iframe');
-                
+
                 var src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
-                
-                if (start && start !== "0") {
+
+                if (start && /^\d+$/.test(start) && start !== "0") {
                     src += "&start=" + start;
                 }
-                
+
                 iframe.setAttribute('src', src);
                 iframe.setAttribute('frameborder', '0');
                 iframe.setAttribute('allowfullscreen', 'true');
                 iframe.setAttribute('allow', 'autoplay; encrypted-media');
                 iframe.setAttribute('title', title);
-                
-                wrapper.innerHTML = '';
+
+                while (wrapper.firstChild) { wrapper.removeChild(wrapper.firstChild); }
                 wrapper.appendChild(iframe);
             }
 
