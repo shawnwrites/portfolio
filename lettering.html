@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://docs.google.com; img-src 'self' https://img.youtube.com data:; connect-src 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lettering Portfolio | Shawn DePasquale</title>
-    
+
     <meta name="description" content="Professional comic book lettering portfolio of Shawn DePasquale. Credits include Trailer Park Boys (IDW), Image Comics, Oni Press, and Devil's Due. Over 20 years of lettering experience. View high-res samples.">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shawndepasquale.com/lettering.html">
     <meta property="og:title" content="Lettering Portfolio | Shawn DePasquale">
@@ -19,22 +19,23 @@
     <meta name="twitter:title" content="Lettering Portfolio | Shawn DePasquale">
     <meta name="twitter:description" content="Professional comic book lettering samples. Credits include Trailer Park Boys, Image, IDW, and Oni Press.">
     <meta name="twitter:image" content="https://shawndepasquale.com/banner.png">
-    
+
     <link rel="canonical" href="https://shawndepasquale.com/lettering.html">
-    
+
     <link rel="icon" type="image/png" href="./favicon.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style">
-    
+
     <style>
         :root {
             --bg: #0d0d0d;
             --accent: #ff66ff;
             --card: #1a1a1a;
             --text: #ffffff;
+            --award: #ffcc00;
         }
 
         body {
@@ -44,7 +45,7 @@
             margin: 0;
             line-height: 1.6;
             overflow-x: hidden;
-            padding-top: 90px; /* FIXED TO MATCH INDEX */
+            padding-top: 90px;
         }
 
         /* --- STICKY NAVIGATION BAR --- */
@@ -54,7 +55,7 @@
             width: 100%;
             z-index: 1000;
             background: rgba(13, 13, 13, 0.95);
-            backdrop-filter: blur(10px); 
+            backdrop-filter: blur(10px);
             padding-top: 15px;
             padding-bottom: 0;
         }
@@ -89,14 +90,14 @@
             opacity: 1;
         }
 
-        /* --- SKA CHECKERBOARD SEPARATOR (FIXED TO MATCH INDEX) --- */
+        /* --- SKA CHECKERBOARD SEPARATOR --- */
         .ska-separator {
             height: 25px;
             width: 100%;
-            background-image: 
-                linear-gradient(45deg, #222 25%, transparent 25%), 
-                linear-gradient(-45deg, #222 25%, transparent 25%), 
-                linear-gradient(45deg, transparent 75%, #222 75%), 
+            background-image:
+                linear-gradient(45deg, #222 25%, transparent 25%),
+                linear-gradient(-45deg, #222 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #222 75%),
                 linear-gradient(-45deg, transparent 75%, #222 75%);
             background-color: #111;
             background-size: 25px 25px;
@@ -104,8 +105,13 @@
             border: none;
         }
 
-        /* --- YOUR ORIGINAL CONTENT STYLES RESTORED --- */
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px 20px; text-align: center; }
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+            text-align: center;
+        }
 
         h1 {
             font-family: 'Bebas Neue', sans-serif;
@@ -116,54 +122,223 @@
             color: var(--accent);
             text-align: center;
         }
-        
-        .intro { 
-            color: #d1d1d1; 
-            margin-bottom: 50px; 
-            font-size: 1.2rem; 
-            border-left: 3px solid var(--accent); 
-            padding-left: 20px; 
-            text-align: left; 
+
+        .intro {
+            color: #d1d1d1;
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+            text-align: left;
         }
 
-        .gallery {
+        .inline-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .inline-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- PROJECT GRID --- */
+        .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
             margin-bottom: 80px;
             padding: 20px 0;
         }
 
-        .gallery a {
-            text-decoration: none;
-            display: block;
-            position: relative;
-            z-index: 1;
+        .project-tile {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 24px 16px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            border: 1px solid #222;
+            outline: none;
         }
 
-        .gallery img {
-            width: 100%;
-            height: 350px; 
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: zoom-in;
-            border: 1px solid #333;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                        border-color 0.3s, 
-                        box-shadow 0.3s;
-            display: block;
-        }
-
-        .gallery a:hover {
-            z-index: 10;
-        }
-
-        .gallery a:hover img {
+        .project-tile:hover,
+        .project-tile:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(255, 102, 255, 0.2);
             border-color: var(--accent);
-            transform: scale(1.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
 
+        .project-tile.no-images {
+            cursor: default;
+            opacity: 0.45;
+            border-style: dashed;
+        }
+
+        .project-tile.no-images:hover,
+        .project-tile.no-images:focus-visible {
+            transform: none;
+            box-shadow: none;
+            border-color: #333;
+        }
+
+        .project-thumb-wrap {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: border-color 0.2s;
+        }
+
+        .project-tile:hover .project-thumb-wrap,
+        .project-tile:focus-visible .project-thumb-wrap {
+            border-color: var(--accent);
+        }
+
+        .project-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            color: var(--text);
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .project-coming-soon {
+            font-size: 0.7rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 6px 0 0;
+        }
+
+        .placeholder-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            border: 2px dashed #3a3a3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3a3a3a;
+            font-size: 2.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        /* --- LIGHTBOX DIALOG --- */
+        #lightbox {
+            background: var(--card);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 0;
+            max-width: 92vw;
+            max-height: 95vh;
+            width: auto;
+            color: var(--text);
+        }
+
+        #lightbox::backdrop {
+            background: rgba(0, 0, 0, 0.88);
+        }
+
+        .lightbox-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .lightbox-title-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin: 0;
+        }
+
+        .lightbox-close {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0 4px;
+            transition: color 0.2s;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent);
+        }
+
+        .lightbox-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        #lightbox-img {
+            max-height: 68vh;
+            max-width: calc(92vw - 40px);
+            object-fit: contain;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .lightbox-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .lb-btn {
+            background: none;
+            border: 2px solid #444;
+            color: var(--text);
+            font-size: 1.3rem;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lb-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .lb-btn:disabled {
+            opacity: 0.25;
+            cursor: default;
+        }
+
+        .lb-btn:disabled:hover {
+            border-color: #444;
+            color: var(--text);
+        }
+
+        #lb-counter {
+            color: #888;
+            font-size: 0.9rem;
+            min-width: 55px;
+            text-align: center;
+        }
+
+        /* --- CREDITS --- */
         .credits-section {
             background: var(--card);
             padding: 40px;
@@ -206,31 +381,17 @@
         .work-title { font-weight: bold; color: #eee; padding-right: 10px; }
         .publisher { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; }
 
-        :root {
-            --bg: #0d0d0d;
-            --accent: #ff66ff; 
-            --text: #ffffff;
-            --award: #ffcc00;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            text-align: center;
-            padding-top: 90px; 
-        }
-                /* --- FOOTER STYLES --- */
+        /* --- FOOTER --- */
         footer {
             margin-top: 0;
-            padding: 0px 0px;
+            padding: 0;
             text-align: center;
         }
 
         .footer-container {
             max-width: 800px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
 
         footer h2 {
@@ -242,9 +403,9 @@
         }
 
         .contact-intro {
-            color: #bbb; 
+            color: #bbb;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 1.rem;
+            font-size: 1rem;
             margin-bottom: 40px;
         }
 
@@ -300,9 +461,14 @@
             border: 0;
         }
 
-        @media (max-width: 768px) {
-            .gateway-grid { grid-template-columns: 1fr; }
-            .gateway-card { height: 350px; }
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+            .credits-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+
+        @media (max-width: 600px) {
+            .project-grid { grid-template-columns: 1fr; }
             footer h2 { font-size: 1.5rem; }
             .contact-btn { width: 100%; }
             .nav-container { gap: 20px; }
@@ -310,7 +476,7 @@
         }
 
     </style>
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -376,42 +542,90 @@
         <div class="container">
             <h1>Lettering</h1>
             <p class="intro">
-         Selection of my professional lettering work for major publishers and independent creators.<br>
-         View complete credits on <strong><a href="https://comicvine.gamespot.com/shawn-depasquale/4040-51976/" target="_blank" rel="noopener noreferrer" class="inline-link">Comic Vine</a></strong> →
-         </p>
+                Selection of my professional lettering work for major publishers and independent creators.<br>
+                View complete credits on <strong><a href="https://comicvine.gamespot.com/shawn-depasquale/4040-51976/" target="_blank" rel="noopener noreferrer" class="inline-link">Comic Vine</a></strong> →
+            </p>
 
-            <div class="gallery">
-                <a href="./letteringsamples/page1.webp" target="_blank" aria-label="View Club Neph Page 1 Sample">
-                    <picture>
-                        <source srcset="./letteringsamples/page1.webp" type="image/webp">
-                        <img src="./letteringsamples/page1.jpg" alt="Club Neph Page 1" width="300" height="300" fetchpriority="high">
-                    </picture>
-                </a>
-                <a href="./letteringsamples/page2.webp" target="_blank" aria-label="View The Disavowed Sample">
-                    <picture>
-                        <source srcset="./letteringsamples/page2.webp" type="image/webp">
-                        <img src="./letteringsamples/page2.jpg" alt="The Disavowed Sample" width="300" height="300" loading="lazy">
-                    </picture>
-                </a>
-                <a href="./letteringsamples/page3.webp" target="_blank" aria-label="View Trailer Park Boys Sample">
-                    <picture>
-                        <source srcset="./letteringsamples/page3.webp" type="image/webp">
-                        <img src="./letteringsamples/page3.jpg" alt="Trailer Park Boys" width="300" height="300" loading="lazy">
-                    </picture>
-                </a>
-                <a href="./letteringsamples/page4.webp" target="_blank" aria-label="View Club Neph Page 2 Sample">
-                    <picture>
-                        <source srcset="./letteringsamples/page4.webp" type="image/webp">
-                        <img src="./letteringsamples/page4.png" alt="Club Neph Page 2" width="300" height="300" loading="lazy">
-                    </picture>
-                </a>
-                <a href="./letteringsamples/page5.webp" target="_blank" aria-label="View Galaxys For Hire Sample">
-                    <picture>
-                        <source srcset="./letteringsamples/page5.webp" type="image/webp">
-                        <img src="./letteringsamples/page5.jpg" alt="Galaxy's For Hire" width="300" height="300" loading="lazy">
-                    </picture>
-                </a>
-            </div>
+            <!-- Project grid: each tile = one comic project -->
+            <!-- To add a project: (1) add an entry to PROJECTS in the script below, (2) add a .project-tile div here -->
+            <div class="project-grid">
+
+                <!-- Galaxy's For Hire -->
+                <div class="project-tile" data-project="galaxys-for-hire" role="button" tabindex="0" aria-label="View Galaxy's For Hire lettering samples">
+                    <div class="project-thumb-wrap">
+                        <img src="covers/cover-galaxys.jpg" alt="Galaxy's For Hire" class="project-thumb" fetchpriority="high">
+                    </div>
+                    <p class="project-title">Galaxy's For Hire</p>
+                </div>
+
+                <!-- The Trailer Park Boys -->
+                <div class="project-tile" data-project="trailer-park-boys" role="button" tabindex="0" aria-label="View The Trailer Park Boys lettering samples">
+                    <div class="project-thumb-wrap">
+                        <img src="letteringsamples/page3.jpg" alt="The Trailer Park Boys" class="project-thumb" loading="lazy">
+                    </div>
+                    <p class="project-title">The Trailer Park Boys</p>
+                </div>
+
+                <!-- Club Nephilim -->
+                <div class="project-tile" data-project="club-nephilim" role="button" tabindex="0" aria-label="View Club Nephilim lettering samples">
+                    <div class="project-thumb-wrap">
+                        <img src="letteringsamples/page1.jpg" alt="Club Nephilim" class="project-thumb" loading="lazy">
+                    </div>
+                    <p class="project-title">Club Nephilim</p>
+                </div>
+
+                <!-- The Disavowed -->
+                <div class="project-tile" data-project="the-disavowed" role="button" tabindex="0" aria-label="View The Disavowed lettering samples">
+                    <div class="project-thumb-wrap">
+                        <img src="letteringsamples/page2.jpg" alt="The Disavowed" class="project-thumb" loading="lazy">
+                    </div>
+                    <p class="project-title">The Disavowed</p>
+                </div>
+
+                <!-- AOC -->
+                <div class="project-tile" data-project="aoc" role="button" tabindex="0" aria-label="View AOC lettering samples">
+                    <div class="project-thumb-wrap">
+                        <img src="covers/cover-aoc.jpg" alt="AOC" class="project-thumb" loading="lazy">
+                    </div>
+                    <p class="project-title">AOC</p>
+                </div>
+
+                <!-- Mercy Sparx (placeholder — add images to PROJECTS array when ready) -->
+                <div class="project-tile no-images" role="presentation" aria-hidden="true">
+                    <div class="placeholder-circle">?</div>
+                    <p class="project-title">Mercy Sparx</p>
+                    <p class="project-coming-soon">Samples coming soon</p>
+                </div>
+
+                <!-- Letter 44 (placeholder) -->
+                <div class="project-tile no-images" role="presentation" aria-hidden="true">
+                    <div class="placeholder-circle">?</div>
+                    <p class="project-title">Letter 44</p>
+                    <p class="project-coming-soon">Samples coming soon</p>
+                </div>
+
+                <!-- 27 (placeholder) -->
+                <div class="project-tile no-images" role="presentation" aria-hidden="true">
+                    <div class="placeholder-circle">?</div>
+                    <p class="project-title">27</p>
+                    <p class="project-coming-soon">Samples coming soon</p>
+                </div>
+
+                <!-- Lucid (placeholder) -->
+                <div class="project-tile no-images" role="presentation" aria-hidden="true">
+                    <div class="placeholder-circle">?</div>
+                    <p class="project-title">Lucid</p>
+                    <p class="project-coming-soon">Samples coming soon</p>
+                </div>
+
+                <!-- Lost and Found: An Amy Devlin Mystery (placeholder) -->
+                <div class="project-tile no-images" role="presentation" aria-hidden="true">
+                    <div class="placeholder-circle">?</div>
+                    <p class="project-title">Lost and Found: An Amy Devlin Mystery</p>
+                    <p class="project-coming-soon">Samples coming soon</p>
+                </div>
+
+            </div><!-- /.project-grid -->
 
             <div class="credits-section">
                 <h2>Lettering Career Highlights</h2>
@@ -424,14 +638,13 @@
                             <li><span class="work-title">Mercy Sparx: Daddy Issues - Issues 1-4</span> <span class="publisher">Devil's Due</span></li>
                         </ul>
                     </div>
-
                     <div class="credits-column">
                         <h3>Additional Work</h3>
                         <ul class="credits-list">
-                            <li><span class="work-title">27 - Full series </span> <span class="publisher">Image</span></li>
+                            <li><span class="work-title">27 - Full series</span> <span class="publisher">Image</span></li>
                             <li><span class="work-title">Night Moves - Full series</span> <span class="publisher">IDW</span></li>
                             <li><span class="work-title">Letter 44 - Issues 1-5</span> <span class="publisher">Oni</span></li>
-            </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -439,7 +652,7 @@
     </main>
 
     <footer>
-        <div class="ska-separator section-spacing-lg"></div>
+        <div class="ska-separator"></div>
         <div class="footer-container">
             <h2>Let's Collaborate</h2>
             <p class="contact-intro">Currently available for writing and/or lettering projects. Contact info below for rates.</p>
@@ -454,6 +667,142 @@
             </p>
         </div>
     </footer>
+
+    <!-- Lightbox modal -->
+    <dialog id="lightbox" aria-modal="true" aria-labelledby="lb-title">
+        <div class="lightbox-header">
+            <p class="lightbox-title-text" id="lb-title"></p>
+            <button class="lightbox-close" id="lb-close" aria-label="Close lightbox">&times;</button>
+        </div>
+        <div class="lightbox-body">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-nav">
+                <button class="lb-btn" id="lb-prev" aria-label="Previous image">&#8592;</button>
+                <span id="lb-counter">1 / 1</span>
+                <button class="lb-btn" id="lb-next" aria-label="Next image">&#8594;</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+    // --- PROJECT DATA ---
+    // To add a new project:
+    //   1. Add an entry here with id, title, and images array
+    //   2. Add a matching .project-tile div in the HTML above
+    //   3. Remove the .no-images class from the tile if it was a placeholder
+    const PROJECTS = [
+        {
+            id: 'galaxys-for-hire',
+            title: "Galaxy's For Hire",
+            images: [
+                { src: 'covers/cover-galaxys.jpg', alt: "Galaxy's For Hire cover" },
+                { src: 'letteringsamples/page5.jpg', alt: "Galaxy's For Hire lettering sample" }
+            ]
+        },
+        {
+            id: 'trailer-park-boys',
+            title: 'The Trailer Park Boys',
+            images: [
+                { src: 'letteringsamples/page3.jpg', alt: 'Trailer Park Boys interior lettering sample' },
+                { src: 'covers/cover-tpb-bagged.jpg', alt: 'Trailer Park Boys — Bagged cover' },
+                { src: 'covers/cover-tpb-big.jpg', alt: 'Trailer Park Boys — Big cover' },
+                { src: 'covers/cover-tpb-conkys.jpg', alt: "Trailer Park Boys — Conky's cover" },
+                { src: 'covers/cover-tpb-gutters.jpg', alt: 'Trailer Park Boys — Gutters cover' }
+            ]
+        },
+        {
+            id: 'club-nephilim',
+            title: 'Club Nephilim',
+            images: [
+                { src: 'letteringsamples/page1.jpg', alt: 'Club Nephilim lettering sample — page 1' },
+                { src: 'letteringsamples/page4.png', alt: 'Club Nephilim lettering sample — page 2' }
+            ]
+        },
+        {
+            id: 'the-disavowed',
+            title: 'The Disavowed',
+            images: [
+                { src: 'letteringsamples/page2.jpg', alt: 'The Disavowed lettering sample' }
+            ]
+        },
+        {
+            id: 'aoc',
+            title: 'AOC',
+            images: [
+                { src: 'covers/cover-aoc.jpg', alt: 'AOC cover' }
+            ]
+        }
+    ];
+
+    // --- LIGHTBOX LOGIC ---
+    (function () {
+        var dialog = document.getElementById('lightbox');
+        var img = document.getElementById('lightbox-img');
+        var counter = document.getElementById('lb-counter');
+        var titleEl = document.getElementById('lb-title');
+        var prevBtn = document.getElementById('lb-prev');
+        var nextBtn = document.getElementById('lb-next');
+        var closeBtn = document.getElementById('lb-close');
+        var currentProject = null;
+        var currentIndex = 0;
+
+        function updateModal() {
+            var item = currentProject.images[currentIndex];
+            img.src = item.src;
+            img.alt = item.alt;
+            counter.textContent = (currentIndex + 1) + ' / ' + currentProject.images.length;
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === currentProject.images.length - 1;
+        }
+
+        function openProject(projectId) {
+            currentProject = null;
+            for (var i = 0; i < PROJECTS.length; i++) {
+                if (PROJECTS[i].id === projectId) { currentProject = PROJECTS[i]; break; }
+            }
+            if (!currentProject) return;
+            currentIndex = 0;
+            titleEl.textContent = currentProject.title;
+            updateModal();
+            dialog.showModal();
+        }
+
+        // Tile click and keyboard activation
+        var tiles = document.querySelectorAll('.project-tile[data-project]');
+        for (var t = 0; t < tiles.length; t++) {
+            (function (tile) {
+                tile.addEventListener('click', function () { openProject(tile.dataset.project); });
+                tile.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openProject(tile.dataset.project);
+                    }
+                });
+            })(tiles[t]);
+        }
+
+        prevBtn.addEventListener('click', function () {
+            if (currentIndex > 0) { currentIndex--; updateModal(); }
+        });
+
+        nextBtn.addEventListener('click', function () {
+            if (currentIndex < currentProject.images.length - 1) { currentIndex++; updateModal(); }
+        });
+
+        closeBtn.addEventListener('click', function () { dialog.close(); });
+
+        // Click on backdrop to close
+        dialog.addEventListener('click', function (e) {
+            if (e.target === dialog) dialog.close();
+        });
+
+        // Arrow key navigation inside the modal
+        dialog.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft' && currentIndex > 0) { currentIndex--; updateModal(); }
+            if (e.key === 'ArrowRight' && currentIndex < currentProject.images.length - 1) { currentIndex++; updateModal(); }
+        });
+    })();
+    </script>
 
 </body>
 </html>
