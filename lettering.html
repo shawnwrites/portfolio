@@ -151,49 +151,39 @@
         }
 
         .project-tile {
-            background: var(--card);
-            border-radius: 12px;
-            padding: 24px 16px 20px;
+            background: transparent;
+            border: none;
+            padding: 16px 16px 20px;
             text-align: center;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-            border: 1px solid #222;
             outline: none;
-        }
-
-        .project-tile:hover,
-        .project-tile:focus-visible {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(255, 102, 255, 0.2);
-            border-color: var(--accent);
         }
 
         .project-tile.no-images {
             cursor: default;
             opacity: 0.45;
-            border-style: dashed;
         }
 
         .project-tile.no-images:hover,
         .project-tile.no-images:focus-visible {
             transform: none;
-            box-shadow: none;
-            border-color: #333;
         }
 
         .project-thumb-wrap {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             margin: 0 auto 16px;
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid #333;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
         }
 
         .project-tile:hover .project-thumb-wrap,
         .project-tile:focus-visible .project-thumb-wrap {
             border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(255, 102, 255, 0.25);
         }
 
         .project-thumb {
@@ -222,8 +212,8 @@
         }
 
         .placeholder-circle {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             margin: 0 auto 16px;
             border-radius: 50%;
             border: 2px dashed #3a3a3a;
