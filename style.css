@@ -925,6 +925,95 @@ body.page-about {
     color: #fff;
 }
 
+.novel-feature {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background: linear-gradient(135deg, rgba(255, 102, 255, 0.05) 0%, var(--card) 100%);
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.novel-cover {
+    width: 220px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px var(--accent);
+}
+
+.novel-info {
+    text-align: left;
+    flex: 1;
+}
+
+.novel-label {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    background: rgba(255, 102, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.novel-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin: 0 0 5px 0;
+    line-height: 1;
+    color: var(--text);
+}
+
+.novel-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin: 0 0 20px 0;
+}
+
+.novel-blurb {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.novel-btns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.novel-patreon-btn {
+    border-color: #555 !important;
+    color: #bbb !important;
+}
+
+.novel-patreon-btn:hover {
+    border-color: var(--accent) !important;
+    color: #000 !important;
+    background: var(--accent) !important;
+}
+
+@media (max-width: 768px) {
+    .novel-feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+    .novel-cover { width: 180px; }
+    .novel-info { text-align: center; }
+    .novel-btns { justify-content: center; }
+}
+
 @media (max-width: 768px) {
     .script-card {
         flex-direction: column;
