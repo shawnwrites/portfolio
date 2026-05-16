@@ -305,21 +305,21 @@ footer h2 {
 }
 
 .lettering-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('lettering-cover.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('letteringsamples/GFH_Sample3.webp');
 }
 
 .writing-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('writing-cover.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('covers/Play Scared Book One Title_RR.png');
 }
 
 .gateway-card:hover .lettering-bg {
     transform: scale(1.05);
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('lettering-cover.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('letteringsamples/GFH_Sample3.webp');
 }
 
 .gateway-card:hover .writing-bg {
     transform: scale(1.05);
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('writing-cover.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('covers/Play Scared Book One Title_RR.png');
 }
 
 .card-content {
