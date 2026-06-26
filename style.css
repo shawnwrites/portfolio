@@ -314,7 +314,7 @@ footer h2 {
 }
 
 .play-scared-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('covers/Play Scared Book One Title_RR.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('covers/Play Scared Book One Title_RR.webp');
 }
 
 .gateway-card:hover .lettering-bg {
@@ -324,12 +324,12 @@ footer h2 {
 
 .gateway-card:hover .writing-bg {
     transform: scale(1.05);
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('covers/Play Scared Book One Title_RR.png');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('covers/Play Scared Book One Title_RR.webp');
 }
 
 .gateway-card:hover .play-scared-bg {
     transform: scale(1.05);
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('covers/Play Scared Book One Title_RR.png');
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('covers/Play Scared Book One Title_RR.webp');
 }
 
 /* RFTS Carousel */
@@ -344,22 +344,22 @@ footer h2 {
 }
 
 .rfts-carousel-1 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_ART/RFTS_Cover04.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_Art/RFTS_Cover04.webp');
     animation-delay: 0s;
 }
 
 .rfts-carousel-2 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_ART/RFTS_Cover01.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_Art/RFTS_Cover01.webp');
     animation-delay: 2s;
 }
 
 .rfts-carousel-3 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_ART/RFTS_Cover02.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_Art/RFTS_Cover02.webp');
     animation-delay: 4s;
 }
 
 .rfts-carousel-4 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_ART/RFTS_Cover03.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('RFTS_Art/RFTS_Cover03.webp');
     animation-delay: 6s;
 }
 

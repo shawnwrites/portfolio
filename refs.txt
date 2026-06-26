@@ -1,0 +1,75 @@
+action-shot.jpg
+banner.png
+covers/cover-aoc.jpg
+covers/cover-galaxys.jpg
+covers/cover-immortality.jpg
+covers/cover-pixies.jpg
+covers/cover-spacemn.jpg
+covers/cover-tpb-bagged.jpg
+covers/cover-tpb-big.jpg
+covers/cover-tpb-conkys.jpg
+covers/cover-tpb-gutters.jpg
+covers/Play Scared Book One Title_RR.webp
+favicon.png
+headshot.jpg
+img.youtube.com/vi/5e56SnwL4aE/maxresdefault.jpg
+img.youtube.com/vi/9M39zY9OXFA/maxresdefault.jpg
+img.youtube.com/vi/a_FURNuBeQg/maxresdefault.jpg
+img.youtube.com/vi/ehMWe0rnyxQ/maxresdefault.jpg
+img.youtube.com/vi/f-w1SDtRglg/maxresdefault.jpg
+img.youtube.com/vi/IKdWSYCM8Ug/maxresdefault.jpg
+img.youtube.com/vi/ScgaYFvuBFM/maxresdefault.jpg
+img.youtube.com/vi/YaSkO4TosYo/maxresdefault.jpg
+letteringsamples/27 Second Set_Sample 1.webp
+letteringsamples/27 Second Set_Sample 2.webp
+letteringsamples/27 Second Set_Sample 3.webp
+letteringsamples/Club_Neph_Issue1_Sample1.webp
+letteringsamples/ClubNephIssue0_Sample1.webp
+letteringsamples/ClubNephIssue0_Sanple2.webp
+letteringsamples/Disavowed_Issue2_Sample1.webp
+letteringsamples/Disavowed_Issue2_Sample2.webp
+letteringsamples/Disavowed_Issue3_Sample1.webp
+letteringsamples/Disavowed_Issue3_Sample2.webp
+letteringsamples/Disavowed_Issue3_Sample3.webp
+letteringsamples/Disavowed_Sample1.jpg
+letteringsamples/DisavowedIssue1_Sample1.webp
+letteringsamples/GALAXYS_for_HIRE_Issue_2_Cover.webp
+letteringsamples/GFH_Sample1.webp
+letteringsamples/GFH_Sample2.webp
+letteringsamples/GFH_Sample3.webp
+letteringsamples/GFH_Sample4.webp
+letteringsamples/GFH_Sample5.webp
+letteringsamples/GFH_Sample6.webp
+letteringsamples/GFH_Sample7.webp
+letteringsamples/GFH_Sample8.webp
+letteringsamples/Letter 44_Cover.webp
+letteringsamples/Letter 44_sample1.webp
+letteringsamples/Letter 44_sample2.webp
+letteringsamples/LFAmyDevilin_Sample1.webp
+letteringsamples/LFAmyDevilin_Sample2.webp
+letteringsamples/LFAmyDevilin_Sample3.webp
+letteringsamples/LFAmyDevilin_Sample4.webp
+letteringsamples/Lucid Cover.webp
+letteringsamples/Lucid_Sample1.webp
+letteringsamples/Lucid_Sample2.webp
+letteringsamples/Lucid_Sample3.webp
+letteringsamples/Mercy_Sparx_NMALTF_Sample1.webp
+letteringsamples/Mercy_Sparx_NMALTF_Sample2.webp
+letteringsamples/Mercy_Sparx_NMALTF_Sample3.webp
+letteringsamples/TPB_Sample1.webp
+letteringsamples/TPB_Sample2.webp
+letteringsamples/TPB_Sample3.webp
+letteringsamples/TPB_Sample4.webp
+letteringsamples/TPB_Sample5.webp
+letteringsamples/TPB_Sample6.webp
+letteringsamples/TPB_Sample7.webp
+letteringsamples/TPB_Sample8.webp
+RFTS_Art/RFTS_Cover01.webp
+RFTS_Art/RFTS_Cover02.webp
+RFTS_Art/RFTS_Cover03.webp
+RFTS_Art/RFTS_Cover04.webp
+shawndepasquale.com/banner.png
+shawndepasquale.com/headshot.jpg
+Stunt_List_Transparent_Laurel.png
+walt-jabsco.jpg
+www.shawndepasquale.com/banner.png

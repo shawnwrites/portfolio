@@ -1,0 +1,119 @@
+
+FullName
+--------                                                                        
+C:\Users\shawn\Desktop\portfolio\E04A0616.jpg                                   
+C:\Users\shawn\Desktop\portfolio\R6MA0075.jpg                                   
+C:\Users\shawn\Desktop\portfolio\Covers\NEWPlay Scared Book One Title_RR.png    
+C:\Users\shawn\Desktop\portfolio\scripts\MarleysMonsters-ISSUE 1 - Copy.pdf     
+C:\Users\shawn\Desktop\portfolio\scripts\MarleysMonsters-ISSUE 1.pdf            
+C:\Users\shawn\Desktop\portfolio\scripts\EagleTraceFeature_March2024 - Copy.pdf 
+C:\Users\shawn\Desktop\portfolio\scripts\EagleTraceFeature_March2024.pdf        
+C:\Users\shawn\Desktop\portfolio\scripts\Robocop_AgainstTheMachine_06172024.pdf 
+C:\Users\shawn\Desktop\portfolio\scripts\Robocop_AgainstTheMachine_06172024 - C…
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page5.jpg                     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page2.jpg                     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page3.jpg                     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page1.jpg                     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page4.png                     
+C:\Users\shawn\Desktop\portfolio\scripts\Grow_A_Pair_04_2025 - Copy.pdf         
+C:\Users\shawn\Desktop\portfolio\scripts\Grow_A_Pair_04_2025.pdf                
+C:\Users\shawn\Desktop\portfolio\scripts\Plume_Pilot - Copy.pdf                 
+C:\Users\shawn\Desktop\portfolio\scripts\Plume_Pilot.pdf                        
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page3.webp                    
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-bagged - Copy.jpg             
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page2.webp                    
+C:\Users\shawn\Desktop\portfolio\Covers\cover-immortality - Copy.jpg            
+C:\Users\shawn\Desktop\portfolio\Covers\cover-galaxys - Copy.jpg                
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-big - Copy.jpg                
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page1.webp                    
+C:\Users\shawn\Desktop\portfolio\scripts\BLINK_Shooting 2ndDraft_11072025.pdf   
+C:\Users\shawn\Desktop\portfolio\scripts\BLINK_Shooting 2ndDraft_11072025 - Cop…
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page5.webp                    
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-gutters - Copy.jpg            
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-conkys - Copy.jpg             
+C:\Users\shawn\Desktop\portfolio\Covers\cover-spacemn - Copy.jpg                
+C:\Users\shawn\Desktop\portfolio\letteringsamples\page4.webp                    
+C:\Users\shawn\Desktop\portfolio\Covers\cover-aoc - Copy.jpg                    
+C:\Users\shawn\Desktop\portfolio\lettering-cover.jpg                            
+C:\Users\shawn\Desktop\portfolio\style.css                                      
+C:\Users\shawn\Desktop\portfolio\writing-cover.jpg                              
+C:\Users\shawn\Desktop\portfolio\Covers\cover-pixies - Copy.jpg                 
+C:\Users\shawn\Desktop\portfolio\lettering.html                                 
+C:\Users\shawn\Desktop\portfolio\redlettermedia.html                            
+C:\Users\shawn\Desktop\portfolio\credits.html                                   
+C:\Users\shawn\Desktop\portfolio\writing.html                                   
+C:\Users\shawn\Desktop\portfolio\about.html                                     
+C:\Users\shawn\Desktop\portfolio\index.html                                     
+C:\Users\shawn\Desktop\portfolio\contact.html                                   
+C:\Users\shawn\Desktop\portfolio\404.html                                       
+C:\Users\shawn\Desktop\portfolio\sitemap.xml                                    
+C:\Users\shawn\Desktop\portfolio\BRAND STYLE GUIDE.txt                          
+C:\Users\shawn\Desktop\portfolio\humans.txt                                     
+C:\Users\shawn\Desktop\portfolio\robots.txt                                     
+C:\Users\shawn\Desktop\portfolio\CNAME                                          
+C:\Users\shawn\Desktop\portfolio\.nojekyll                                      
+C:\Users\shawn\Desktop\portfolio\Covers\Play Scared Book One Title_RR.png       
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Disavowed_Issue2_Sample1.webp 
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample4.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample5.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample6.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample8.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample7.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample8.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample6.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample2.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Disavowed_Issue3_Sample2.webp 
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample3.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample3.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Lucid_Sample1.webp            
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Mercy_Sparx_NMALTF_Sample1.we…
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Letter 44_sample1.webp        
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Club_Neph_Issue1_Sample1.webp 
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GALAXYS_for_HIRE_Issue_2_Cove…
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Mercy_Sparx_NMALTF_Sample3.we…
+C:\Users\shawn\Desktop\portfolio\letteringsamples\27 Second Set_Sample 1.webp   
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Lucid Cover.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Letter 44_sample2.webp        
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample4.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Disavowed_Issue3_Sample3.webp 
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Lucid_Sample2.webp            
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Disavowed_Issue3_Sample1.webp 
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample7.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample5.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\27 Second Set_Sample 3.webp   
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Letter 44_Cover.webp          
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Lucid_Sample3.webp            
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Mercy_Sparx_NMALTF_Sample2.we…
+C:\Users\shawn\Desktop\portfolio\letteringsamples\27 Second Set_Sample 2.webp   
+C:\Users\shawn\Desktop\portfolio\letteringsamples\LFAmyDevilin_Sample3.webp     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\LFAmyDevilin_Sample1.webp     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\LFAmyDevilin_Sample4.webp     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample2.webp              
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Disavowed_Issue2_Sample2.webp 
+C:\Users\shawn\Desktop\portfolio\letteringsamples\LFAmyDevilin_Sample2.webp     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\Disavowed_Sample1.jpg         
+C:\Users\shawn\Desktop\portfolio\RFTS_Art\RFTS_Cover01.webp                     
+C:\Users\shawn\Desktop\portfolio\letteringsamples\TPB_Sample1.webp              
+C:\Users\shawn\Desktop\portfolio\RFTS_Art\RFTS_Cover02.webp                     
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-bagged.jpg                    
+C:\Users\shawn\Desktop\portfolio\letteringsamples\DisavowedIssue1_Sample1.webp  
+C:\Users\shawn\Desktop\portfolio\Covers\cover-immortality.jpg                   
+C:\Users\shawn\Desktop\portfolio\Covers\cover-galaxys.jpg                       
+C:\Users\shawn\Desktop\portfolio\Stunt_List_Transparent_Laurel.png              
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-big.jpg                       
+C:\Users\shawn\Desktop\portfolio\letteringsamples\ClubNephIssue0_Sample1.webp   
+C:\Users\shawn\Desktop\portfolio\letteringsamples\GFH_Sample1.webp              
+C:\Users\shawn\Desktop\portfolio\RFTS_Art\RFTS_Cover04.webp                     
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-gutters.jpg                   
+C:\Users\shawn\Desktop\portfolio\Covers\cover-tpb-conkys.jpg                    
+C:\Users\shawn\Desktop\portfolio\Covers\cover-spacemn.jpg                       
+C:\Users\shawn\Desktop\portfolio\letteringsamples\ClubNephIssue0_Sanple2.webp   
+C:\Users\shawn\Desktop\portfolio\RFTS_Art\RFTS_Cover03.webp                     
+C:\Users\shawn\Desktop\portfolio\banner.png                                     
+C:\Users\shawn\Desktop\portfolio\Covers\cover-aoc.jpg                           
+C:\Users\shawn\Desktop\portfolio\headshot.jpg                                   
+C:\Users\shawn\Desktop\portfolio\walt-jabsco.jpg                                
+C:\Users\shawn\Desktop\portfolio\Covers\cover-pixies.jpg                        
+C:\Users\shawn\Desktop\portfolio\action-shot.jpg                                
+C:\Users\shawn\Desktop\portfolio\favicon.png                                    
+
