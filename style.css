@@ -54,7 +54,7 @@ nav.main-nav {
     justify-content: center;
     gap: 40px;
     list-style: none;
-    padding: 0 0 15px 0;
+    padding: 0 0 6px 0;
 }
 
 .nav-container li {
@@ -93,6 +93,7 @@ nav.main-nav {
     background-size: 24px 24px;
     background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
     border: none;
+    margin: 6px 0 14px 0;
 }
 
 /* ------------------------------------------------------------------
@@ -216,25 +217,50 @@ footer h2 {
    PAGE: HOME  (body.page-home)
    ================================================================== */
 
-.banner-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px 40px 20px;
-    box-sizing: border-box;
+.hero-intro {
+    max-width: 760px;
+    margin: 0 auto 22px auto;
+    padding: 20px 20px 12px 20px;
+    text-align: center;
 }
 
-.main-logo {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.hero-eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.45em;
+    font-size: 0.95rem;
+    margin: 10px auto 10px auto;
+    font-weight: 800;
+}
+
+.hero-intro h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.4rem;
+    letter-spacing: 0.14em;
+    margin: 0 0 0px 0;
+    color: var(--text);
+    text-shadow: 2px 2px 15px rgba(255,102,255,0.08);
+}
+
+.hero-tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin: 0 auto 6px auto;
+    max-width: 720px;
+}
+
+.hero-description {
+    font-size: 1.12rem;
+    line-height: 1.75;
+    color: #ccc;
+    margin: 0 auto 12px auto;
+    max-width: 680px;
 }
 
 .short-bio {
     max-width: 763px;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 20px auto;
     padding: 0 20px;
     text-align: center;
 }
@@ -251,7 +277,7 @@ footer h2 {
 
 .bio-link {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 10px;
     color: var(--text);
     text-decoration: none;
     font-family: 'Bebas Neue', sans-serif;
@@ -272,7 +298,7 @@ footer h2 {
     gap: 20px;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 8px 20px 12px 20px;
 }
 
 .gateway-card {
@@ -284,6 +310,14 @@ footer h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #222;
     background-color: #000;
+}
+
+.gateway-card.featured-card {
+    height: 420px;
+}
+
+.gateway-card.secondary-card {
+    height: 200px;
 }
 
 .gateway-card:hover {
@@ -396,6 +430,15 @@ footer h2 {
     letter-spacing: 4px;
     margin-top: 10px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.gateway-card.secondary-card .card-content h2 {
+    font-size: 2.2rem;
+}
+
+.gateway-card.secondary-card .card-content p {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
 }
 
 .special-feature-link {
